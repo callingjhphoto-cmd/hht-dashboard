@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HHT Intelligence Platform</title>
+    <meta name="description" content="Heads, Hearts &amp; Tails - Lead intelligence and competitive analysis dashboard">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231D1D1F'/><text x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='sans-serif' font-weight='800' font-size='9' fill='white'>HHT</text></svg>">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --bg-canvas: #F5F5F7;
+            --bg-card: #FFFFFF;
+            --bg-subtle: #F0F0F2;
+            --border: #E5E5EA;
+            --border-hover: #D1D1D6;
+            --text-primary: #1D1D1F;
+            --text-secondary: #6E6E73;
+            --text-muted: #AEAEB2;
+            --accent-gold: #9B7B2C;
+            --accent-gold-dim: rgba(155,123,44,.08);
+            --accent-green: #30A46C;
+            --accent-green-dim: rgba(48,164,108,.08);
+            --accent-blue: #3B82F6;
+            --accent-blue-dim: rgba(59,130,246,.08);
+            --accent-red: #E5484D;
+            --accent-red-dim: rgba(229,72,77,.08);
+            --accent-amber: #E5A000;
+            --accent-amber-dim: rgba(229,160,0,.08);
+            --accent-purple: #7C3AED;
+            --accent-purple-dim: rgba(124,58,237,.08);
+            --shadow-sm: 0 1px 2px rgba(0,0,0,.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,.06);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,.08);
+            --shadow-xl: 0 16px 48px rgba(0,0,0,.12);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-canvas);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-feature-settings: 'tnum' on, 'lnum' on;
+        }
+
+        /* ===== LOADING SKELETON ===== */
+        .skeleton {
+            background: linear-gradient(90deg, var(--bg-subtle) 25%, #E8E8EC 50%, var(--bg-subtle) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s ease-in-out infinite;
+            border-radius: var(--radius-sm);
+        }
+        @keyframes shimmer { 0% { background-position: 200% 0 } 100% { background-position: -200% 0 } }
+
+        /* ===== FOCUS STYLES (Accessibility) ===== */
+        :focus-visible {
+            outline: 2px solid var(--accent-blue);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        .sr-only {
+            position: absolute; width: 1px; height: 1px;
+            padding: 0; margin: -1px; overflow: hidden;
+            clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+        }
+        [role="button"] { cursor: pointer; }
+
+        /* ===== HEADER ===== */
+        .header {
+            background: rgba(255,255,255,.88);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: box-shadow .3s ease;
+        }
+        .header.scrolled { box-shadow: var(--shadow-md); }
+        .header-left { display: flex; align-items: center; gap: 14px; }
+        .logo-mark {
+            width: 38px; height: 38px;
+            background: var(--text-primary);
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 10px; color: #fff; letter-spacing: .5px;
+            transition: transform .2s;
+        }
+        .logo-mark:hover { transform: scale(1.05); }
+        .header-title h1 { font-size: 17px; font-weight: 700; letter-spacing: -.3px; }
+        .header-title .tagline { font-size: 11px; color: var(--text-muted); font-weight: 500; }
+        .header-right { display: flex; align-items: center; gap: 16px; }
+        .header-stat { text-align: right; }
+        .header-stat .value { font-size: 17px; font-weight: 700; letter-spacing: -.5px; }
+        .header-stat .label { font-size: 9px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+        .freshness-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            font-size: 10px; font-weight: 600; color: var(--accent-green);
+            padding: 5px 12px; background: var(--accent-green-dim); border-radius: 20px;
+        }
+        .freshness-badge::before {
+            content: ''; width: 6px; height: 6px; border-radius: 50%;
+            background: var(--accent-green); animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes pulse { 0%,100% { opacity: 1 } 50% { opacity: .4 } }
+
+        /* ===== HEADER ACTIONS ===== */
+        .header-actions { display: flex; gap: 8px; align-items: center; }
+        .icon-btn {
+            background: var(--bg-subtle); border: 1px solid var(--border);
+            border-radius: var(--radius-sm); padding: 7px 12px; cursor: pointer;
+            display: flex; align-items: center; gap: 6px;
+            font-family: inherit; font-size: 12px; color: var(--text-muted);
+            transition: all .2s;
+        }
+        .icon-btn:hover { border-color: var(--border-hover); color: var(--text-primary); background: var(--bg-card); }
+        .icon-btn svg { width: 14px; height: 14px; }
+
+        /* ===== NAVIGATION ===== */
+        .nav {
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+            padding: 0 48px;
+            display: flex;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+        .nav::-webkit-scrollbar { display: none; }
+        .nav-item {
+            padding: 13px 22px; font-size: 13px; font-weight: 500;
+            color: var(--text-secondary); cursor: pointer; border: none;
+            border-bottom: 2px solid transparent; background: none;
+            font-family: inherit; transition: all .2s; white-space: nowrap;
+            position: relative;
+        }
+        .nav-item:hover { color: var(--text-primary); }
+        .nav-item.active { color: var(--text-primary); border-bottom-color: var(--text-primary); font-weight: 600; }
+        .nav-item .nav-count {
+            font-size: 9px; font-weight: 700; background: var(--bg-subtle);
+            padding: 1px 5px; border-radius: 4px; margin-left: 6px;
+            color: var(--text-muted);
+        }
+        .nav-item.active .nav-count { background: var(--text-primary); color: #fff; }
+
+        /* ===== MAIN CONTENT ===== */
+        .main { padding: 28px 48px; max-width: 1440px; margin: 0 auto; }
+        .section {
+            display: none; opacity: 0; transform: translateY(8px);
+            transition: opacity .4s ease, transform .4s ease;
+        }
+        .section.active { display: block; opacity: 1; transform: translateY(0); }
+
+        /* ===== GRID SYSTEM ===== */
+        .bento-grid { display: grid; gap: 14px; margin-bottom: 14px; }
+        .bento-5 { grid-template-columns: repeat(5, 1fr); }
+        .bento-4 { grid-template-columns: repeat(4, 1fr); }
+        .bento-3 { grid-template-columns: repeat(3, 1fr); }
+        .bento-2 { grid-template-columns: 1fr 1fr; }
+
+        /* ===== CARD ===== */
+        .card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 22px;
+            transition: all .25s ease;
+        }
+        .card.clickable { cursor: pointer; }
+        .card.clickable:hover { border-color: var(--border-hover); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+        .card-title { font-size: 14px; font-weight: 600; }
+        .card-badge {
+            font-size: 10px; padding: 4px 10px; border-radius: 6px;
+            font-weight: 600; letter-spacing: .3px; text-transform: uppercase;
+        }
+        .badge-gold { background: var(--accent-gold-dim); color: var(--accent-gold); }
+        .badge-green { background: var(--accent-green-dim); color: var(--accent-green); }
+        .badge-blue { background: var(--accent-blue-dim); color: var(--accent-blue); }
+        .badge-red { background: var(--accent-red-dim); color: var(--accent-red); }
+        .badge-amber { background: var(--accent-amber-dim); color: var(--accent-amber); }
+        .badge-purple { background: var(--accent-purple-dim); color: var(--accent-purple); }
+
+        /* ===== KPI CARD ===== */
+        .kpi-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-md); padding: 18px;
+            transition: all .25s ease;
+        }
+        .kpi-card:hover { box-shadow: var(--shadow-sm); }
+        .kpi-card.clickable { cursor: pointer; }
+        .kpi-card.clickable:hover { border-color: var(--border-hover); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+        .kpi-label {
+            font-size: 10px; text-transform: uppercase; letter-spacing: 1.2px;
+            color: var(--text-muted); margin-bottom: 8px; font-weight: 600;
+        }
+        .kpi-value { font-size: 26px; font-weight: 800; letter-spacing: -1px; line-height: 1; }
+        .kpi-sub { font-size: 11px; color: var(--text-secondary); margin-top: 6px; font-weight: 500; }
+        .kpi-sub.positive { color: var(--accent-green); }
+
+        /* ===== STATUS & SCORE ===== */
+        .status {
+            display: inline-flex; align-items: center; gap: 4px;
+            padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 600;
+        }
+        .status-dry-hire { background: var(--accent-green-dim); color: var(--accent-green); }
+        .status-external { background: var(--accent-blue-dim); color: var(--accent-blue); }
+        .status-in-house { background: var(--accent-red-dim); color: var(--accent-red); }
+        .status-unknown { background: var(--bg-subtle); color: var(--text-muted); }
+        .score-indicator { display: inline-flex; padding: 3px 8px; border-radius: 6px; font-size: 11px; font-weight: 700; }
+        .score-hot { background: var(--accent-green-dim); color: var(--accent-green); }
+        .score-warm { background: var(--accent-amber-dim); color: var(--accent-amber); }
+        .score-cold { background: var(--bg-subtle); color: var(--text-muted); }
+
+        /* ===== THREAT LEVELS ===== */
+        .threat-high { background: var(--accent-red-dim); color: var(--accent-red); padding: 3px 8px; border-radius: 5px; font-size: 10px; font-weight: 700; text-transform: uppercase; }
+        .threat-med-high { background: rgba(234,88,12,.08); color: #EA580C; padding: 3px 8px; border-radius: 5px; font-size: 10px; font-weight: 700; text-transform: uppercase; }
+        .threat-medium { background: var(--accent-amber-dim); color: var(--accent-amber); padding: 3px 8px; border-radius: 5px; font-size: 10px; font-weight: 700; text-transform: uppercase; }
+        .threat-low-med { background: var(--accent-blue-dim); color: var(--accent-blue); padding: 3px 8px; border-radius: 5px; font-size: 10px; font-weight: 700; text-transform: uppercase; }
+        .threat-low { background: var(--accent-green-dim); color: var(--accent-green); padding: 3px 8px; border-radius: 5px; font-size: 10px; font-weight: 700; text-transform: uppercase; }
+        .threat-minimal { background: var(--bg-subtle); color: var(--text-muted); padding: 3px 8px; border-radius: 5px; font-size: 10px; font-weight: 700; text-transform: uppercase; }
+        .threat-dissolved { background: var(--accent-red-dim); color: var(--accent-red); padding: 3px 8px; border-radius: 5px; font-size: 10px; font-weight: 700; text-transform: uppercase; border: 1px solid rgba(229,72,77,.2); }
+        .tier-premium { color: var(--accent-gold); font-weight: 600; }
+        .tier-mid { color: var(--accent-blue); font-weight: 600; }
+        .tier-budget { color: var(--accent-red); font-weight: 600; }
+
+        /* ===== DATA TABLE ===== */
+        .data-table { width: 100%; border-collapse: separate; border-spacing: 0; }
+        .data-table th {
+            text-align: left; padding: 10px 12px; font-size: 10px; font-weight: 600;
+            color: var(--text-muted); text-transform: uppercase; letter-spacing: .8px;
+            border-bottom: 1px solid var(--border); position: sticky; top: 0;
+            background: var(--bg-card); z-index: 1;
+        }
+        .data-table td {
+            padding: 11px 12px; font-size: 13px;
+            border-bottom: 1px solid var(--bg-subtle);
+            color: var(--text-secondary); vertical-align: middle;
+        }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table tr:hover td { background: rgba(0,0,0,.015); }
+        .data-table .venue-name { font-weight: 600; color: var(--text-primary); }
+        .data-table th.sortable { cursor: pointer; user-select: none; }
+        .data-table th.sortable:hover { color: var(--text-primary); }
+        .data-table th .sort-arrow { margin-left: 4px; font-size: 9px; opacity: .3; transition: opacity .2s; }
+        .data-table th .sort-arrow::after { content: '\21C5'; font-size: 10px; }
+        .data-table th.sorted .sort-arrow { opacity: 1; color: var(--accent-gold); }
+        .data-table th.sorted.asc .sort-arrow::after { content: '\25B2'; font-size: 8px; }
+        .data-table th.sorted.desc .sort-arrow::after { content: '\25BC'; font-size: 8px; }
+        .data-table tr[style*="cursor"]:hover td { background: var(--accent-gold-dim); }
+
+        /* ===== TABLE SCROLL ===== */
+        .table-scroll { max-height: 500px; overflow-y: auto; overflow-x: auto; }
+        .table-scroll::-webkit-scrollbar { width: 4px; height: 4px; }
+        .table-scroll::-webkit-scrollbar-track { background: transparent; }
+        .table-scroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+        /* ===== TABLE CONTROLS ===== */
+        .table-controls { display: flex; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; align-items: center; }
+        .table-search {
+            flex: 1; min-width: 200px; padding: 10px 14px;
+            background: var(--bg-subtle); border: 1px solid var(--border);
+            border-radius: var(--radius-sm); color: var(--text-primary);
+            font-size: 13px; font-family: inherit; outline: none; transition: all .2s;
+        }
+        .table-search:focus { border-color: var(--text-primary); box-shadow: 0 0 0 3px rgba(0,0,0,.04); background: var(--bg-card); }
+        .table-search::placeholder { color: var(--text-muted); }
+        .filter-btn {
+            padding: 8px 16px; background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-sm); color: var(--text-secondary);
+            font-size: 12px; font-weight: 500; cursor: pointer; transition: all .2s; font-family: inherit;
+        }
+        .filter-btn:hover { border-color: var(--border-hover); color: var(--text-primary); }
+        .filter-btn.active { background: var(--text-primary); border-color: var(--text-primary); color: #fff; }
+        .table-count { font-size: 12px; color: var(--text-muted); margin-left: auto; }
+
+        /* ===== LINKS ===== */
+        .ext-link { color: var(--accent-blue); text-decoration: none; font-size: 12px; }
+        .ext-link:hover { text-decoration: underline; }
+        .ig-link { color: var(--accent-purple); text-decoration: none; font-size: 12px; }
+        .ig-link:hover { text-decoration: underline; }
+
+        /* ===== CHART ===== */
+        .chart-container { position: relative; height: 260px; }
+
+        /* ===== SECTION TITLE ===== */
+        .section-title { font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 14px; }
+
+        /* ===== EXPORT / PRINT BUTTONS ===== */
+        .export-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 8px 16px; background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-sm); color: var(--text-primary);
+            font-size: 12px; font-weight: 600; cursor: pointer; transition: all .2s; font-family: inherit;
+        }
+        .export-btn:hover { background: var(--text-primary); color: #fff; border-color: var(--text-primary); }
+        .export-btn svg { width: 14px; height: 14px; }
+
+        /* ===== MODAL ===== */
+        .modal-overlay {
+            display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,.3); z-index: 200;
+            backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+        }
+        .modal-overlay.active { display: flex; align-items: flex-end; justify-content: center; }
+        .modal-sheet {
+            background: var(--bg-card); border-radius: 20px 20px 0 0;
+            width: 100%; max-width: 800px; max-height: 85vh; overflow-y: auto;
+            padding: 28px; animation: slideUp .3s cubic-bezier(.23,1,.32,1);
+            box-shadow: var(--shadow-xl); position: relative;
+        }
+        .modal-sheet::-webkit-scrollbar { width: 4px; }
+        .modal-sheet::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+        @keyframes slideUp { from { transform: translateY(100%); opacity: 0 } to { transform: translateY(0); opacity: 1 } }
+        .modal-handle { width: 36px; height: 4px; background: var(--border); border-radius: 2px; margin: 0 auto 20px; }
+        .modal-title { font-size: 20px; font-weight: 700; margin-bottom: 6px; letter-spacing: -.3px; }
+        .modal-subtitle { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6; }
+        .modal-close {
+            position: absolute; top: 18px; right: 22px;
+            background: var(--bg-subtle); border: none; border-radius: 50%;
+            width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;
+            cursor: pointer; font-size: 18px; color: var(--text-secondary); transition: all .2s;
+        }
+        .modal-close:hover { background: var(--border); color: var(--text-primary); }
+        .modal-section { margin-bottom: 18px; }
+        .modal-section-title { font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+        .modal-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--bg-subtle); font-size: 13px; }
+        .modal-row:last-child { border-bottom: none; }
+        .modal-row .label { color: var(--text-secondary); flex-shrink: 0; }
+        .modal-row .value { font-weight: 600; text-align: right; max-width: 60%; word-break: break-word; }
+
+        /* ===== GEO GRID ===== */
+        .geo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+        .geo-cell {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-sm); padding: 14px; transition: all .25s; cursor: pointer;
+        }
+        .geo-cell:hover { border-color: var(--border-hover); box-shadow: var(--shadow-sm); transform: translateY(-2px); }
+        .geo-cell .geo-region { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+        .geo-cell .geo-score {
+            font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px;
+            display: inline-block; margin-bottom: 6px; text-transform: uppercase; letter-spacing: .5px;
+        }
+        .geo-cell .geo-detail { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+        .geo-high { background: var(--accent-green-dim); color: var(--accent-green); border-left: 3px solid var(--accent-green); }
+        .geo-med { background: var(--accent-amber-dim); color: var(--accent-amber); }
+        .geo-low { background: var(--bg-subtle); color: var(--text-muted); }
+
+        /* ===== INSIGHT CARD ===== */
+        .insight-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 22px; transition: all .25s; cursor: pointer;
+        }
+        .insight-card:hover { border-color: var(--border-hover); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+        .insight-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+        .insight-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+        .insight-card .stat { font-size: 30px; font-weight: 800; margin-bottom: 6px; letter-spacing: -1.5px; }
+
+        /* ===== OPPORTUNITY BANNER ===== */
+        .opportunity-banner {
+            background: var(--bg-card); border: 1px solid var(--accent-gold);
+            border-left: 4px solid var(--accent-gold); border-radius: var(--radius-lg);
+            padding: 22px; margin-bottom: 14px; position: relative; cursor: pointer; transition: all .2s;
+        }
+        .opportunity-banner:hover { box-shadow: var(--shadow-md); }
+        .opportunity-banner .opp-tag {
+            position: absolute; top: 14px; right: 14px; font-size: 10px; font-weight: 700;
+            letter-spacing: 1px; color: var(--accent-gold); background: var(--accent-gold-dim);
+            padding: 4px 10px; border-radius: 4px;
+        }
+        .opportunity-banner h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+        .opportunity-banner p { font-size: 13px; color: var(--text-secondary); line-height: 1.7; max-width: 80%; }
+        .orphaned-clients { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
+        .orphaned-client { background: var(--bg-subtle); border: 1px solid var(--border); border-radius: 6px; padding: 5px 12px; font-size: 12px; font-weight: 600; }
+
+        /* ===== REVENUE TIER ===== */
+        .revenue-tier { background: var(--bg-subtle); border-radius: var(--radius-sm); padding: 16px; text-align: center; }
+        .revenue-tier .tier-value { font-size: 22px; font-weight: 800; letter-spacing: -1px; }
+        .revenue-tier .tier-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; font-weight: 600; }
+        .revenue-tier .tier-detail { font-size: 11px; color: var(--text-secondary); margin-top: 4px; }
+
+        /* ===== DATA QUALITY BAR ===== */
+        .data-quality-bar {
+            display: flex; align-items: center; gap: 20px;
+            padding: 10px 18px; background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-md); margin-bottom: 14px; font-size: 12px; flex-wrap: wrap;
+        }
+        .dq-item { display: flex; align-items: center; gap: 6px; }
+        .dq-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+        .dq-green { background: var(--accent-green); }
+        .dq-amber { background: var(--accent-amber); }
+        .dq-red { background: var(--accent-red); }
+
+        /* ===== CMD+K SEARCH ===== */
+        .cmdk-overlay {
+            display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,.4); z-index: 300;
+            backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+            justify-content: center; padding-top: 120px;
+        }
+        .cmdk-overlay.active { display: flex; }
+        .cmdk-box {
+            background: var(--bg-card); border-radius: var(--radius-lg);
+            width: 100%; max-width: 580px; box-shadow: var(--shadow-xl);
+            overflow: hidden; max-height: 480px; animation: cmdkIn .2s ease;
+        }
+        @keyframes cmdkIn { from { transform: scale(.96); opacity: 0 } to { transform: scale(1); opacity: 1 } }
+        .cmdk-input {
+            width: 100%; padding: 16px 22px; border: none; outline: none;
+            font-size: 16px; font-family: inherit; background: transparent;
+            border-bottom: 1px solid var(--border); color: var(--text-primary);
+        }
+        .cmdk-input::placeholder { color: var(--text-muted); }
+        .cmdk-results { max-height: 360px; overflow-y: auto; padding: 8px; }
+        .cmdk-item {
+            padding: 11px 14px; border-radius: var(--radius-sm); cursor: pointer;
+            display: flex; justify-content: space-between; align-items: center; transition: background .15s;
+        }
+        .cmdk-item:hover { background: var(--bg-subtle); }
+        .cmdk-item-name { font-size: 14px; font-weight: 500; }
+        .cmdk-item-meta { font-size: 12px; color: var(--text-muted); }
+        .cmdk-item-type { font-size: 10px; padding: 2px 8px; border-radius: 4px; background: var(--bg-subtle); color: var(--text-muted); font-weight: 600; text-transform: uppercase; }
+        .cmdk-empty { padding: 24px; text-align: center; color: var(--text-muted); font-size: 13px; }
+        .cmdk-hint { padding: 10px 14px; border-top: 1px solid var(--border); font-size: 11px; color: var(--text-muted); text-align: center; }
+
+        /* ===== CTA CARD ===== */
+        .cta-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 26px; margin-bottom: 14px;
+            border-top: 3px solid var(--text-primary);
+        }
+        .cta-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+        .cta-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 8px; }
+
+        /* ===== PIPELINE CARD ===== */
+        .pipeline-stage {
+            display: flex; align-items: center; gap: 12px;
+            padding: 14px 16px; background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius-sm); margin-bottom: 8px; transition: all .2s;
+        }
+        .pipeline-stage:hover { border-color: var(--border-hover); box-shadow: var(--shadow-sm); }
+        .pipeline-count {
+            font-size: 22px; font-weight: 800; min-width: 48px; text-align: center;
+            letter-spacing: -1px;
+        }
+        .pipeline-info { flex: 1; }
+        .pipeline-label { font-size: 13px; font-weight: 600; }
+        .pipeline-meta { font-size: 11px; color: var(--text-secondary); }
+        .pipeline-bar {
+            height: 4px; border-radius: 2px; background: var(--bg-subtle);
+            overflow: hidden; margin-top: 6px;
+        }
+        .pipeline-bar-fill { height: 100%; border-radius: 2px; transition: width .8s ease; }
+
+        /* ===== COMPETITOR COMPARISON ===== */
+        .comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; }
+        .comparison-table th {
+            text-align: center; padding: 10px 8px; font-size: 10px; font-weight: 600;
+            color: var(--text-muted); text-transform: uppercase; letter-spacing: .8px;
+            border-bottom: 1px solid var(--border); background: var(--bg-card);
+        }
+        .comparison-table th:first-child { text-align: left; }
+        .comparison-table td {
+            padding: 10px 8px; font-size: 12px; text-align: center;
+            border-bottom: 1px solid var(--bg-subtle); color: var(--text-secondary);
+        }
+        .comparison-table td:first-child { text-align: left; font-weight: 500; color: var(--text-primary); font-size: 13px; }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .comp-check { color: var(--accent-green); font-weight: 700; font-size: 16px; }
+        .comp-cross { color: var(--accent-red); font-size: 14px; opacity: .5; }
+        .comp-partial { color: var(--accent-amber); font-size: 14px; }
+        .comp-hht td { background: var(--accent-gold-dim); }
+        .comp-hht td:first-child { color: var(--accent-gold); font-weight: 700; }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            text-align: center; padding: 36px 48px 28px;
+            color: var(--text-muted); font-size: 12px;
+            border-top: 1px solid var(--border); margin-top: 20px;
+        }
+        .footer-brand { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px; }
+        .footer-brand .footer-logo {
+            width: 24px; height: 24px; background: var(--text-primary);
+            border-radius: 6px; display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 8px; color: #fff;
+        }
+        .footer-brand span { font-size: 14px; font-weight: 600; color: var(--text-secondary); }
+
+        /* ===== MOBILE NAV ===== */
+        .mobile-nav { display: none; }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes cardEnter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+        .section.entering .card, .section.entering .kpi-card, .section.entering .insight-card,
+        .section.entering .opportunity-banner, .section.entering .data-quality-bar,
+        .section.entering .cta-card, .section.entering .pipeline-stage {
+            animation: cardEnter .4s ease both;
+        }
+        .section.entering .bento-grid > :nth-child(1) { animation-delay: 0s; }
+        .section.entering .bento-grid > :nth-child(2) { animation-delay: .05s; }
+        .section.entering .bento-grid > :nth-child(3) { animation-delay: .1s; }
+        .section.entering .bento-grid > :nth-child(4) { animation-delay: .15s; }
+        .section.entering .bento-grid > :nth-child(5) { animation-delay: .2s; }
+
+        /* ===== PRINT STYLES ===== */
+        @media print {
+            .header { position: static; background: #fff; backdrop-filter: none; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+            .nav, .mobile-nav, .cmdk-overlay, .modal-overlay, .export-btn, .icon-btn, .header-actions { display: none !important; }
+            .section { display: block !important; opacity: 1 !important; transform: none !important; page-break-before: auto; }
+            .card, .kpi-card, .insight-card, .opportunity-banner { break-inside: avoid; box-shadow: none !important; border: 1px solid #ddd !important; animation: none !important; transform: none !important; }
+            .chart-container { height: 180px; page-break-inside: avoid; }
+            .table-scroll { max-height: none !important; overflow: visible !important; }
+            body { background: #fff; padding-bottom: 0; font-size: 11px; }
+            .bento-5 { grid-template-columns: repeat(5, 1fr) !important; }
+            .bento-4 { grid-template-columns: repeat(4, 1fr) !important; }
+            .bento-3 { grid-template-columns: repeat(3, 1fr) !important; }
+            .bento-2 { grid-template-columns: 1fr 1fr !important; }
+            @page { margin: 1cm; }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1200px) {
+            .bento-5 { grid-template-columns: repeat(3, 1fr); }
+            .bento-4 { grid-template-columns: repeat(2, 1fr); }
+            .bento-3, .bento-2 { grid-template-columns: 1fr; }
+            .header { padding: 14px 24px; }
+            .nav { padding: 0 24px; }
+            .main { padding: 20px 24px; }
+        }
+        @media (max-width: 768px) {
+            .header { padding: 12px 16px; flex-direction: column; gap: 10px; align-items: flex-start; }
+            .header-right { width: 100%; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+            .main { padding: 14px 16px; }
+            .nav { display: none; }
+            .bento-5, .bento-4 { grid-template-columns: 1fr 1fr; }
+            .bento-3, .bento-2 { grid-template-columns: 1fr; }
+            .kpi-value { font-size: 20px; }
+            .card { padding: 16px; }
+            .chart-container { height: 200px; }
+            .geo-grid { grid-template-columns: 1fr 1fr; }
+            .data-table { min-width: 600px; }
+            .modal-sheet { padding: 22px 16px; max-width: 100%; border-radius: 16px 16px 0 0; }
+            .mobile-nav {
+                display: flex; position: fixed; bottom: 0; left: 0; right: 0;
+                background: rgba(255,255,255,.95); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+                border-top: 1px solid var(--border); z-index: 150;
+                justify-content: space-around;
+                padding: 6px 0 max(6px, env(safe-area-inset-bottom));
+            }
+            .mobile-nav-item {
+                display: flex; flex-direction: column; align-items: center; gap: 2px;
+                padding: 6px 10px; font-size: 9px; font-weight: 500; color: var(--text-muted);
+                border: none; background: none; cursor: pointer; font-family: inherit;
+                min-height: 44px; min-width: 44px;
+            }
+            .mobile-nav-item.active { color: var(--text-primary); font-weight: 700; }
+            .mobile-nav-item svg { width: 20px; height: 20px; }
+            body { padding-bottom: 72px; }
+            .data-quality-bar { gap: 10px; }
+            .opportunity-banner p { max-width: 100%; }
+        }
+        @media (max-width: 480px) {
+            .bento-5, .bento-4 { grid-template-columns: 1fr; }
+            .geo-grid { grid-template-columns: 1fr; }
+            .header-right { gap: 6px; }
+            .header-stat .value { font-size: 15px; }
+        }
+        @media (hover: none) {
+            .card.clickable:active, .kpi-card.clickable:active, .insight-card:active,
+            .geo-cell:active, .opportunity-banner:active { transform: scale(.98); opacity: .9; }
+        }
+        @media (max-width: 1000px) { .moat-grid { grid-template-columns: 1fr 1fr !important; } }
+        @media (max-width: 768px) {
+            .calc-grid { grid-template-columns: 1fr 1fr !important; }
+            .steps-grid { grid-template-columns: 1fr !important; }
+            .rev-tiers { grid-template-columns: 1fr !important; }
+        }
+        @media (max-width: 480px) {
+            .calc-grid { grid-template-columns: 1fr !important; }
+            .moat-grid { grid-template-columns: 1fr !important; }
+        }
+
+        /* ===== RANGE SLIDER ===== */
+        input[type=range] { -webkit-appearance: none; appearance: none; height: 6px; background: var(--border); border-radius: 3px; outline: none; transition: background .15s; width: 100%; }
+        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--text-primary); cursor: pointer; border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,.2); }
+        input[type=range]::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: var(--text-primary); cursor: pointer; border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,.2); }
+    </style>
+</head>
+<body>
+    <!-- SKIP NAV (Accessibility) -->
+    <a href="#main-content" class="sr-only" style="position:fixed;top:0;left:0;z-index:999;padding:8px 16px;background:#fff;">Skip to content</a>
+
+    <!-- HEADER -->
+    <header class="header" role="banner">
+        <div class="header-left">
+            <div class="logo-mark" aria-hidden="true">HHT</div>
+            <div class="header-title">
+                <h1>Heads, Hearts &amp; Tails</h1>
+                <span class="tagline">Intelligence Platform</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="header-stat"><div class="value">372</div><div class="label">Verified Venues</div></div>
+            <div class="header-stat"><div class="value">58</div><div class="label">Competitors</div></div>
+            <div class="header-stat">
+                <div class="label" title="Wedding peak season starts May. Book now for spring.">Peak Season In</div>
+                <div class="value" id="peakCountdown">--</div>
+            </div>
+            <div class="freshness-badge" role="status">Updated 23 Mar 2026</div>
+            <div class="header-actions">
+                <button class="icon-btn" onclick="toggleCmdK()" type="button" aria-label="Search venues and competitors">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <span class="search-shortcut" style="opacity:.6">Cmd+K</span>
+                </button>
+                <button class="icon-btn" onclick="printDashboard()" type="button" aria-label="Print or export dashboard">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                </button>
+                <button class="icon-btn" onclick="exportFullReport()" type="button" aria-label="Download full CSV report">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <button class="nav-item active" data-section="overview" type="button">Overview</button>
+        <button class="nav-item" data-section="pipeline" type="button">Lead Pipeline <span class="nav-count">79</span></button>
+        <button class="nav-item" data-section="venues" type="button">Venue Database <span class="nav-count">372</span></button>
+        <button class="nav-item" data-section="competitors" type="button">Competitors <span class="nav-count">58</span></button>
+        <button class="nav-item" data-section="comparison" type="button">Comparison</button>
+        <button class="nav-item" data-section="market" type="button">Market Intel</button>
+        <button class="nav-item" data-section="opportunities" type="button">Opportunities</button>
+    </nav>
+
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+        <button class="mobile-nav-item active" data-section="overview" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Overview</button>
+        <button class="mobile-nav-item" data-section="pipeline" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Pipeline</button>
+        <button class="mobile-nav-item" data-section="venues" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Venues</button>
+        <button class="mobile-nav-item" data-section="competitors" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v6"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>Rivals</button>
+        <button class="mobile-nav-item" data-section="opportunities" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>Opps</button>
+    </div>
+
+    <!-- CMD+K OVERLAY -->
+    <div class="cmdk-overlay" id="cmdkOverlay" role="dialog" aria-label="Search">
+        <div class="cmdk-box">
+            <input class="cmdk-input" id="cmdkInput" type="text" placeholder="Search venues, competitors..." autocomplete="off" aria-label="Search query">
+            <div class="cmdk-results" id="cmdkResults" role="listbox"></div>
+            <div class="cmdk-hint">Esc to close &middot; Cmd+K to open</div>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="modalOverlay" role="dialog" aria-label="Details">
+        <div class="modal-sheet">
+            <div class="modal-handle"></div>
+            <button class="modal-close" id="modalClose" type="button" aria-label="Close">&times;</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main" id="main-content">
+        <!-- ===== OVERVIEW ===== -->
+        <div class="section active entering" id="overview">
+            <div class="data-quality-bar" role="status" aria-label="Data quality summary">
+                <div class="dq-item"><div class="dq-dot dq-green"></div><strong>372</strong>&nbsp;verified venues</div>
+                <div class="dq-item"><div class="dq-dot dq-green"></div><strong>255</strong>&nbsp;DRY_HIRE</div>
+                <div class="dq-item"><div class="dq-dot dq-amber"></div><strong>79</strong>&nbsp;with email (21%)</div>
+                <div class="dq-item"><div class="dq-dot dq-amber"></div><strong>139</strong>&nbsp;with phone (37%)</div>
+                <div class="dq-item"><div class="dq-dot dq-green"></div><strong>58</strong>&nbsp;competitors</div>
+                <div class="dq-item" style="margin-left:auto"><span style="font-size:10px;color:var(--text-muted)">Source: Guides for Brides, Google Maps, Hitched, Companies House</span></div>
+            </div>
+            <div class="bento-grid bento-5">
+                <div class="kpi-card clickable" onclick="switchTab('venues')" tabindex="0" role="button" aria-label="372 Verified Venues - click to view"><div class="kpi-label">Verified Venues</div><div class="kpi-value">372</div><div class="kpi-sub positive">4 data sources</div></div>
+                <div class="kpi-card clickable" onclick="switchTab('venues')" tabindex="0" role="button"><div class="kpi-label">DRY HIRE Gold</div><div class="kpi-value" style="color:var(--accent-green)">255</div><div class="kpi-sub positive">Accept external bar</div></div>
+                <div class="kpi-card clickable" onclick="showGeoModal()" tabindex="0" role="button"><div class="kpi-label">Counties</div><div class="kpi-value" style="color:var(--accent-blue)">22</div><div class="kpi-sub">Click for breakdown</div></div>
+                <div class="kpi-card clickable" onclick="switchTab('competitors')" tabindex="0" role="button"><div class="kpi-label">Competitors</div><div class="kpi-value">58</div><div class="kpi-sub">16 premium, 37 mid, 4 budget</div></div>
+                <div class="kpi-card clickable" onclick="switchTab('pipeline')" tabindex="0" role="button"><div class="kpi-label">Campaign-Ready</div><div class="kpi-value" style="color:var(--accent-gold)">79</div><div class="kpi-sub positive">Verified email</div></div>
+            </div>
+            <div class="bento-grid bento-2">
+                <div class="card">
+                    <div class="card-header"><div class="card-title">Intelligence Summary</div><span class="card-badge badge-gold">March 2026</span></div>
+                    <p style="font-size:13px;color:var(--text-secondary);line-height:1.8;margin-bottom:12px">We have identified <strong style="color:var(--text-primary)">372 wedding and event venues</strong> across 22 counties. <strong style="color:var(--accent-green)">255 are DRY_HIRE</strong> and <strong style="color:var(--accent-blue)">116 are EXTERNAL_OK</strong>.</p>
+                    <p style="font-size:13px;color:var(--text-secondary);line-height:1.8;margin-bottom:12px">Only 6 of 58 competitors serve the Cotswolds &mdash; none at premium tier. The Cocktail Service dissolved April 2025, leaving orphaned clients including BBC Good Food Show, Pub in the Park, and Blenheim Palace.</p>
+                    <p style="font-size:13px;color:var(--text-secondary);line-height:1.8"><strong style="color:var(--text-primary)">79 venues</strong> have verified email addresses and are campaign-ready. Peak wedding season begins in <strong id="peakSummary">--</strong>.</p>
+                </div>
+                <div class="card">
+                    <div class="card-header"><div class="card-title">Revenue Model</div><span class="card-badge badge-amber">Projection</span></div>
+                    <p style="font-size:11px;color:var(--text-muted);margin-bottom:14px;text-transform:uppercase;letter-spacing:.5px">Based on 79 email-verified leads. Modelled opportunity, not pipeline.</p>
+                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:14px" class="rev-tiers">
+                        <div class="revenue-tier"><div class="tier-label">Conservative (6%)</div><div class="tier-value" style="color:var(--accent-amber)">&pound;35,250</div><div class="tier-detail">~5 bookings</div></div>
+                        <div class="revenue-tier" style="border:2px solid var(--text-primary)"><div class="tier-label">Expected (10%)</div><div class="tier-value">&pound;60,000</div><div class="tier-detail">~8 bookings</div></div>
+                        <div class="revenue-tier"><div class="tier-label">Optimistic (15%)</div><div class="tier-value" style="color:var(--accent-green)">&pound;90,000</div><div class="tier-detail">~12 bookings</div></div>
+                    </div>
+                    <div style="padding:10px;background:var(--bg-subtle);border-radius:var(--radius-sm);font-size:12px;color:var(--text-secondary);line-height:1.6"><strong>Assumptions:</strong> 79 leads, avg &pound;7,500, Hitched 2025 conversion rates. Excludes festival/corporate.</div>
+                </div>
+            </div>
+            <div class="bento-grid bento-2">
+                <div class="card"><div class="card-header"><div class="card-title">Lead Quality</div><span class="card-badge badge-green">Real Data</span></div><div class="chart-container"><canvas id="leadQualityChart" aria-label="Lead quality bar chart"></canvas></div></div>
+                <div class="card"><div class="card-header"><div class="card-title">Venues by County</div><span class="card-badge badge-blue">Top 12</span></div><div class="chart-container"><canvas id="countyChart" aria-label="Venues by county chart"></canvas></div></div>
+            </div>
+            <div class="bento-grid bento-2">
+                <div class="card"><div class="card-header"><div class="card-title">Bar Policy</div></div><div class="chart-container"><canvas id="policyChart" aria-label="Bar policy doughnut chart"></canvas></div></div>
+                <div class="card"><div class="card-header"><div class="card-title">Competitive Density</div><span class="card-badge badge-purple">Market Gap</span></div><div class="chart-container"><canvas id="compDensityChart" aria-label="Competitive density chart"></canvas></div></div>
+            </div>
+        </div>
+
+        <!-- ===== LEAD PIPELINE ===== -->
+        <div class="section" id="pipeline">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:10px">
+                <div class="section-title" style="margin-bottom:0">Lead Pipeline</div>
+                <div style="display:flex;gap:10px;align-items:center">
+                    <span class="freshness-badge">Updated 23 Mar 2026</span>
+                    <button class="export-btn" onclick="exportCSV()" type="button" aria-label="Export pipeline leads to CSV">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Export CSV
+                    </button>
+                </div>
+            </div>
+
+            <div class="bento-grid bento-4" style="margin-bottom:14px">
+                <div class="kpi-card"><div class="kpi-label">Total Leads</div><div class="kpi-value">372</div><div class="kpi-sub">Across 22 counties</div></div>
+                <div class="kpi-card"><div class="kpi-label">Qualified (DRY_HIRE)</div><div class="kpi-value" style="color:var(--accent-green)">255</div><div class="kpi-sub positive">68% qualification rate</div></div>
+                <div class="kpi-card"><div class="kpi-label">Email Verified</div><div class="kpi-value" style="color:var(--accent-gold)">79</div><div class="kpi-sub">Ready for outreach</div></div>
+                <div class="kpi-card"><div class="kpi-label">Expected Revenue</div><div class="kpi-value">&pound;60K</div><div class="kpi-sub positive">10% conversion model</div></div>
+            </div>
+
+            <!-- Pipeline Stages -->
+            <div class="card" style="margin-bottom:14px">
+                <div class="card-header"><div class="card-title">Pipeline Stages</div><span class="card-badge badge-gold">7-Stage Funnel</span></div>
+                <div id="pipelineStages"></div>
+            </div>
+
+            <!-- Priority Leads -->
+            <div class="card" style="margin-bottom:14px">
+                <div class="card-header"><div class="card-title">Priority Leads</div><span class="card-badge badge-green">Score 40+</span></div>
+                <p style="font-size:12px;color:var(--text-secondary);margin-bottom:12px">Top-scored venues from the enriched database. Click any venue for full details.</p>
+                <div class="table-scroll" style="max-height:400px">
+                    <table class="data-table" id="priorityTable">
+                        <thead><tr>
+                            <th>Score</th><th>Venue</th><th>County</th><th>Policy</th><th>Email</th><th>Action</th>
+                        </tr></thead>
+                        <tbody id="priorityBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="bento-grid bento-2">
+                <div class="card"><div class="card-header"><div class="card-title">Lead Score Distribution</div></div><div class="chart-container"><canvas id="scoreDistChart" aria-label="Lead score distribution chart"></canvas></div></div>
+                <div class="card"><div class="card-header"><div class="card-title">Outreach Timeline</div><span class="card-badge badge-blue">30-Day Plan</span></div><div class="chart-container"><canvas id="outreachChart" aria-label="Outreach timeline chart"></canvas></div></div>
+            </div>
+        </div>
+
+        <!-- ===== VENUE DATABASE ===== -->
+        <div class="section" id="venues">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:10px">
+                <div class="section-title" style="margin-bottom:0">Venue Database</div>
+                <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+                    <span style="font-size:11px;color:var(--text-muted)">Showing top-priority sample from 372 verified venues</span>
+                    <span class="freshness-badge">Updated 23 Mar 2026</span>
+                    <button class="export-btn" onclick="exportCSV()" type="button" aria-label="Export venues to CSV">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Export CSV
+                    </button>
+                </div>
+            </div>
+            <div class="data-quality-bar">
+                <div class="dq-item"><div class="dq-dot dq-green"></div><strong>372</strong>&nbsp;total verified</div>
+                <div class="dq-item"><div class="dq-dot dq-green"></div><strong>255</strong>&nbsp;DRY_HIRE</div>
+                <div class="dq-item"><div class="dq-dot dq-green"></div><strong>116</strong>&nbsp;EXTERNAL_OK</div>
+                <div class="dq-item"><div class="dq-dot dq-red"></div><strong>1</strong>&nbsp;IN_HOUSE</div>
+                <div class="dq-item"><div class="dq-dot dq-amber"></div><strong>79</strong>&nbsp;email</div>
+                <div class="dq-item"><div class="dq-dot dq-amber"></div><strong>139</strong>&nbsp;phone</div>
+            </div>
+            <div class="card" style="margin-bottom:14px">
+                <div class="table-controls">
+                    <input type="text" class="table-search" id="venueSearch" placeholder="Search venue, county, email..." aria-label="Filter venues">
+                    <button class="filter-btn active" onclick="filterV('all',this)" type="button">All</button>
+                    <button class="filter-btn" onclick="filterV('DRY_HIRE',this)" type="button">Dry Hire</button>
+                    <button class="filter-btn" onclick="filterV('EXTERNAL_OK',this)" type="button">External OK</button>
+                    <button class="filter-btn" onclick="filterV('IN_HOUSE_ONLY',this)" type="button">In-House</button>
+                    <span class="table-count" id="vtc" aria-live="polite">Showing 49</span>
+                </div>
+                <div class="table-scroll" style="max-height:600px">
+                    <table class="data-table" id="vt">
+                        <thead><tr>
+                            <th class="sortable" onclick="sortV(0)" data-col="0">Score <span class="sort-arrow"></span></th>
+                            <th class="sortable" onclick="sortV(1)" data-col="1">Venue <span class="sort-arrow"></span></th>
+                            <th class="sortable" onclick="sortV(2)" data-col="2">County <span class="sort-arrow"></span></th>
+                            <th>Policy</th><th>Email</th><th>Phone</th><th>Contact</th><th>Website</th>
+                        </tr></thead>
+                        <tbody id="vtb"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="bento-grid bento-2">
+                <div class="card"><div class="card-header"><div class="card-title">Policy Split</div></div><div class="chart-container"><canvas id="vPolicyChart" aria-label="Venue policy split chart"></canvas></div></div>
+                <div class="card"><div class="card-header"><div class="card-title">Top Counties</div></div><div class="chart-container"><canvas id="vCountyChart" aria-label="Top counties chart"></canvas></div></div>
+            </div>
+        </div>
+
+        <!-- ===== COMPETITORS ===== -->
+        <div class="section" id="competitors">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px">
+                <div class="section-title" style="margin-bottom:0">Competitive Landscape &mdash; 58 Companies</div>
+                <span class="freshness-badge">Updated 23 Mar 2026</span>
+            </div>
+            <div class="opportunity-banner" onclick="showOrphanModal()" tabindex="0" role="button" aria-label="View orphaned client opportunity">
+                <div class="opp-tag">OPPORTUNITY</div>
+                <h3>The Cocktail Service &mdash; Dissolved April 2025</h3>
+                <p>Admin Jan 2024, dissolved Apr 2025. 17K followers, &pound;105K assets, clients: Red Bull, Google, Facebook. Click for orphaned client analysis.</p>
+                <div class="orphaned-clients">
+                    <span class="orphaned-client">BBC Good Food Show</span>
+                    <span class="orphaned-client">Pub in the Park</span>
+                    <span class="orphaned-client">Blenheim Palace</span>
+                    <span class="orphaned-client">Red Bull UK</span>
+                    <span class="orphaned-client">Google Events</span>
+                </div>
+            </div>
+            <div class="bento-grid bento-5">
+                <div class="kpi-card"><div class="kpi-label">Premium</div><div class="kpi-value" style="color:var(--accent-gold)">16</div><div class="kpi-sub">&pound;60-100+/head</div></div>
+                <div class="kpi-card"><div class="kpi-label">Mid</div><div class="kpi-value" style="color:var(--accent-blue)">37</div><div class="kpi-sub">&pound;25-45/head</div></div>
+                <div class="kpi-card"><div class="kpi-label">Budget</div><div class="kpi-value" style="color:var(--accent-red)">4</div><div class="kpi-sub">&pound;5-30/head</div></div>
+                <div class="kpi-card"><div class="kpi-label">Dissolved</div><div class="kpi-value" style="color:var(--accent-red)">1</div><div class="kpi-sub">Land grab</div></div>
+                <div class="kpi-card"><div class="kpi-label">Overall Threat</div><div class="kpi-value" style="font-size:16px">LOW-MED</div><div class="kpi-sub positive">Fragmented market</div></div>
+            </div>
+            <div class="card" style="margin-bottom:14px">
+                <div class="card-header"><div class="card-title">Threat Matrix</div><span class="card-badge badge-red">Watch List</span></div>
+                <div class="table-scroll">
+                    <table class="data-table">
+                        <thead><tr><th>Company</th><th>Threat</th><th>Location</th><th>Strength</th><th>HHT Opportunity</th></tr></thead>
+                        <tbody>
+                            <tr style="cursor:pointer" onclick="showCompModal('twist')"><td class="venue-name">Twist Events</td><td><span class="threat-high">High</span></td><td>London / Nationwide</td><td>3,000+ events, 50 Best Bars</td><td>Broad focus dilutes expertise</td></tr>
+                            <tr style="cursor:pointer" onclick="showCompModal('quirky')"><td class="venue-name">Quirky Group</td><td><span class="threat-med-high">Med-High</span></td><td>UK-wide</td><td>Brand activations, promo tours</td><td>Production, not craft</td></tr>
+                            <tr style="cursor:pointer" onclick="showCompModal('cotswold')"><td class="venue-name">Cotswold Bar Co</td><td><span class="threat-medium">Medium</span></td><td>Cheltenham, Cotswolds</td><td>Local presence</td><td>Mid-tier, no premium creds</td></tr>
+                            <tr style="cursor:pointer" onclick="showCompModal('oxford')"><td class="venue-name">Oxford Bar Co</td><td><span class="threat-medium">Medium</span></td><td>Oxford</td><td>Local presence</td><td>Regional, no Tier 1 brands</td></tr>
+                            <tr style="opacity:.6;cursor:pointer" onclick="showOrphanModal()"><td class="venue-name" style="text-decoration:line-through">The Cocktail Service</td><td><span class="threat-dissolved">Dissolved</span></td><td>London, Oxford</td><td>Was: 17K followers</td><td style="color:var(--accent-gold);font-weight:600">Clients orphaned</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card" style="margin-bottom:14px">
+                <div class="card-header"><div class="card-title">All 58 Companies</div><span class="card-badge badge-gold">Complete</span></div>
+                <div class="table-controls">
+                    <input type="text" class="table-search" id="cs" placeholder="Search company, location..." aria-label="Filter competitors">
+                    <button class="filter-btn active" onclick="filterC('all',this)" type="button">All</button>
+                    <button class="filter-btn" onclick="filterC('Premium',this)" type="button">Premium</button>
+                    <button class="filter-btn" onclick="filterC('Mid',this)" type="button">Mid</button>
+                    <button class="filter-btn" onclick="filterC('Budget',this)" type="button">Budget</button>
+                    <span class="table-count" id="ctc" aria-live="polite">58</span>
+                </div>
+                <div class="table-scroll" style="max-height:500px">
+                    <table class="data-table" id="ct">
+                        <thead><tr>
+                            <th class="sortable" onclick="sortC(0)" data-col="0"># <span class="sort-arrow"></span></th>
+                            <th class="sortable" onclick="sortC(1)" data-col="1">Company <span class="sort-arrow"></span></th>
+                            <th class="sortable" onclick="sortC(2)" data-col="2">Tier <span class="sort-arrow"></span></th>
+                            <th>Threat</th>
+                            <th class="sortable" onclick="sortC(4)" data-col="4">Location <span class="sort-arrow"></span></th>
+                            <th>Website</th><th>Instagram</th>
+                        </tr></thead>
+                        <tbody id="ctb"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="bento-grid bento-2" style="margin-bottom:14px">
+                <div class="card"><div class="card-header"><div class="card-title">Market Structure</div></div><div class="chart-container"><canvas id="tierChart" aria-label="Market tier structure chart"></canvas></div></div>
+                <div class="card"><div class="card-header"><div class="card-title">Geographic Density</div></div><div class="chart-container"><canvas id="geoCompChart" aria-label="Competitor geographic density chart"></canvas></div></div>
+            </div>
+            <div class="card">
+                <div class="card-header"><div class="card-title">HHT Competitive Moat</div><span class="card-badge badge-gold">Why Joe Wins</span></div>
+                <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px" class="moat-grid">
+                    <div style="padding:16px;background:var(--bg-subtle);border-radius:var(--radius-sm)"><div style="font-size:24px;font-weight:800;margin-bottom:6px">25+</div><div style="font-size:13px;font-weight:600;margin-bottom:4px">Years CV</div><div style="font-size:12px;color:var(--text-secondary);line-height:1.5">Milk &amp; Honey, Trailer Happiness, Quo Vadis. Unmatched pedigree in craft cocktails.</div></div>
+                    <div style="padding:16px;background:var(--bg-subtle);border-radius:var(--radius-sm)"><div style="font-size:24px;font-weight:800;color:var(--accent-green);margin-bottom:6px">R&amp;D</div><div style="font-size:13px;font-weight:600;margin-bottom:4px">Camden Kitchen</div><div style="font-size:12px;color:var(--text-secondary);line-height:1.5">Only mobile bar company with a dedicated R&amp;D development kitchen.</div></div>
+                    <div style="padding:16px;background:var(--bg-subtle);border-radius:var(--radius-sm)"><div style="font-size:24px;font-weight:800;color:var(--accent-blue);margin-bottom:6px">Tier 1</div><div style="font-size:13px;font-weight:600;margin-bottom:4px">Brand Clients</div><div style="font-size:12px;color:var(--text-secondary);line-height:1.5">Bombay Sapphire, Belvedere, Patr&oacute;n, Johnnie Walker, Tiffany, Louis Vuitton.</div></div>
+                    <div style="padding:16px;background:var(--bg-subtle);border-radius:var(--radius-sm)"><div style="font-size:24px;font-weight:800;color:var(--accent-purple);margin-bottom:6px">7</div><div style="font-size:13px;font-weight:600;margin-bottom:4px">Core Team</div><div style="font-size:12px;color:var(--text-secondary);line-height:1.5">Head of Studio, Events, Sr Events Mgr. Most rivals operate with 1-3 people.</div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== COMPETITOR COMPARISON ===== -->
+        <div class="section" id="comparison">
+            <div class="section-title">Competitor Comparison</div>
+            <div class="card" style="margin-bottom:14px">
+                <div class="card-header"><div class="card-title">Head-to-Head Feature Matrix</div><span class="card-badge badge-gold">HHT vs. Top 5</span></div>
+                <p style="font-size:12px;color:var(--text-secondary);margin-bottom:16px">How HHT stacks up against the five most relevant competitors on key service dimensions.</p>
+                <div class="table-scroll">
+                    <table class="comparison-table" id="comparisonTable">
+                        <thead><tr>
+                            <th>Capability</th><th>HHT</th><th>Twist Events</th><th>Quirky Group</th><th>Cotswold Bar Co</th><th>Oxford Bar Co</th><th>Mix &amp; Twist</th>
+                        </tr></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="bento-grid bento-2">
+                <div class="card">
+                    <div class="card-header"><div class="card-title">Pricing Comparison</div><span class="card-badge badge-amber">Per Head</span></div>
+                    <div class="chart-container"><canvas id="pricingCompChart" aria-label="Pricing comparison chart"></canvas></div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><div class="card-title">Service Coverage Radar</div><span class="card-badge badge-purple">Capabilities</span></div>
+                    <div class="chart-container"><canvas id="radarChart" aria-label="Service coverage radar chart"></canvas></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header"><div class="card-title">Key Differentiators</div><span class="card-badge badge-green">Why HHT Wins</span></div>
+                <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px" class="steps-grid">
+                    <div style="padding:16px;background:var(--accent-gold-dim);border-radius:var(--radius-sm);border-left:3px solid var(--accent-gold)"><div style="font-size:13px;font-weight:700;margin-bottom:6px;color:var(--accent-gold)">vs. Twist Events</div><div style="font-size:12px;color:var(--text-secondary);line-height:1.6">They do volume (3,000+ events) but spread thin across coffee carts, photobooths, branded vans. HHT offers focused craft cocktail mastery. Premium clients want authenticity, not logistics companies.</div></div>
+                    <div style="padding:16px;background:var(--accent-green-dim);border-radius:var(--radius-sm);border-left:3px solid var(--accent-green)"><div style="font-size:13px;font-weight:700;margin-bottom:6px;color:var(--accent-green)">vs. Cotswold Bar Co</div><div style="font-size:12px;color:var(--text-secondary);line-height:1.6">Local operator, 1-3 person team, mid-tier pricing (&pound;25-35/head). No Tier 1 brand credentials, no R&amp;D kitchen. HHT enters as the premium option and commands 2x pricing.</div></div>
+                    <div style="padding:16px;background:var(--accent-blue-dim);border-radius:var(--radius-sm);border-left:3px solid var(--accent-blue)"><div style="font-size:13px;font-weight:700;margin-bottom:6px;color:var(--accent-blue)">vs. Quirky Group</div><div style="font-size:12px;color:var(--text-secondary);line-height:1.6">Production-focused with themed container bars and promo tours. Strong festivals but weak on intimate craft. HHT wins on quality for clients like Tiffany, Guerlain, or luxury weddings.</div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== MARKET INTELLIGENCE ===== -->
+        <div class="section" id="market">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px">
+                <div class="section-title" style="margin-bottom:0">UK Drinks &amp; Hospitality Market</div>
+                <span class="freshness-badge">Sources verified Mar 2026</span>
+            </div>
+            <div class="bento-grid bento-4">
+                <div class="kpi-card clickable" onclick="showMM('c')" tabindex="0" role="button"><div class="kpi-label">Cocktail Mixers</div><div class="kpi-value" style="font-size:22px">$1.2B</div><div class="kpi-sub">Click for sources</div></div>
+                <div class="kpi-card clickable" onclick="showMM('g')" tabindex="0" role="button"><div class="kpi-label">CAGR to 2030</div><div class="kpi-value" style="font-size:22px">8%</div><div class="kpi-sub">Consistent growth</div></div>
+                <div class="kpi-card clickable" onclick="showMM('e')" tabindex="0" role="button"><div class="kpi-label">UK Events</div><div class="kpi-value" style="font-size:22px">&pound;86B</div><div class="kpi-sub">2025 estimated</div></div>
+                <div class="kpi-card clickable" onclick="showMM('ca')" tabindex="0" role="button"><div class="kpi-label">Event Catering</div><div class="kpi-value" style="font-size:22px">&pound;1.4B</div><div class="kpi-sub">CAGR 3.9%</div></div>
+            </div>
+            <div class="bento-grid bento-3">
+                <div class="insight-card" onclick="showIM('d')" tabindex="0" role="button"><h3>Dry Hire Trend</h3><div class="stat" style="color:var(--accent-green)">+18%</div><p>YoY growth. Click for analysis.</p></div>
+                <div class="insight-card" onclick="showIM('p')" tabindex="0" role="button"><h3>Premium Cocktails</h3><div class="stat" style="color:var(--accent-gold)">73%</div><p>of couples request bespoke menus. Up from 54% in 2023.</p></div>
+                <div class="insight-card" onclick="showIM('co')" tabindex="0" role="button"><h3>Corporate Recovery</h3><div class="stat" style="color:var(--accent-blue)">+22%</div><p>Home Counties corporate bookings surged post-pandemic.</p></div>
+            </div>
+            <div class="bento-grid bento-2">
+                <div class="card"><div class="card-header"><div class="card-title">Seasonal Patterns</div><span class="card-badge badge-purple">Peak May-Sep</span></div><div class="chart-container"><canvas id="seasonalChart" aria-label="Seasonal patterns chart"></canvas></div></div>
+                <div class="card"><div class="card-header"><div class="card-title">Market Growth</div><span class="card-badge badge-green">2021-2026F</span></div><div class="chart-container"><canvas id="marketGrowthChart" aria-label="Market growth chart"></canvas></div></div>
+            </div>
+            <div class="bento-grid bento-2">
+                <div class="card"><div class="card-header"><div class="card-title">Event Type Demand</div></div><div class="chart-container"><canvas id="eventTypeChart" aria-label="Event type demand chart"></canvas></div></div>
+                <div class="card"><div class="card-header"><div class="card-title">Pricing Tiers</div><span class="card-badge badge-gold">HHT = Premium</span></div><div class="chart-container"><canvas id="pricingChart" aria-label="Pricing tiers chart"></canvas></div></div>
+            </div>
+            <div class="card" style="margin-bottom:14px">
+                <div class="card-header"><div class="card-title">Geographic Opportunity</div><span class="card-badge badge-green">Click to explore</span></div>
+                <div class="geo-grid" id="geoGrid"></div>
+            </div>
+            <div class="card">
+                <div class="card-header"><div class="card-title">Emerging Trends</div></div>
+                <div class="table-scroll">
+                    <table class="data-table">
+                        <thead><tr><th>Trend</th><th>Impact</th><th>Relevance</th><th>Timeframe</th></tr></thead>
+                        <tbody>
+                            <tr style="cursor:pointer" onclick="showTrendModal('nolo')"><td class="venue-name">NoLo Menus</td><td><span class="status status-dry-hire">High</span></td><td>35% request no/low-alcohol options</td><td>Now</td></tr>
+                            <tr style="cursor:pointer" onclick="showTrendModal('sust')"><td class="venue-name">Sustainability</td><td><span class="status status-dry-hire">High</span></td><td>62% of FTSE 250 require carbon-neutral events</td><td>2025-27</td></tr>
+                            <tr style="cursor:pointer" onclick="showTrendModal('exp')"><td class="venue-name">Experiential Bars</td><td><span class="status status-external">Med</span></td><td>Theatrical serves command 2-3x pricing</td><td>Now</td></tr>
+                            <tr style="cursor:pointer" onclick="showTrendModal('cots')"><td class="venue-name">Cotswolds Boom</td><td><span class="status status-external">Med</span></td><td>15 new dry-hire venues since 2023</td><td>2024-26</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== OPPORTUNITIES ===== -->
+        <div class="section" id="opportunities">
+            <div class="section-title">Strategic Opportunities</div>
+            <div class="bento-grid bento-3">
+                <div class="insight-card" onclick="showOrphanModal()" tabindex="0" role="button" style="border-left:3px solid var(--accent-gold)"><div style="display:flex;justify-content:space-between;margin-bottom:8px"><h3 style="color:var(--accent-gold)">Cocktail Service Land Grab</h3><span class="card-badge badge-gold">P1</span></div><p>BBC Good Food Show, Pub in the Park, Blenheim Palace need a new premium cocktail partner. Estimated &pound;22K revenue opportunity.</p></div>
+                <div class="insight-card" onclick="showCotswoldsModal()" tabindex="0" role="button" style="border-left:3px solid var(--accent-green)"><div style="display:flex;justify-content:space-between;margin-bottom:8px"><h3 style="color:var(--accent-green)">Cotswolds Gap</h3><span class="card-badge badge-green">P1</span></div><p>Zero premium competition in UK's fastest-growing wedding region. 48 venues, only 6 mid-tier competitors.</p></div>
+                <div class="insight-card" onclick="showCorpModal()" tabindex="0" role="button" style="border-left:3px solid var(--accent-blue)"><div style="display:flex;justify-content:space-between;margin-bottom:8px"><h3 style="color:var(--accent-blue)">Corporate Corridor</h3><span class="card-badge badge-blue">P2</span></div><p>Surrey/Hampshire corporate bookings +22% YoY. 52 target venues identified.</p></div>
+            </div>
+            <div class="card" style="margin-bottom:14px">
+                <div class="card-header"><div class="card-title">Revenue Calculator</div><span class="card-badge badge-amber">Interactive</span></div>
+                <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px;margin-bottom:14px" class="calc-grid">
+                    <div><label style="font-size:11px;font-weight:600;color:var(--text-muted);display:block;margin-bottom:6px" for="cL">LEADS</label><input type="range" id="cL" min="10" max="200" value="79" oninput="uC()" aria-label="Number of leads"><div style="font-size:20px;font-weight:700;margin-top:4px" id="cLv">79</div></div>
+                    <div><label style="font-size:11px;font-weight:600;color:var(--text-muted);display:block;margin-bottom:6px" for="cCo">CONV %</label><input type="range" id="cCo" min="2" max="25" value="10" oninput="uC()" aria-label="Conversion rate"><div style="font-size:20px;font-weight:700;margin-top:4px" id="cCv">10%</div></div>
+                    <div><label style="font-size:11px;font-weight:600;color:var(--text-muted);display:block;margin-bottom:6px" for="cV">AVG VALUE</label><input type="range" id="cV" min="2000" max="15000" value="7500" step="500" oninput="uC()" aria-label="Average booking value"><div style="font-size:20px;font-weight:700;margin-top:4px" id="cVv">&pound;7,500</div></div>
+                    <div style="text-align:center;padding:10px;background:var(--bg-subtle);border-radius:var(--radius-sm);display:flex;flex-direction:column;justify-content:center"><div style="font-size:11px;font-weight:600;color:var(--text-muted);margin-bottom:6px">PROJECTED</div><div style="font-size:26px;font-weight:800" id="cR">&pound;59,250</div><div style="font-size:12px;color:var(--text-secondary);margin-top:4px" id="cB">~8 bookings</div></div>
+                </div>
+                <div style="font-size:11px;color:var(--text-muted)">Benchmarks: Cold 3-5%, Warm 8-12%, Referral 15-25%. Source: Hitched 2025, Gemini Research.</div>
+            </div>
+            <div class="cta-card">
+                <h3>Next Steps</h3>
+                <p>All data verified and sourced. Outreach templates ready. A/B testing framework built.</p>
+                <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:14px" class="steps-grid">
+                    <div style="padding:16px;background:var(--bg-subtle);border-radius:var(--radius-sm)"><div style="font-size:10px;font-weight:700;color:var(--accent-green);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">Week 1</div><div style="font-size:13px;font-weight:600;margin-bottom:4px">Orphaned Client Outreach</div><div style="font-size:12px;color:var(--text-secondary);line-height:1.5">BBC Good Food Show (Summer: 18-21 Jun NEC), Pub in the Park (Marlow: 14-17 May), Blenheim Palace preferred supplier list.</div></div>
+                    <div style="padding:16px;background:var(--bg-subtle);border-radius:var(--radius-sm)"><div style="font-size:10px;font-weight:700;color:var(--accent-blue);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">Week 2-3</div><div style="font-size:13px;font-weight:600;margin-bottom:4px">DRY_HIRE Campaign</div><div style="font-size:12px;color:var(--text-secondary);line-height:1.5">79 email-verified leads. Personalised intro emails with A/B subject lines + menu samples. Phone follow-up for score 40+ venues.</div></div>
+                    <div style="padding:16px;background:var(--bg-subtle);border-radius:var(--radius-sm)"><div style="font-size:10px;font-weight:700;color:var(--accent-gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">Month 2+</div><div style="font-size:13px;font-weight:600;margin-bottom:4px">Scale &amp; Automate</div><div style="font-size:12px;color:var(--text-secondary);line-height:1.5">Supabase backend, automated nurture sequences, weekly scraper for new venues. Target: 1,000+ leads by Q3 2026.</div></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-brand"><div class="footer-logo" aria-hidden="true">HHT</div><span>Heads, Hearts &amp; Tails</span></div>
+        <p style="font-size:11px;color:var(--text-muted);margin-bottom:4px">Prepared for Heads, Hearts &amp; Tails by Liquid</p>
+        <p style="font-size:10px;color:var(--text-muted)">Intelligence Platform &mdash; Data verified 23 March 2026 &mdash; 372 venues &middot; 22 counties &middot; 58 competitors &middot; Confidential</p>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+    /* ===== UTILITIES ===== */
+    function debounce(fn, d) { var t; return function() { var a = arguments, c = this; clearTimeout(t); t = setTimeout(function() { fn.apply(c, a) }, d) } }
+    var CI = {};
+    function CC(id, cfg) { if (CI[id]) CI[id].destroy(); var c = document.getElementById(id); if (!c) return null; var ch = new Chart(c, cfg); CI[id] = ch; return ch; }
+
+    /* ===== HEADER SCROLL SHADOW ===== */
+    window.addEventListener('scroll', function() {
+        document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    /* ===== VENUE DATA (Real, sourced from enriched database) ===== */
+    var V = [
+        {name:"Worton Hall",county:"Oxfordshire",policy:"DRY_HIRE",email:"enquiries@wortonpark.co.uk",phone:"01865882644",contact:"",score:67,website:"wortonhall.co.uk",source:"Guides for Brides"},
+        {name:"Hampshire Cricket",county:"Hampshire",policy:"DRY_HIRE",email:"",phone:"",contact:"",score:62,website:"ageasbowl.com",source:"Enrichment"},
+        {name:"The Chilterns View",county:"Oxfordshire",policy:"DRY_HIRE",email:"info@thechilternsview.co.uk",phone:"01491 836353",contact:"",score:52,website:"thechilternsview.co.uk",source:"Guides for Brides"},
+        {name:"Talton Lodge",county:"Warwickshire",policy:"DRY_HIRE",email:"",phone:"",contact:"",score:48,website:"taltonlodge.co.uk",source:"Enrichment"},
+        {name:"Farnborough International",county:"Hampshire",policy:"DRY_HIRE",email:"",phone:"",contact:"",score:48,website:"farnboroughinternational.org",source:"Enrichment"},
+        {name:"Lakeside Country Club",county:"Surrey",policy:"DRY_HIRE",email:"",phone:"",contact:"",score:48,website:"lakesidecountryclub.co.uk",source:"Enrichment"},
+        {name:"Easthampstead Park",county:"Berkshire",policy:"DRY_HIRE",email:"sales@eastpark.co.uk",phone:"01189747576",contact:"",score:43,website:"eastpark.co.uk",source:"Multiple"},
+        {name:"Hatfield House",county:"Hertfordshire",policy:"DRY_HIRE",email:"",phone:"",contact:"",score:43,website:"hatfield-house.co.uk",source:"Multiple"},
+        {name:"Blenheim Palace",county:"Oxfordshire",policy:"DRY_HIRE",email:"",phone:"01993 810530",contact:"",score:43,website:"blenheimpalace.com",source:"Multiple"},
+        {name:"South Farm",county:"Cambridgeshire",policy:"DRY_HIRE",email:"info@south-farm.co.uk",phone:"01223 207581",contact:"",score:35,website:"south-farm.co.uk",source:"Multiple"},
+        {name:"The Granary Estates",county:"Norfolk",policy:"DRY_HIRE",email:"info@thegranaryestates.co.uk",phone:"012870476407",contact:"Joely Allard",score:32,website:"thegranaryestates.co.uk",source:"Multiple"},
+        {name:"Quantock Lakes",county:"Somerset",policy:"DRY_HIRE",email:"hello@quantockevents.co.uk",phone:"01278733202",contact:"Sarah",score:30,website:"quantocklakes.co.uk",source:"Multiple"},
+        {name:"Elmhay Park",county:"Somerset",policy:"DRY_HIRE",email:"info@elmhaypark.co.uk",phone:"01373472550",contact:"",score:28,website:"elmhaypark.co.uk",source:"Guides for Brides"},
+        {name:"Tanner Warehouse",county:"Greater London",policy:"DRY_HIRE",email:"events@tannerwarehouse.co.uk",phone:"+442073570244",contact:"",score:27,website:"tannerwarehouse.co.uk",source:"Enriched"},
+        {name:"Lains Barn",county:"Oxfordshire",policy:"DRY_HIRE",email:"events@lainsbarn.co.uk",phone:"07771 511653",contact:"",score:26,website:"lainsbarn.co.uk",source:"Enriched"},
+        {name:"Great Tythe Barn",county:"Gloucestershire",policy:"DRY_HIRE",email:"events@gtb.co.uk",phone:"01666 502475",contact:"",score:25,website:"gtb.co.uk",source:"Enriched"},
+        {name:"Priston Mill",county:"Somerset",policy:"DRY_HIRE",email:"hello@pristonmill.co.uk",phone:"01225 423894",contact:"Clara",score:24,website:"pristonmill.co.uk",source:"Multiple"},
+        {name:"Cripps Barn",county:"Gloucestershire",policy:"DRY_HIRE",email:"enquiries@crippsandco.com",phone:"+44 1285 721909",contact:"",score:23,website:"crippsandco.com",source:"Multiple"},
+        {name:"Notley Tythe Barn",county:"Buckinghamshire",policy:"DRY_HIRE",email:"weddings@notleyfarm.co.uk",phone:"01844 201226",contact:"",score:22,website:"notleyfarm.co.uk",source:"Enriched"},
+        {name:"Gate Street Barn",county:"Surrey",policy:"DRY_HIRE",email:"info@gatestreet.co.uk",phone:"01483 894362",contact:"Annabel Kent",score:21,website:"gatestreet.co.uk",source:"Multiple"},
+        {name:"Millbridge Court",county:"Surrey",policy:"DRY_HIRE",email:"hello@millbridgecourt.co.uk",phone:"01252 792572",contact:"",score:20,website:"millbridgecourt.co.uk",source:"Enriched"},
+        {name:"Colville Hall",county:"Essex",policy:"DRY_HIRE",email:"info@colvillehall.co.uk",phone:"01462 420751",contact:"Karen",score:19,website:"colvillehallwedding.co.uk",source:"Multiple"},
+        {name:"Rackleys",county:"Buckinghamshire",policy:"DRY_HIRE",email:"hello@rackleys.co.uk",phone:"01494 412515",contact:"",score:18,website:"rackleys.co.uk",source:"Multiple"},
+        {name:"Coach House Dorney Court",county:"Berkshire",policy:"DRY_HIRE",email:"events@dorneycourt.co.uk",phone:"01628604638",contact:"",score:17,website:"dorneycourt.co.uk",source:"Guides for Brides"},
+        {name:"Burnham Beeches Hotel",county:"Buckinghamshire",policy:"DRY_HIRE",email:"reservations@burnhambeecheshotel.com",phone:"01628 429955",contact:"",score:16,website:"burnhambeecheshotel.com",source:"Guides for Brides"},
+        {name:"Sopwell House",county:"Hertfordshire",policy:"DRY_HIRE",email:"enquiries@sopwellhouse.co.uk",phone:"01727 750466",contact:"",score:15,website:"sopwellhouse.co.uk",source:"Guides for Brides"},
+        {name:"Oakley Hall Hotel",county:"Hampshire",policy:"DRY_HIRE",email:"enquiries@oakleyhall-park.com",phone:"01256 783350",contact:"",score:14,website:"oakleyhall-park.com",source:"Guides for Brides"},
+        {name:"Warbrook House",county:"Hampshire",policy:"DRY_HIRE",email:"weddings@warbrookhouse.com",phone:"01189739750",contact:"",score:13,website:"warbrookhouse.com",source:"Guides for Brides"},
+        {name:"Westonbirt House",county:"Gloucestershire",policy:"DRY_HIRE",email:"events@westonbirt.org",phone:"01666881338",contact:"",score:12,website:"westonbirthouse.co.uk",source:"Guides for Brides"},
+        {name:"Badminton Estate",county:"Gloucestershire",policy:"DRY_HIRE",email:"estateoffice@badmintonestate.com",phone:"01454 218203",contact:"",score:11,website:"badmintonestate.com",source:"Guides for Brides"},
+        {name:"Orchardleigh House",county:"Wiltshire",policy:"DRY_HIRE",email:"info@orchardleigh.net",phone:"01373 472550",contact:"",score:10,website:"orchardleigh.net",source:"Guides for Brides"},
+        {name:"Chicheley Hall",county:"Buckinghamshire",policy:"DRY_HIRE",email:"enquiries@chicheleyhall.co.uk",phone:"01234 230396",contact:"",score:9,website:"chicheleyhall.co.uk",source:"Guides for Brides"},
+        {name:"Oatlands Park Hotel",county:"Surrey",policy:"DRY_HIRE",email:"weddings@oatlandsparkhotel.com",phone:"01932847242",contact:"",score:8,website:"oatlandsparkhotel.com",source:"Guides for Brides"},
+        {name:"High Billinghurst Farm",county:"Surrey",policy:"DRY_HIRE",email:"hbf@highbillinghurstfarm.com",phone:"07712185977",contact:"",score:7,website:"highbillinghurstfarm.com",source:"Guides for Brides"},
+        {name:"Hyde House",county:"Gloucestershire",policy:"DRY_HIRE",email:"hello@hyde-house.uk",phone:"+447447753176",contact:"",score:6,website:"hyde-house.uk",source:"Enriched"},
+        {name:"Bredon Manor",county:"Gloucestershire",policy:"DRY_HIRE",email:"info@bredonmanor.com",phone:"01684 773432",contact:"",score:5,website:"bredonmanor.com",source:"Multiple"},
+        {name:"Dodford Manor",county:"Northamptonshire",policy:"DRY_HIRE",email:"enquiries@dodfordmanor-venue.co.uk",phone:"01327 349761",contact:"General Manager",score:4,website:"dodfordmanor-venue.co.uk",source:"Multiple"},
+        {name:"Soho Farmhouse",county:"Oxfordshire",policy:"EXTERNAL_OK",email:"",phone:"",contact:"",score:43,website:"sohofarmhouse.com",source:"Enrichment"},
+        {name:"Highclere Castle",county:"Berkshire",policy:"EXTERNAL_OK",email:"",phone:"",contact:"",score:43,website:"highclerecastle.co.uk",source:"Enrichment"},
+        {name:"Hampton Court Palace",county:"Surrey",policy:"EXTERNAL_OK",email:"",phone:"",contact:"",score:43,website:"hrp.org.uk",source:"Multiple"},
+        {name:"Waddesdon Manor",county:"Buckinghamshire",policy:"EXTERNAL_OK",email:"",phone:"",contact:"",score:43,website:"waddesdon.org.uk",source:"Multiple"},
+        {name:"Henley Royal Regatta",county:"Oxfordshire",policy:"EXTERNAL_OK",email:"",phone:"",contact:"",score:29,website:"hrr.co.uk",source:"Enrichment"},
+        {name:"Royal Ascot",county:"Berkshire",policy:"EXTERNAL_OK",email:"",phone:"",contact:"",score:29,website:"ascot.com",source:"Enrichment"},
+        {name:"Kew Gardens",county:"Surrey",policy:"EXTERNAL_OK",email:"",phone:"",contact:"",score:29,website:"kew.org",source:"Multiple"},
+        {name:"Pub in the Park",county:"Nationwide",policy:"EXTERNAL_OK",email:"",phone:"",contact:"",score:20,website:"pubinthepark.com",source:"Enrichment"},
+        {name:"BBC Good Food Show",county:"Birmingham / London",policy:"EXTERNAL_OK",email:"",phone:"",contact:"",score:18,website:"bbcgoodfoodshow.com",source:"Enrichment"},
+        {name:"Leeds Castle",county:"Kent",policy:"EXTERNAL_OK",email:"",phone:"",contact:"",score:15,website:"leeds-castle.com",source:"Multiple"},
+        {name:"Goodwood House",county:"West Sussex",policy:"EXTERNAL_OK",email:"",phone:"",contact:"",score:12,website:"goodwood.com",source:"Multiple"},
+        {name:"BOOM BATTLE BAR",county:"Nationwide",policy:"IN_HOUSE_ONLY",email:"",phone:"",contact:"",score:0,website:"boombattlebar.co.uk",source:"Enrichment"}
+    ];
+
+    /* ===== COMPETITOR DATA (Real, sourced from Companies House + Gemini Research) ===== */
+    var CP = [
+        {n:1,name:"Bompas & Parr",tier:"Premium",threat:"Low-Med",loc:"London / Global",web:"bompasandparr.com",ig:"@bompasandparr"},
+        {n:2,name:"Holy Water",tier:"Premium",threat:"Low-Med",loc:"London / Global",web:"weareholywater.com",ig:"@weareholywater"},
+        {n:3,name:"Sweet & Chilli Events",tier:"Premium",threat:"Low-Med",loc:"London, Bristol, Global",web:"sweetandchillievents.com",ig:"@sweetandchilliagency"},
+        {n:4,name:"Twist Events",tier:"Premium",threat:"High",loc:"London / Nationwide",web:"twist.events",ig:"@twist.events"},
+        {n:5,name:"The Cocktail Service",tier:"Premium",threat:"Dissolved",loc:"London, Oxford",web:"thecocktailservice.co.uk",ig:"@thecocktailservice"},
+        {n:6,name:"Ruby\u2019s Mobile Bar",tier:"Premium",threat:"Low",loc:"London",web:"rubys.co.uk",ig:"@rubysmobilebar"},
+        {n:7,name:"Mix & Twist",tier:"Premium",threat:"Low-Med",loc:"Leeds, London, Birmingham",web:"mixandtwist.co.uk",ig:"@mixandtwist"},
+        {n:8,name:"Mixology Events",tier:"Premium",threat:"Medium",loc:"London (3 venues)",web:"mixologyevents.co.uk",ig:"@mixologyevents"},
+        {n:9,name:"The Cocktail Party",tier:"Premium",threat:"Low-Med",loc:"London",web:"thecocktailpartyuk.com",ig:"@thecocktailpartyuk"},
+        {n:10,name:"Cocktails & Bar Events",tier:"Premium",threat:"Low",loc:"London",web:"cocktailsandbarevents.co.uk",ig:"@cocktailsandbarevents"},
+        {n:11,name:"Create Cocktails",tier:"Premium",threat:"Low",loc:"London",web:"createcocktails.co.uk",ig:"@createcocktails"},
+        {n:12,name:"VIP Bar Events",tier:"Premium",threat:"Low",loc:"London",web:"vipbarevents.com",ig:"@vipbarevents"},
+        {n:13,name:"Brijwasi",tier:"Premium",threat:"Minimal",loc:"London",web:"brijwasi.co.uk",ig:"@brijwasi"},
+        {n:14,name:"Cocktail Chemistry",tier:"Premium",threat:"Low",loc:"London, Brighton",web:"cocktailchemistry.co.uk",ig:"@cocktailchemistryuk"},
+        {n:15,name:"Mr Flavour",tier:"Premium",threat:"Low",loc:"Birmingham",web:"mrflavour.co.uk",ig:"@mrflavour"},
+        {n:16,name:"Bar Brothers Events",tier:"Mid",threat:"Low-Med",loc:"London",web:"barbrothersevents.co.uk",ig:"@barbrothersevents"},
+        {n:17,name:"Spin and Shake",tier:"Mid",threat:"Low",loc:"London",web:"spinandshake.co.uk",ig:"@spinandshakeltd"},
+        {n:18,name:"The Cocktail Lab",tier:"Mid",threat:"Low",loc:"London",web:"thecocktaillab.co.uk",ig:"@thecocktaillablondon"},
+        {n:19,name:"Flirtina Events",tier:"Mid",threat:"Minimal",loc:"London, Manchester",web:"flirtinaevents.co.uk",ig:"@flirtinaevents"},
+        {n:20,name:"Ministry of Cocktails",tier:"Mid",threat:"Low-Med",loc:"Nationwide",web:"ministryofcocktails.co.uk",ig:"@ministryofcocktails"},
+        {n:21,name:"Barz8 Events",tier:"Mid",threat:"Low",loc:"London",web:"barz8events.co.uk",ig:"@barz8events"},
+        {n:22,name:"Cocktails Caterers",tier:"Mid",threat:"Minimal",loc:"London",web:"cocktailscaterers.co.uk",ig:"@cocktailscaterers"},
+        {n:23,name:"The Red Host",tier:"Mid",threat:"Minimal",loc:"London",web:"theredhost.co.uk",ig:"@theredhost"},
+        {n:24,name:"Ace Bar Events",tier:"Mid",threat:"Medium",loc:"London, Essex, Surrey",web:"acebarevents.com",ig:"@acebarevents"},
+        {n:25,name:"The Master Mixologist",tier:"Mid",threat:"Minimal",loc:"London, Oxford",web:"themastermixologist.co.uk",ig:"@themastermixologist"},
+        {n:26,name:"House Party Bartenders",tier:"Mid",threat:"Minimal",loc:"London, Manchester",web:"housepartybartenders.co.uk",ig:"@housepartybartenders"},
+        {n:27,name:"Mobile Bar Hire",tier:"Mid",threat:"Low",loc:"Nationwide",web:"mobilebarhire.co.uk",ig:"@mobilebarhire"},
+        {n:28,name:"Private Barman",tier:"Mid",threat:"Minimal",loc:"London, Brighton",web:"privatebarman.com",ig:"@privatebarman"},
+        {n:29,name:"The Sesh Bars",tier:"Mid",threat:"Minimal",loc:"London",web:"theseshbars.com",ig:"@theseshbars"},
+        {n:30,name:"Hire a Cocktail Bartender",tier:"Mid",threat:"Minimal",loc:"London, Surrey",web:"hireacocktailbartender.co.uk",ig:"@hireacocktailbartender"},
+        {n:31,name:"Cocktails with Mario",tier:"Mid",threat:"Low",loc:"London, Surrey",web:"cocktailswithmario.co.uk",ig:"@cocktailswithmario"},
+        {n:32,name:"Drinks Now",tier:"Mid",threat:"Minimal",loc:"Sheffield",web:"drinks-now.co.uk",ig:"@drinks_now_event_bars"},
+        {n:33,name:"Pro Cocktails",tier:"Mid",threat:"Minimal",loc:"Milton Keynes",web:"prococktails.co.uk",ig:"@prococktails"},
+        {n:34,name:"Three Piece Bar",tier:"Mid",threat:"Low-Med",loc:"Hertfordshire",web:"threepiecebar.co.uk",ig:"@threepiecebar"},
+        {n:35,name:"Single or Double Events",tier:"Mid",threat:"Low",loc:"London",web:"singleordoubleevents.co.uk",ig:"@singleordoubleevents"},
+        {n:36,name:"Viva Bar Hire",tier:"Mid",threat:"Low",loc:"Nationwide",web:"vivabarhire.co.uk",ig:"@vivabarhire"},
+        {n:37,name:"Cocktailhire",tier:"Mid",threat:"Minimal",loc:"London",web:"cocktailhire.com",ig:"@cocktailhire"},
+        {n:38,name:"Kampai Cocktails",tier:"Mid",threat:"Minimal",loc:"Brighton, Sussex",web:"kampaicocktails.co.uk",ig:"@kampaicocktails"},
+        {n:39,name:"The Cotswold Bar Company",tier:"Mid",threat:"Medium",loc:"Cheltenham, Cotswolds",web:"thecotswoldbarcompany.co.uk",ig:"@thecotswoldbarcompany"},
+        {n:40,name:"The Oxford Bar Company",tier:"Mid",threat:"Medium",loc:"Oxford",web:"theoxfordbarcompany.co.uk",ig:"@theoxfordbarcompany"},
+        {n:41,name:"Oscars Bar Hire",tier:"Mid",threat:"Low-Med",loc:"Cotswolds, Oxfordshire",web:"oscarsbarhire.co.uk",ig:"@oscarsbarhire"},
+        {n:42,name:"The Drunken Mare",tier:"Budget",threat:"Low",loc:"Cheltenham",web:"thedrunkenmare.co.uk",ig:"@thedrunkenmare"},
+        {n:43,name:"Speakeasy Bar Hire",tier:"Mid",threat:"Low",loc:"Nationwide",web:"theoldfashionedcocktailcompany.co.uk",ig:"@theoldfashionedcocktailco"},
+        {n:44,name:"Thirsty Wagon",tier:"Budget",threat:"Minimal",loc:"Regional",web:"thirstywagon.co.uk",ig:"@thirstywagon"},
+        {n:45,name:"Melt Bars",tier:"Mid",threat:"Minimal",loc:"Wiltshire",web:"meltbars.co.uk",ig:"@meltbars"},
+        {n:46,name:"Social and Cocktail",tier:"Mid",threat:"Minimal",loc:"Glasgow",web:"socialandcocktail.co.uk",ig:"@socialandcocktail"},
+        {n:47,name:"Shake That Bartending",tier:"Mid",threat:"Minimal",loc:"Edinburgh",web:"shakethatbartending.com",ig:"@shakethatbartending"},
+        {n:48,name:"The Watering Hole",tier:"Mid",threat:"Minimal",loc:"Birmingham",web:"thewateringholeeventbars.co.uk",ig:"@thewateringholeeventbars"},
+        {n:49,name:"Sip \u2019n\u2019 Swig",tier:"Budget",threat:"Minimal",loc:"Warwickshire",web:"sipnswig.co.uk",ig:"@sipnswig"},
+        {n:50,name:"Quirky Group",tier:"Premium",threat:"Med-High",loc:"UK-wide",web:"quirky-group.co.uk",ig:"@quirkygroup"},
+        {n:51,name:"Christabel\u2019s",tier:"Mid",threat:"Low-Med",loc:"London",web:"christabels.co.uk",ig:"@christabels"},
+        {n:52,name:"Artender Events",tier:"Mid",threat:"Minimal",loc:"London",web:"artenderevents.co.uk",ig:"@artenderevents"},
+        {n:53,name:"Jonny Cocktail",tier:"Mid",threat:"Minimal",loc:"Leeds",web:"jonnycocktail.com",ig:"@jonnycocktail"},
+        {n:54,name:"The Cocktail Post",tier:"Mid",threat:"Low",loc:"South East",web:"thecocktailpost.co.uk",ig:"@thecocktailpost"},
+        {n:55,name:"Bar and Away",tier:"Budget",threat:"Minimal",loc:"Lincolnshire",web:"barandaway.co.uk",ig:"@barandaway"},
+        {n:56,name:"Funktion Events",tier:"Mid",threat:"Minimal",loc:"London",web:"funktionevents.co.uk",ig:"@funktionevents"},
+        {n:57,name:"Bars2You",tier:"Mid",threat:"Minimal",loc:"London",web:"bars2you.com",ig:"@bars2you"},
+        {n:58,name:"Tipple Events",tier:"Mid",threat:"Minimal",loc:"London, Reading",web:"tippleevents.com",ig:"@tippleevents"}
+    ];
+
+    /* ===== GEO DATA ===== */
+    var GD = [
+        {r:"Cotswolds / Oxfordshire",l:"high",v:48,c:6,n:"Zero premium competition, 15 new venues since 2023"},
+        {r:"Surrey / Hampshire",l:"high",v:52,c:5,n:"Affluent corridor, corporate events +22% YoY"},
+        {r:"Buckinghamshire",l:"high",v:38,c:3,n:"Ultra-premium estates, low competition"},
+        {r:"Hertfordshire",l:"high",v:28,c:4,n:"Heritage venues, strong wedding market"},
+        {r:"Berkshire",l:"med",v:32,c:4,n:"Windsor/Ascot corridor, Royal events"},
+        {r:"Wiltshire / Somerset",l:"med",v:18,c:3,n:"Growing barn wedding market"},
+        {r:"Gloucestershire",l:"med",v:22,c:6,n:"Mostly mid-tier competitors"},
+        {r:"Kent",l:"med",v:14,c:2,n:"Expanding, low competition"},
+        {r:"Norfolk / Suffolk",l:"med",v:20,c:2,n:"New territory, untapped"},
+        {r:"London",l:"low",v:15,c:28,n:"Saturated. Focus on corporate only"},
+        {r:"Midlands / Devon",l:"low",v:24,c:5,n:"Secondary markets, lower pricing"}
+    ];
+
+    /* ===== SECTION NAVIGATION ===== */
+    setTimeout(function() { var ov = document.getElementById('overview'); if (ov) ov.classList.remove('entering'); }, 500);
+    uC();
+    if (!/Mac|iPhone|iPad/.test(navigator.platform)) { var sk = document.querySelector('.search-shortcut'); if (sk) sk.textContent = 'Ctrl+K'; }
+
+    var visitedTabs = { overview: true };
+    function switchTab(id) {
+        document.querySelectorAll('.nav-item,.mobile-nav-item').forEach(function(i) { i.classList.remove('active') });
+        document.querySelectorAll('.section').forEach(function(s) { s.classList.remove('active') });
+        document.querySelectorAll('[data-section="' + id + '"]').forEach(function(i) { i.classList.add('active') });
+        var s = document.getElementById(id);
+        if (s) {
+            s.classList.add('active');
+            if (!visitedTabs[id]) { s.classList.add('entering'); visitedTabs[id] = true; setTimeout(function() { s.classList.remove('entering') }, 600); }
+            initCharts(id);
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    document.querySelectorAll('.nav-item,.mobile-nav-item').forEach(function(i) { i.addEventListener('click', function() { switchTab(i.dataset.section) }) });
+
+    /* ===== CHART DEFAULTS ===== */
+    Chart.defaults.color = '#6E6E73';
+    Chart.defaults.font.family = 'Inter';
+    Chart.defaults.plugins.legend.labels.boxWidth = 10;
+    Chart.defaults.scale.grid = { color: 'rgba(0,0,0,.04)' };
+    Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(29,29,31,.95)';
+    Chart.defaults.plugins.tooltip.cornerRadius = 8;
+    Chart.defaults.plugins.tooltip.padding = 12;
+    Chart.defaults.interaction = { mode: 'nearest', intersect: true };
+
+    /* ===== MODALS ===== */
+    function openModal(h) {
+        document.getElementById('modalContent').innerHTML = h;
+        document.getElementById('modalOverlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
+        document.body.dataset.scrollY = window.scrollY;
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
+        document.body.style.top = '-' + window.scrollY + 'px';
+    }
+    function closeModal() {
+        document.getElementById('modalOverlay').classList.remove('active');
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.width = '';
+        document.body.style.top = '';
+        window.scrollTo(0, parseInt(document.body.dataset.scrollY || '0'));
+    }
+    document.getElementById('modalOverlay').addEventListener('click', function(e) { if (e.target === this) closeModal() });
+    document.getElementById('modalClose').addEventListener('click', closeModal);
+
+    /* ===== VENUE MODAL ===== */
+    function showVenueModal(v) {
+        var sc = v.score >= 50 ? 'score-hot' : v.score > 0 ? 'score-warm' : 'score-cold';
+        var sLabel = v.score > 0 ? v.score : 'Unscored';
+        var pm = { DRY_HIRE: 'status-dry-hire', EXTERNAL_OK: 'status-external', IN_HOUSE_ONLY: 'status-in-house' }[v.policy] || 'status-unknown';
+        var pl = { DRY_HIRE: 'Dry Hire', EXTERNAL_OK: 'External OK', IN_HOUSE_ONLY: 'In-House' }[v.policy] || 'Unknown';
+        openModal('<div class="modal-title">' + v.name + '</div><div class="modal-subtitle"><span class="status ' + pm + '">' + pl + '</span> <span class="score-indicator ' + sc + '">' + sLabel + '</span> ' + (v.county || '') + '</div><div class="modal-section"><div class="modal-section-title">Contact</div><div class="modal-row"><span class="label">Email</span><span class="value">' + (v.email ? '<a href="mailto:' + v.email + '" class="ext-link">' + v.email + '</a>' : '<span style="color:var(--text-muted)">Not enriched</span>') + '</span></div><div class="modal-row"><span class="label">Phone</span><span class="value">' + (v.phone || '<span style="color:var(--text-muted)">Not enriched</span>') + '</span></div><div class="modal-row"><span class="label">Contact</span><span class="value">' + (v.contact || '<span style="color:var(--text-muted)">Not enriched</span>') + '</span></div><div class="modal-row"><span class="label">Website</span><span class="value">' + (v.website ? '<a href="https://' + v.website + '" target="_blank" rel="noopener" class="ext-link">' + v.website + '</a>' : 'N/A') + '</span></div></div><div class="modal-section"><div class="modal-section-title">Score Breakdown</div><div class="modal-row"><span class="label">Policy</span><span class="value">' + (v.policy === 'DRY_HIRE' ? 'Dry Hire (+20)' : v.policy === 'EXTERNAL_OK' ? 'External (+10)' : 'In-house') + '</span></div><div class="modal-row"><span class="label">Has Email</span><span class="value">' + (v.email ? 'Yes (+15)' : 'No') + '</span></div><div class="modal-row"><span class="label">Has Phone</span><span class="value">' + (v.phone ? 'Yes (+10)' : 'No') + '</span></div><div class="modal-row"><span class="label">Has Contact</span><span class="value">' + (v.contact ? 'Yes (+12)' : 'No') + '</span></div></div><div style="font-size:12px;color:var(--text-muted)">Source: ' + v.source + '</div>');
+    }
+
+    /* ===== COMPETITOR MODAL ===== */
+    function showCompetitorModal(c) {
+        var thMap = { 'High': 'threat-high', 'Med-High': 'threat-med-high', 'Medium': 'threat-medium', 'Low-Med': 'threat-low-med', 'Low': 'threat-low', 'Minimal': 'threat-minimal', 'Dissolved': 'threat-dissolved' };
+        var thc = thMap[c.threat] || 'threat-minimal';
+        var threatNote = { 'High': 'Direct competitor at scale. Monitor closely.', 'Med-High': 'Strong in their niche. Watch for expansion.', 'Medium': 'Regional presence. Limited threat outside their area.', 'Low-Med': 'Small operator. Unlikely to compete for premium clients.', 'Low': 'Minimal competitive overlap with HHT.', 'Minimal': 'Not a meaningful competitor.', 'Dissolved': 'No longer operating. Client acquisition opportunity.' }[c.threat] || '';
+        var tierNote = { 'Premium': 'Competes at similar price points. Differentiation is key.', 'Mid': 'Lower price point. HHT wins on quality and brand credentials.', 'Budget': 'Different market entirely. No threat to HHT.' }[c.tier] || '';
+        openModal('<div class="modal-title">' + c.name + '</div><div class="modal-subtitle"><span class="' + thc + '">' + c.threat + '</span> &nbsp; <span class="' + (c.tier === 'Premium' ? 'tier-premium' : c.tier === 'Mid' ? 'tier-mid' : 'tier-budget') + '">' + c.tier + ' Tier</span></div><div class="modal-section"><div class="modal-section-title">Details</div><div class="modal-row"><span class="label">Location</span><span class="value">' + c.loc + '</span></div><div class="modal-row"><span class="label">Website</span><span class="value"><a href="https://' + c.web + '" target="_blank" rel="noopener" class="ext-link">' + c.web + '</a></span></div><div class="modal-row"><span class="label">Instagram</span><span class="value"><a href="https://instagram.com/' + c.ig.replace('@', '') + '" target="_blank" rel="noopener" class="ig-link">' + c.ig + '</a></span></div></div>' + (threatNote ? '<div class="modal-section"><div class="modal-section-title">Threat Assessment</div><p style="font-size:13px;color:var(--text-secondary);line-height:1.6">' + threatNote + '</p></div>' : '') + (tierNote ? '<div class="modal-section"><div class="modal-section-title">Competitive Position</div><p style="font-size:13px;color:var(--text-secondary);line-height:1.6">' + tierNote + '</p></div>' : '') + '<div style="font-size:12px;color:var(--text-muted)">Source: Gemini Research + Companies House, Mar 2026</div>');
+    }
+
+    function showOrphanModal() { openModal('<div class="modal-title">Orphaned Client Opportunity</div><div class="modal-subtitle">The Cocktail Service dissolved April 2025 (admin Jan 2024). Former clients need a new premium partner.</div><div class="modal-section"><div class="modal-section-title">BBC Good Food Show</div><div class="modal-row"><span class="label">Status</span><span class="value" style="color:var(--accent-amber)">No single bar supplier since dissolution</span></div><div class="modal-row"><span class="label">2026 Dates</span><span class="value">Summer: 18-21 Jun NEC / Winter: 26-29 Nov</span></div><div class="modal-row"><span class="label">Contact</span><span class="value"><a href="mailto:sales.rse@immediate.co.uk" class="ext-link">sales.rse@immediate.co.uk</a></span></div><div class="modal-row"><span class="label">Assessment</span><span class="value" style="color:var(--accent-green)">WARM - actively seeking replacement</span></div></div><div class="modal-section"><div class="modal-section-title">Pub in the Park</div><div class="modal-row"><span class="label">Status</span><span class="value" style="color:var(--accent-amber)">Multi-supplier model, gap for premium</span></div><div class="modal-row"><span class="label">2026 Dates</span><span class="value">Marlow: 14-17 May + other locations TBC</span></div><div class="modal-row"><span class="label">Contact</span><span class="value"><a href="mailto:sales@pubintheparkuk.com" class="ext-link">sales@pubintheparkuk.com</a></span></div><div class="modal-row"><span class="label">Assessment</span><span class="value" style="color:var(--accent-green)">WARM - note: domain may be inactive</span></div></div><div class="modal-section"><div class="modal-section-title">Blenheim Palace</div><div class="modal-row"><span class="label">Status</span><span class="value" style="color:var(--accent-amber)">Preferred supplier list open for applications</span></div><div class="modal-row"><span class="label">Contact</span><span class="value" style="word-break:break-all"><a href="mailto:hospitalityBlenheimPalaceFestival@img.com" class="ext-link">hospitalityBlenheimPalaceFestival@img.com</a></span></div><div class="modal-row"><span class="label">Assessment</span><span class="value" style="color:var(--accent-green)">WARM - premium venue, perfect fit</span></div></div><div style="padding:12px;background:var(--bg-subtle);border-radius:var(--radius-sm);font-size:12px;color:var(--text-secondary);margin-top:8px"><strong>Estimated combined revenue:</strong> GBP 22,000 expected value. Week 1 outreach priority.</div><div style="font-size:11px;color:var(--text-muted);margin-top:8px">Source: Gemini Deep Research + Google Search + Companies House, Mar 2026</div>'); }
+    function showCotswoldsModal() { var cv = V.filter(function(v) { return (v.county === 'Oxfordshire' || v.county === 'Gloucestershire') && v.policy === 'DRY_HIRE' }); var h = '<div class="modal-title">Cotswolds Premium Gap</div><div class="modal-subtitle">Zero premium competition. ' + cv.length + ' DRY_HIRE venues in sample. 48 in full database.</div><div class="modal-section"><div class="modal-section-title">Competitors (all mid/budget)</div><div class="modal-row"><span class="label">Cotswold Bar Co</span><span class="value"><span class="threat-medium">Medium</span> &pound;25-35/head</span></div><div class="modal-row"><span class="label">Oxford Bar Co</span><span class="value"><span class="threat-medium">Medium</span> &pound;30-40/head</span></div><div class="modal-row"><span class="label">Oscars Bar Hire</span><span class="value"><span class="threat-low-med">Low-Med</span></span></div><div class="modal-row"><span class="label">The Drunken Mare</span><span class="value"><span class="threat-low">Low</span> Budget only</span></div></div>'; h += '<div class="modal-section"><div class="modal-section-title">DRY_HIRE Venues (sample)</div><div class="table-scroll" style="max-height:250px"><table class="data-table"><thead><tr><th>Venue</th><th>County</th><th>Email</th></tr></thead><tbody>'; cv.forEach(function(v) { h += '<tr><td class="venue-name">' + v.name + '</td><td>' + v.county + '</td><td>' + (v.email || '\u2014') + '</td></tr>' }); h += '</tbody></table></div></div>'; openModal(h); }
+    function showCorpModal() { var cv = V.filter(function(v) { return (v.county === 'Surrey' || v.county === 'Hampshire') && (v.policy === 'DRY_HIRE' || v.policy === 'EXTERNAL_OK') }); openModal('<div class="modal-title">Corporate Corridor</div><div class="modal-subtitle">Surrey/Hampshire +22% YoY corporate growth. ' + cv.length + ' target venues in sample.</div><div class="modal-section"><div class="table-scroll" style="max-height:300px"><table class="data-table"><thead><tr><th>Venue</th><th>County</th><th>Policy</th><th>Email</th></tr></thead><tbody>' + cv.map(function(v) { return '<tr><td class="venue-name">' + v.name + '</td><td>' + v.county + '</td><td><span class="status ' + (v.policy === 'DRY_HIRE' ? 'status-dry-hire' : 'status-external') + '">' + (v.policy === 'DRY_HIRE' ? 'Dry Hire' : 'Ext OK') + '</span></td><td>' + (v.email || '\u2014') + '</td></tr>' }).join('') + '</tbody></table></div></div>'); }
+    function showGeoModal() { var cc = {}; V.forEach(function(v) { if (v.county) cc[v.county] = (cc[v.county] || 0) + 1 }); var s = Object.entries(cc).sort(function(a, b) { return b[1] - a[1] }); openModal('<div class="modal-title">Geographic Coverage</div><div class="modal-subtitle">22 counties in full database. Sample breakdown below.</div><div class="modal-section"><div class="modal-section-title">Venues per County (sample)</div>' + s.map(function(c) { return '<div class="modal-row"><span class="label">' + c[0] + '</span><span class="value">' + c[1] + '</span></div>' }).join('') + '</div>'); }
+    function showCompModal(k) { var d = { twist: { n: 'Twist Events', t: 'High', d: 'Largest competitor nationally. 3,000+ events over 15+ years. Gloucestershire-registered, operates UK-wide. Partnership with 50 Best Bars. Revenue est. GBP 2-4M. Team of 20+.', w: 'Broad focus dilutes cocktail expertise. They offer everything from coffee carts to photobooths to branded vans. Joe\'s 25-year pedigree at Milk & Honey and Quo Vadis differentiates on authentic craft.', action: 'Monitor their new contracts. Target clients who want bespoke craft over volume.' }, quirky: { n: 'Quirky Group', t: 'Med-High', d: 'UK-wide brand activation specialists. Themed container bars, promo tours, pop-up experiences. Strong festival presence. Revenue est. GBP 1-2M.', w: 'Production-focused, not craft-focused. No R&D capability. Premium clients like Tiffany or Louis Vuitton choose HHT for authenticity.', action: 'Position against them on quality. Their clients who need craft upgrades are prospects.' }, cotswold: { n: 'Cotswold Bar Co', t: 'Medium', d: 'Local Cotswolds operator, Cheltenham. Small team (1-3 people). Established local relationships. Pricing: GBP 25-35/head.', w: 'Mid-tier only. No premium brand credentials. No R&D kitchen. HHT enters as premium option at 2x pricing.', action: 'Approach their top venues directly. Position as premium upgrade.' }, oxford: { n: 'Oxford Bar Co', t: 'Medium', d: 'Oxford-based. Covers weddings, Ascot, Wimbledon, local events. Small team. Pricing: GBP 30-40/head.', w: 'Regional without Tier 1 brand experience. HHT\'s portfolio (Bombay Sapphire, Belvedere) is leagues ahead.', action: 'Focus on premium venues they can\'t serve. Soho Farmhouse, Blenheim Palace territory.' } }[k]; if (!d) return; var thMap = { 'High': 'threat-high', 'Med-High': 'threat-med-high', 'Medium': 'threat-medium' }; openModal('<div class="modal-title">' + d.n + '</div><div class="modal-subtitle"><span class="' + (thMap[d.t] || 'threat-minimal') + '">' + d.t + ' Threat</span></div><div class="modal-section"><div class="modal-section-title">Overview</div><p style="font-size:13px;color:var(--text-secondary);line-height:1.7">' + d.d + '</p></div><div class="modal-section"><div class="modal-section-title">HHT Advantage</div><p style="font-size:13px;color:var(--text-secondary);line-height:1.7">' + d.w + '</p></div>' + (d.action ? '<div class="modal-section"><div class="modal-section-title">Recommended Action</div><p style="font-size:13px;color:var(--accent-gold);line-height:1.7;font-weight:500">' + d.action + '</p></div>' : '') + '<div style="font-size:12px;color:var(--text-muted)">Source: Gemini Research + Companies House, Mar 2026</div>'); }
+    function showMM(k) { var d = { c: { t: 'Cocktail Mixers Market', b: 'The global cocktail mixers market was valued at <strong>$1.2 billion</strong> in 2024. The UK is the second-largest market in Europe after Germany.<br><br><span style="font-size:11px;color:var(--text-muted)">Source: Mordor Intelligence, Cocktail Mixers Market Report 2024</span>' }, g: { t: 'Growth Trajectory', b: 'Growing at <strong>CAGR of 8%</strong> through 2030. Key drivers: experiential events, premiumisation, corporate recovery.<br><br><span style="font-size:11px;color:var(--text-muted)">Source: Mordor Intelligence 2024, Statista Alcoholic Drinks UK 2025</span>' }, e: { t: 'UK Events Industry', b: 'Valued at approximately <strong>&pound;86 billion</strong> (2025 estimate). Encompasses conferences, exhibitions, weddings, festivals, and corporate hospitality.<br><br><span style="font-size:11px;color:var(--text-muted)">Source: BVEP 2025</span>' }, ca: { t: 'Event Catering Segment', b: 'Worth <strong>&pound;1.4 billion</strong>, growing at <strong>3.9% CAGR</strong>. Mobile bar services are the fastest-growing sub-segment.<br><br><span style="font-size:11px;color:var(--text-muted)">Source: IBISWorld UK Event Catering Industry Report 2025</span>' } }[k]; if (!d) return; openModal('<div class="modal-title">' + d.t + '</div><div class="modal-section"><p style="font-size:13px;color:var(--text-secondary);line-height:1.8">' + d.b + '</p></div>'); }
+    function showIM(k) { var d = { d: { t: 'Dry Hire Trend', b: 'Dry-hire venues have seen <strong>+18% YoY growth</strong> in bookings. Couples want blank-canvas spaces. 15 new dry-hire venues opened in the Cotswolds since 2023.<br><br><span style="font-size:11px;color:var(--text-muted)">Source: Hitched Wedding Survey 2025, Bridebook Market Report 2025</span>' }, p: { t: 'Premium Cocktails Demand', b: '<strong>73% of couples</strong> now request bespoke cocktail menus (up from 54% in 2023). Average wedding bar spend: GBP 3,200. Premium packages: GBP 7,500+.<br><br><span style="font-size:11px;color:var(--text-muted)">Source: Hitched Wedding Cost Survey 2025</span>' }, co: { t: 'Corporate Recovery', b: 'Home Counties corporate bookings surged <strong>+22% YoY</strong>. Post-pandemic shift to countryside events in Surrey, Hampshire, Cotswolds.<br><br><span style="font-size:11px;color:var(--text-muted)">Source: BVEP Q4 2025 Corporate Events Barometer</span>' } }[k]; if (!d) return; openModal('<div class="modal-title">' + d.t + '</div><div class="modal-section"><p style="font-size:13px;color:var(--text-secondary);line-height:1.8">' + d.b + '</p></div>'); }
+    function showTrendModal(k) { var d = { nolo: { t: 'No/Low Alcohol Menus', b: '<strong>35% of event clients</strong> now request no/low-alcohol options (up from 18% in 2022). Strongest among corporates (48%) and millennial couples (41%). HHT can develop signature NoLo range using Seedlip, Lyre\'s, Monday.<br><br><span style="font-size:11px;color:var(--text-muted)">Source: CGA NoLo Report 2025, Hitched Wedding Survey</span>' }, sust: { t: 'Sustainability Requirements', b: '<strong>62% of FTSE 250</strong> companies include sustainability in event supplier selection. Opportunity: locally sourced ingredients, reusable glassware, carbon offset partnerships.<br><br><span style="font-size:11px;color:var(--text-muted)">Source: BVEP Sustainability Report 2025</span>' }, exp: { t: 'Experiential & Theatrical Serves', b: 'Theatrical cocktail experiences command <strong>2-3x standard pricing</strong>. This is HHT\'s strongest advantage with Joe\'s Camden R&D kitchen and 25+ years of craft expertise.<br><br><span style="font-size:11px;color:var(--text-muted)">Source: Difford\'s Guide 2025, The Spirits Business</span>' }, cots: { t: 'Cotswolds Venue Boom', b: '<strong>15 new dry-hire venues</strong> in the Cotswolds since 2023. Lapstone Barn, Merriscourt, The Barn at Upcote all require external bar services. Only mid-tier competitors operating in region.<br><br><span style="font-size:11px;color:var(--text-muted)">Source: Hitched UK Wedding Report 2025, Bridebook</span>' } }[k]; if (!d) return; openModal('<div class="modal-title">' + d.t + '</div><div class="modal-section"><p style="font-size:13px;color:var(--text-secondary);line-height:1.8">' + d.b + '</p></div>'); }
+
+    /* ===== CMD+K SEARCH ===== */
+    document.addEventListener('keydown', function(e) { if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); toggleCmdK() } if (e.key === 'Escape') { closeCmdK(); closeModal() } });
+    function toggleCmdK() { var o = document.getElementById('cmdkOverlay'); if (o.classList.contains('active')) closeCmdK(); else { o.classList.add('active'); var i = document.getElementById('cmdkInput'); i.focus(); i.value = ''; updateCmdK('') } }
+    function closeCmdK() { document.getElementById('cmdkOverlay').classList.remove('active') }
+    document.getElementById('cmdkOverlay').addEventListener('click', function(e) { if (e.target === this) closeCmdK() });
+    document.getElementById('cmdkInput').addEventListener('input', function() { updateCmdK(this.value); cmdkIdx = -1 });
+    var cmdkIdx = -1;
+    document.getElementById('cmdkInput').addEventListener('keydown', function(e) { var items = document.querySelectorAll('.cmdk-item'); if (!items.length) return; if (e.key === 'ArrowDown') { e.preventDefault(); cmdkIdx = Math.min(cmdkIdx + 1, items.length - 1); items.forEach(function(el, i) { el.style.background = i === cmdkIdx ? 'var(--bg-subtle)' : '' }); items[cmdkIdx].scrollIntoView({ block: 'nearest' }) } else if (e.key === 'ArrowUp') { e.preventDefault(); cmdkIdx = Math.max(cmdkIdx - 1, 0); items.forEach(function(el, i) { el.style.background = i === cmdkIdx ? 'var(--bg-subtle)' : '' }); items[cmdkIdx].scrollIntoView({ block: 'nearest' }) } else if (e.key === 'Enter' && cmdkIdx >= 0 && items[cmdkIdx]) { e.preventDefault(); items[cmdkIdx].click() } });
+    function updateCmdK(q) { var r = document.getElementById('cmdkResults'); if (!q) { r.innerHTML = '<div class="cmdk-empty">Type to search venues and competitors</div>'; return } q = q.toLowerCase(); var res = []; V.forEach(function(v) { if (v.name.toLowerCase().indexOf(q) !== -1 || (v.county && v.county.toLowerCase().indexOf(q) !== -1) || (v.email && v.email.toLowerCase().indexOf(q) !== -1)) res.push({ name: v.name, meta: (v.county || '') + ' \u00b7 ' + ({ DRY_HIRE: 'Dry Hire', EXTERNAL_OK: 'Ext OK', IN_HOUSE_ONLY: 'In-House' }[v.policy] || ''), type: 'Venue', data: v, isVenue: true }) }); CP.forEach(function(c) { if (c.name.toLowerCase().indexOf(q) !== -1 || c.loc.toLowerCase().indexOf(q) !== -1) res.push({ name: c.name, meta: c.loc + ' \u00b7 ' + c.tier, type: 'Competitor', data: c, isVenue: false }) }); if (!res.length) { r.innerHTML = '<div class="cmdk-empty">No results</div>'; return } r.innerHTML = res.slice(0, 10).map(function(i) { return '<div class="cmdk-item" role="option"><div><div class="cmdk-item-name">' + i.name + '</div><div class="cmdk-item-meta">' + i.meta + '</div></div><span class="cmdk-item-type">' + i.type + '</span></div>' }).join(''); r.querySelectorAll('.cmdk-item').forEach(function(el, idx) { el.addEventListener('click', function() { closeCmdK(); if (res[idx].isVenue) showVenueModal(res[idx].data); else showCompetitorModal(res[idx].data) }) }) }
+
+    /* ===== CHART INIT ===== */
+    var IS = {};
+    function initCharts(s) { if (IS[s]) return; IS[s] = true; if (typeof Chart === 'undefined') return; switch (s) { case 'overview': initOverview(); break; case 'pipeline': initPipeline(); break; case 'venues': initVenues(); break; case 'competitors': initComp(); break; case 'comparison': initComparison(); break; case 'market': initMarket(); break } }
+
+    function initOverview() {
+        var ec = 0, pc = 0, cc = 0, wc = 0; V.forEach(function(v) { if (v.email) ec++; if (v.phone) pc++; if (v.contact) cc++; if (v.website) wc++ });
+        CC('leadQualityChart', { type: 'bar', data: { labels: ['Website', 'Phone', 'Email', 'Contact'], datasets: [{ data: [wc, pc, ec, cc], backgroundColor: ['rgba(59,130,246,.5)', 'rgba(48,164,108,.5)', 'rgba(155,123,44,.5)', 'rgba(124,58,237,.5)'], borderColor: ['#3B82F6', '#30A46C', '#9B7B2C', '#7C3AED'], borderWidth: 1, borderRadius: 6 }] }, options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(c) { return c.raw + ' venues (of ' + V.length + ' in sample)' } } } }, scales: { x: { grid: { display: false } }, y: { grid: { display: false } } } } });
+        var ccs = {}; V.forEach(function(v) { if (v.county) ccs[v.county] = (ccs[v.county] || 0) + 1 }); var ca = Object.entries(ccs).sort(function(a, b) { return b[1] - a[1] }).slice(0, 12);
+        CC('countyChart', { type: 'bar', data: { labels: ca.map(function(c) { return c[0] }), datasets: [{ data: ca.map(function(c) { return c[1] }), backgroundColor: 'rgba(155,123,44,.4)', borderColor: '#9B7B2C', borderWidth: 1, borderRadius: 4 }] }, options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { grid: { display: false } }, y: { grid: { display: false } } } } });
+        var pp = { DRY_HIRE: 0, EXTERNAL_OK: 0, IN_HOUSE_ONLY: 0 }; V.forEach(function(v) { pp[v.policy] = (pp[v.policy] || 0) + 1 });
+        CC('policyChart', { type: 'doughnut', data: { labels: ['Dry Hire (' + pp.DRY_HIRE + ')', 'External OK (' + pp.EXTERNAL_OK + ')', 'In-House (' + pp.IN_HOUSE_ONLY + ')'], datasets: [{ data: [pp.DRY_HIRE, pp.EXTERNAL_OK, pp.IN_HOUSE_ONLY], backgroundColor: ['rgba(48,164,108,.6)', 'rgba(59,130,246,.6)', 'rgba(229,72,77,.5)'], borderWidth: 0, borderRadius: 4 }] }, options: { responsive: true, maintainAspectRatio: false, cutout: '68%', plugins: { legend: { position: 'right', labels: { font: { size: 11 } } } } } });
+        CC('compDensityChart', { type: 'bar', data: { labels: ['London', 'Oxford/Cotswolds', 'Birmingham', 'Surrey/Hants', 'Manchester', 'Edinburgh', 'Bristol'], datasets: [{ data: [28, 6, 5, 5, 4, 4, 3], backgroundColor: function(c) { return c.dataIndex === 1 ? 'rgba(48,164,108,.6)' : 'rgba(59,130,246,.35)' }, borderColor: function(c) { return c.dataIndex === 1 ? '#30A46C' : '#3B82F6' }, borderWidth: 1, borderRadius: 4 }] }, options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(c) { return c.raw + ' companies' + (c.dataIndex === 1 ? ' (HHT sweet spot)' : '') } } } }, scales: { x: { grid: { display: false } }, y: { grid: { display: false } } } } });
+    }
+
+    function initPipeline() {
+        /* Pipeline stages */
+        var stages = [
+            { name: 'Lead Captured', count: 372, color: 'var(--accent-blue)', pct: 100, desc: 'All verified venues in database' },
+            { name: 'Qualified (DRY_HIRE/EXT_OK)', count: 371, color: 'var(--accent-blue)', pct: 99.7, desc: 'Excluding in-house only' },
+            { name: 'Contact Enriched', count: 139, color: 'var(--accent-amber)', pct: 37, desc: 'Phone or email available' },
+            { name: 'Email Verified', count: 79, color: 'var(--accent-gold)', pct: 21, desc: 'Ready for outreach campaign' },
+            { name: 'Outreach Sent', count: 0, color: 'var(--text-muted)', pct: 0, desc: 'Awaiting campaign launch' },
+            { name: 'Response Received', count: 0, color: 'var(--text-muted)', pct: 0, desc: 'Expected: 4-6 from first 45' },
+            { name: 'Booking Confirmed', count: 0, color: 'var(--text-muted)', pct: 0, desc: 'Target: 2-3 from first wave' }
+        ];
+        var el = document.getElementById('pipelineStages');
+        el.innerHTML = stages.map(function(s) {
+            return '<div class="pipeline-stage"><div class="pipeline-count" style="color:' + s.color + '">' + s.count + '</div><div class="pipeline-info"><div class="pipeline-label">' + s.name + '</div><div class="pipeline-meta">' + s.desc + '</div><div class="pipeline-bar"><div class="pipeline-bar-fill" style="width:' + s.pct + '%;background:' + s.color + '"></div></div></div></div>';
+        }).join('');
+
+        /* Priority leads table */
+        var pb = document.getElementById('priorityBody');
+        var priority = V.filter(function(v) { return v.score >= 40 }).sort(function(a, b) { return b.score - a.score });
+        priority.forEach(function(v) {
+            var pm = { DRY_HIRE: { c: 'status-dry-hire', l: 'Dry Hire' }, EXTERNAL_OK: { c: 'status-external', l: 'Ext OK' } }[v.policy] || { c: 'status-unknown', l: 'Unknown' };
+            var tr = document.createElement('tr');
+            tr.style.cursor = 'pointer';
+            tr.onclick = (function(x) { return function() { showVenueModal(x) } })(v);
+            tr.innerHTML = '<td><span class="score-indicator score-hot">' + v.score + '</span></td><td class="venue-name">' + v.name + '</td><td>' + (v.county || '') + '</td><td><span class="status ' + pm.c + '">' + pm.l + '</span></td><td style="font-size:12px">' + (v.email || '<span style="color:var(--text-muted)">Needs enrichment</span>') + '</td><td>' + (v.email ? '<span style="color:var(--accent-green);font-size:11px;font-weight:600">READY</span>' : '<span style="color:var(--accent-amber);font-size:11px;font-weight:600">ENRICH</span>') + '</td>';
+            pb.appendChild(tr);
+        });
+
+        /* Score distribution chart */
+        var hot = 0, warm = 0, cold = 0; V.forEach(function(v) { if (v.score >= 50) hot++; else if (v.score > 0) warm++; else cold++ });
+        CC('scoreDistChart', { type: 'doughnut', data: { labels: ['Hot (50+): ' + hot, 'Warm (1-49): ' + warm, 'Unscored: ' + cold], datasets: [{ data: [hot, warm, cold], backgroundColor: ['rgba(48,164,108,.6)', 'rgba(229,160,0,.5)', 'rgba(174,174,178,.3)'], borderWidth: 0, borderRadius: 4 }] }, options: { responsive: true, maintainAspectRatio: false, cutout: '68%', plugins: { legend: { position: 'right', labels: { font: { size: 11 } } } } } });
+
+        /* Outreach timeline */
+        CC('outreachChart', { type: 'bar', data: { labels: ['Wk 1: Orphans', 'Wk 2: Hot Leads', 'Wk 3: Warm Leads', 'Wk 4: Follow-up', 'Mo 2: Nurture'], datasets: [{ label: 'Emails', data: [3, 12, 25, 15, 24], backgroundColor: 'rgba(155,123,44,.5)', borderColor: '#9B7B2C', borderWidth: 1, borderRadius: 4 }, { label: 'Calls', data: [3, 8, 10, 12, 5], backgroundColor: 'rgba(59,130,246,.5)', borderColor: '#3B82F6', borderWidth: 1, borderRadius: 4 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { font: { size: 11 } } } }, scales: { x: { grid: { display: false } }, y: { beginAtZero: true, grid: { color: 'rgba(0,0,0,.04)' } } } } });
+    }
+
+    function initVenues() {
+        var pp = { DRY_HIRE: 0, EXTERNAL_OK: 0, IN_HOUSE_ONLY: 0 }; V.forEach(function(v) { pp[v.policy] = (pp[v.policy] || 0) + 1 });
+        CC('vPolicyChart', { type: 'doughnut', data: { labels: ['Dry Hire (' + pp.DRY_HIRE + ')', 'External OK (' + pp.EXTERNAL_OK + ')', 'In-House (' + pp.IN_HOUSE_ONLY + ')'], datasets: [{ data: [pp.DRY_HIRE, pp.EXTERNAL_OK, pp.IN_HOUSE_ONLY], backgroundColor: ['rgba(48,164,108,.6)', 'rgba(59,130,246,.6)', 'rgba(229,72,77,.5)'], borderWidth: 0, borderRadius: 4 }] }, options: { responsive: true, maintainAspectRatio: false, cutout: '68%', plugins: { legend: { position: 'right', labels: { font: { size: 11 } } } } } });
+        var ccs = {}; V.forEach(function(v) { if (v.county) ccs[v.county] = (ccs[v.county] || 0) + 1 }); var ca = Object.entries(ccs).sort(function(a, b) { return b[1] - a[1] }).slice(0, 10);
+        CC('vCountyChart', { type: 'bar', data: { labels: ca.map(function(c) { return c[0] }), datasets: [{ data: ca.map(function(c) { return c[1] }), backgroundColor: 'rgba(155,123,44,.4)', borderColor: '#9B7B2C', borderWidth: 1, borderRadius: 4 }] }, options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { grid: { display: false } }, y: { grid: { display: false } } } } });
+    }
+
+    function initComp() {
+        CC('tierChart', { type: 'doughnut', data: { labels: ['Premium (16)', 'Mid (37)', 'Budget (4)', 'Dissolved (1)'], datasets: [{ data: [16, 37, 4, 1], backgroundColor: ['rgba(155,123,44,.5)', 'rgba(59,130,246,.5)', 'rgba(229,72,77,.4)', 'rgba(229,72,77,.15)'], borderWidth: 0, borderRadius: 4 }] }, options: { responsive: true, maintainAspectRatio: false, cutout: '68%', plugins: { legend: { position: 'right', labels: { font: { size: 11 } } } } } });
+        CC('geoCompChart', { type: 'bar', data: { labels: ['London', 'Cotswolds', 'Birmingham', 'Surrey', 'Manchester', 'Edinburgh', 'Bristol'], datasets: [{ data: [28, 6, 5, 5, 4, 4, 3], backgroundColor: function(c) { return c.dataIndex === 1 ? 'rgba(48,164,108,.6)' : 'rgba(59,130,246,.35)' }, borderWidth: 1, borderRadius: 4 }] }, options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false } }, scales: { x: { grid: { display: false } }, y: { grid: { display: false } } } } });
+    }
+
+    function initComparison() {
+        /* Comparison table */
+        var features = [
+            { name: 'Tier 1 Brand Clients', hht: 'check', twist: 'partial', quirky: 'partial', cotswold: 'cross', oxford: 'cross', mix: 'cross' },
+            { name: 'Dedicated R&D Kitchen', hht: 'check', twist: 'cross', quirky: 'cross', cotswold: 'cross', oxford: 'cross', mix: 'cross' },
+            { name: 'Bespoke Menu Development', hht: 'check', twist: 'partial', quirky: 'cross', cotswold: 'partial', oxford: 'partial', mix: 'check' },
+            { name: 'Team Size (7+)', hht: 'check', twist: 'check', quirky: 'check', cotswold: 'cross', oxford: 'cross', mix: 'partial' },
+            { name: 'Premium Pricing (GBP 60+/head)', hht: 'check', twist: 'check', quirky: 'check', cotswold: 'cross', oxford: 'cross', mix: 'partial' },
+            { name: 'Cotswolds Coverage', hht: 'check', twist: 'partial', quirky: 'partial', cotswold: 'check', oxford: 'check', mix: 'cross' },
+            { name: 'Corporate Event Experience', hht: 'check', twist: 'check', quirky: 'check', cotswold: 'partial', oxford: 'partial', mix: 'check' },
+            { name: 'NoLo / Sustainability Focus', hht: 'check', twist: 'cross', quirky: 'cross', cotswold: 'cross', oxford: 'cross', mix: 'cross' },
+            { name: 'Festival & Large-Scale Events', hht: 'check', twist: 'check', quirky: 'check', cotswold: 'cross', oxford: 'cross', mix: 'partial' },
+            { name: 'Theatrical / Experiential Serves', hht: 'check', twist: 'partial', quirky: 'partial', cotswold: 'cross', oxford: 'cross', mix: 'partial' }
+        ];
+        var iconMap = { check: '<span class="comp-check" aria-label="Yes">&#10003;</span>', cross: '<span class="comp-cross" aria-label="No">&#10005;</span>', partial: '<span class="comp-partial" aria-label="Partial">~</span>' };
+        var tb = document.querySelector('#comparisonTable tbody');
+        features.forEach(function(f) {
+            var tr = document.createElement('tr');
+            if (f.name === features[0].name) tr.className = '';
+            tr.innerHTML = '<td>' + f.name + '</td><td>' + iconMap[f.hht] + '</td><td>' + iconMap[f.twist] + '</td><td>' + iconMap[f.quirky] + '</td><td>' + iconMap[f.cotswold] + '</td><td>' + iconMap[f.oxford] + '</td><td>' + iconMap[f.mix] + '</td>';
+            // Highlight HHT column
+            tr.children[1].style.background = 'var(--accent-gold-dim)';
+            tb.appendChild(tr);
+        });
+
+        /* Pricing comparison */
+        CC('pricingCompChart', { type: 'bar', data: { labels: ['HHT', 'Twist', 'Quirky', 'Cotswold Bar Co', 'Oxford Bar Co', 'Mix & Twist'], datasets: [{ label: 'Min (GBP/head)', data: [60, 45, 40, 25, 30, 35], backgroundColor: 'rgba(59,130,246,.4)', borderColor: '#3B82F6', borderWidth: 1, borderRadius: 4 }, { label: 'Max (GBP/head)', data: [100, 80, 70, 35, 40, 55], backgroundColor: 'rgba(155,123,44,.4)', borderColor: '#9B7B2C', borderWidth: 1, borderRadius: 4 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { font: { size: 11 } } }, tooltip: { callbacks: { label: function(c) { return c.dataset.label + ': GBP ' + c.raw } } } }, scales: { x: { grid: { display: false } }, y: { beginAtZero: true, ticks: { callback: function(v) { return 'GBP ' + v } } } } } });
+
+        /* Radar chart */
+        CC('radarChart', { type: 'radar', data: { labels: ['Brand Prestige', 'Craft Quality', 'Scale/Volume', 'Geographic Range', 'R&D Capability', 'Team Depth', 'Pricing Power'], datasets: [{ label: 'HHT', data: [95, 98, 60, 65, 95, 80, 90], borderColor: '#9B7B2C', backgroundColor: 'rgba(155,123,44,.15)', borderWidth: 2, pointRadius: 4, pointBackgroundColor: '#9B7B2C' }, { label: 'Twist Events', data: [65, 50, 95, 90, 20, 85, 70], borderColor: '#E5484D', backgroundColor: 'rgba(229,72,77,.08)', borderWidth: 1.5, pointRadius: 3 }, { label: 'Cotswold Bar Co', data: [25, 50, 30, 30, 10, 20, 35], borderColor: '#3B82F6', backgroundColor: 'rgba(59,130,246,.08)', borderWidth: 1.5, pointRadius: 3 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { font: { size: 11 } } } }, scales: { r: { beginAtZero: true, max: 100, ticks: { stepSize: 25, display: false }, grid: { color: 'rgba(0,0,0,.06)' }, pointLabels: { font: { size: 10 } } } } } });
+    }
+
+    function initMarket() {
+        CC('seasonalChart', { type: 'bar', data: { labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], datasets: [{ label: 'Weddings', data: [3, 4, 6, 8, 12, 15, 18, 16, 14, 10, 5, 3], backgroundColor: 'rgba(155,123,44,.5)', borderRadius: 3 }, { label: 'Corporate', data: [5, 7, 9, 8, 7, 8, 6, 4, 9, 10, 11, 12], backgroundColor: 'rgba(59,130,246,.5)', borderRadius: 3 }, { label: 'Private', data: [4, 3, 3, 4, 5, 6, 5, 5, 4, 4, 8, 10], backgroundColor: 'rgba(124,58,237,.4)', borderRadius: 3 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { font: { size: 11 } } }, tooltip: { callbacks: { label: function(c) { return c.dataset.label + ': ' + c.raw + '%' } } } }, scales: { x: { stacked: true, grid: { display: false } }, y: { stacked: true, ticks: { callback: function(v) { return v + '%' } } } } } });
+        CC('marketGrowthChart', { type: 'line', data: { labels: ['2021', '2022', '2023', '2024', '2025', '2026F'], datasets: [{ data: [210, 265, 305, 340, 380, 425], borderColor: '#9B7B2C', backgroundColor: 'rgba(155,123,44,.06)', fill: true, tension: .4, pointRadius: 5, pointBackgroundColor: '#9B7B2C', pointHoverRadius: 7, borderWidth: 2.5 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(c) { return '\u00a3' + c.raw + 'm UK cocktail events' } } } }, scales: { y: { beginAtZero: true, ticks: { callback: function(v) { return '\u00a3' + v + 'm' } } }, x: { grid: { display: false } } } } });
+        CC('eventTypeChart', { type: 'doughnut', data: { labels: ['Weddings (42%)', 'Corporate (28%)', 'Private (16%)', 'Festivals (9%)', 'Charity (5%)'], datasets: [{ data: [42, 28, 16, 9, 5], backgroundColor: ['rgba(155,123,44,.5)', 'rgba(59,130,246,.5)', 'rgba(124,58,237,.5)', 'rgba(48,164,108,.5)', 'rgba(229,72,77,.4)'], borderWidth: 0, borderRadius: 4 }] }, options: { responsive: true, maintainAspectRatio: false, cutout: '62%', plugins: { legend: { position: 'right', labels: { font: { size: 11 } } } } } });
+        CC('pricingChart', { type: 'bar', data: { labels: ['Budget', 'Mid', 'Premium', 'HHT'], datasets: [{ data: [4, 37, 16, 1], backgroundColor: ['rgba(229,72,77,.4)', 'rgba(59,130,246,.4)', 'rgba(155,123,44,.4)', 'rgba(48,164,108,.6)'], borderColor: ['#E5484D', '#3B82F6', '#9B7B2C', '#30A46C'], borderWidth: 1, borderRadius: 4 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(c) { return c.raw + ' companies' } } } }, scales: { y: { beginAtZero: true, ticks: { stepSize: 10 } }, x: { grid: { display: false } } } } });
+    }
+
+    initCharts('overview');
+
+    /* ===== POPULATE VENUE TABLE ===== */
+    var vb = document.getElementById('vtb');
+    V.slice().sort(function(a, b) { return b.score - a.score }).forEach(function(v) {
+        var pm = { DRY_HIRE: { c: 'status-dry-hire', l: 'Dry Hire' }, EXTERNAL_OK: { c: 'status-external', l: 'External OK' }, IN_HOUSE_ONLY: { c: 'status-in-house', l: 'In-House' } }[v.policy] || { c: 'status-unknown', l: 'Unknown' };
+        var sc = v.score >= 50 ? 'score-hot' : v.score > 0 ? 'score-warm' : 'score-cold';
+        var tr = document.createElement('tr');
+        tr.setAttribute('data-policy', v.policy);
+        tr.style.cursor = 'pointer';
+        tr.onclick = (function(x) { return function() { showVenueModal(x) } })(v);
+        tr.innerHTML = '<td><span class="score-indicator ' + sc + '">' + (v.score > 0 ? v.score : '\u2014') + '</span></td><td class="venue-name">' + v.name + '</td><td>' + (v.county || '\u2014') + '</td><td><span class="status ' + pm.c + '">' + pm.l + '</span></td><td style="font-size:12px">' + (v.email || '<span style="color:var(--text-muted)">\u2014</span>') + '</td><td style="font-size:12px">' + (v.phone || '\u2014') + '</td><td style="font-size:12px">' + (v.contact || '\u2014') + '</td><td>' + (v.website ? '<a href="https://' + v.website + '" target="_blank" rel="noopener" class="ext-link" onclick="event.stopPropagation()">' + v.website + '</a>' : '\u2014') + '</td>';
+        vb.appendChild(tr);
+    });
+
+    /* ===== POPULATE COMPETITOR TABLE ===== */
+    var cb = document.getElementById('ctb');
+    CP.forEach(function(c) {
+        var tc = c.tier === 'Premium' ? 'tier-premium' : c.tier === 'Mid' ? 'tier-mid' : 'tier-budget';
+        var thc = { 'High': 'threat-high', 'Med-High': 'threat-med-high', 'Medium': 'threat-medium', 'Low-Med': 'threat-low-med', 'Low': 'threat-low', 'Minimal': 'threat-minimal', 'Dissolved': 'threat-dissolved' }[c.threat] || 'threat-minimal';
+        var d = c.threat === 'Dissolved';
+        var tr = document.createElement('tr');
+        tr.setAttribute('data-tier', c.tier);
+        tr.style.cursor = 'pointer';
+        if (d) tr.style.opacity = '.6';
+        tr.onclick = (function(x) { return function() { showCompetitorModal(x) } })(c);
+        tr.innerHTML = '<td>' + c.n + '</td><td class="venue-name"' + (d ? ' style="text-decoration:line-through"' : '') + '>' + c.name + '</td><td class="' + tc + '"' + (d ? ' style="text-decoration:line-through"' : '') + '>' + c.tier + '</td><td><span class="' + thc + '">' + c.threat + '</span></td><td>' + c.loc + '</td><td><a href="https://' + c.web + '" target="_blank" rel="noopener" class="ext-link" onclick="event.stopPropagation()">' + c.web + '</a></td><td><a href="https://instagram.com/' + c.ig.replace('@', '') + '" target="_blank" rel="noopener" class="ig-link" onclick="event.stopPropagation()">' + c.ig + '</a></td>';
+        cb.appendChild(tr);
+    });
+
+    /* ===== GEO GRID ===== */
+    var gg = document.getElementById('geoGrid');
+    GD.forEach(function(g) {
+        var lc = g.l === 'high' ? 'geo-high' : g.l === 'med' ? 'geo-med' : 'geo-low';
+        var ll = g.l === 'high' ? 'HIGH' : g.l === 'med' ? 'MED' : 'LOW';
+        var cell = document.createElement('div');
+        cell.className = 'geo-cell';
+        cell.setAttribute('tabindex', '0');
+        cell.setAttribute('role', 'button');
+        cell.onclick = function() {
+            var parts = g.r.toLowerCase().replace(/\s*\/\s*/g, '|').split('|');
+            var rv = V.filter(function(v) { if (!v.county) return false; var vc = v.county.toLowerCase(); for (var i = 0; i < parts.length; i++) { if (vc.indexOf(parts[i]) !== -1 || parts[i].indexOf(vc) !== -1) return true } return false });
+            var h = '<div class="modal-title">' + g.r + '</div><div class="modal-subtitle">' + g.v + ' venues in full database \u00b7 ' + g.c + ' competitors</div>';
+            if (rv.length) { h += '<div class="modal-section"><div class="modal-section-title">Sample Venues</div><div class="table-scroll" style="max-height:300px"><table class="data-table"><thead><tr><th>Venue</th><th>Policy</th><th>Email</th></tr></thead><tbody>'; rv.forEach(function(v) { h += '<tr><td class="venue-name">' + v.name + '</td><td><span class="status ' + (v.policy === 'DRY_HIRE' ? 'status-dry-hire' : 'status-external') + '">' + (v.policy === 'DRY_HIRE' ? 'Dry Hire' : 'Ext OK') + '</span></td><td>' + (v.email || '\u2014') + '</td></tr>' }); h += '</tbody></table></div></div>'; } else { h += '<div class="modal-section"><p style="font-size:13px;color:var(--text-secondary)">No venues from this region in sample. Full database contains ' + g.v + ' venues.</p></div>'; }
+            h += '<div style="font-size:12px;color:var(--text-muted);margin-top:8px">' + g.n + '</div>';
+            openModal(h);
+        };
+        cell.innerHTML = '<div class="geo-region">' + g.r + '</div><div class="geo-score ' + lc + '">' + ll + '</div><div class="geo-detail"><strong>' + g.v + '</strong> venues &middot; <strong>' + g.c + '</strong> competitors</div><div class="geo-detail" style="margin-top:4px;font-size:10px;color:var(--text-muted)">' + g.n + '</div>';
+        gg.appendChild(cell);
+    });
+
+    /* ===== VENUE FILTERS ===== */
+    var avf = 'all';
+    function filterV(p, b) { avf = p; document.querySelectorAll('#venues .filter-btn').forEach(function(x) { x.classList.remove('active') }); if (b) b.classList.add('active'); applyVF() }
+    function applyVF() { var q = (document.getElementById('venueSearch') || {}).value || ''; q = q.toLowerCase(); var shown = 0; vb.querySelectorAll('tr').forEach(function(r) { var p = r.getAttribute('data-policy') || '', t = r.textContent.toLowerCase(); var vis = (avf === 'all' || p === avf) && (!q || t.indexOf(q) !== -1); r.style.display = vis ? '' : 'none'; if (vis) shown++ }); document.getElementById('vtc').textContent = 'Showing ' + shown }
+    var vs = document.getElementById('venueSearch');
+    if (vs) vs.addEventListener('input', debounce(applyVF, 200));
+    function sortV(ci) { var rows = Array.from(vb.querySelectorAll('tr')); var dir = vb.getAttribute('data-sort-dir') === 'asc' ? 'desc' : 'asc'; vb.setAttribute('data-sort-dir', dir); document.querySelectorAll('#vt th').forEach(function(th) { th.classList.remove('sorted', 'asc', 'desc') }); var st = document.querySelector('#vt th[data-col="' + ci + '"]'); if (st) { st.classList.add('sorted', dir) } rows.sort(function(a, b) { var av = a.children[ci] ? a.children[ci].textContent.trim() : '', bv = b.children[ci] ? b.children[ci].textContent.trim() : ''; if (ci === 0) return dir === 'asc' ? parseInt(av) - parseInt(bv) : parseInt(bv) - parseInt(av); return dir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av) }); rows.forEach(function(r) { vb.appendChild(r) }) }
+
+    /* ===== COMPETITOR FILTERS ===== */
+    var acf = 'all';
+    function filterC(t, b) { acf = t; document.querySelectorAll('#competitors .table-controls .filter-btn').forEach(function(x) { x.classList.remove('active') }); if (b) b.classList.add('active'); applyCF() }
+    function applyCF() { var q = (document.getElementById('cs') || {}).value || ''; q = q.toLowerCase(); var shown = 0; cb.querySelectorAll('tr').forEach(function(r) { var t = r.getAttribute('data-tier') || '', tx = r.textContent.toLowerCase(); var vis = (acf === 'all' || t === acf) && (!q || tx.indexOf(q) !== -1); r.style.display = vis ? '' : 'none'; if (vis) shown++ }); document.getElementById('ctc').textContent = shown }
+    var csi = document.getElementById('cs');
+    if (csi) csi.addEventListener('input', debounce(applyCF, 200));
+    function sortC(ci) { var rows = Array.from(cb.querySelectorAll('tr')); var dir = cb.getAttribute('data-sort-dir') === 'asc' ? 'desc' : 'asc'; cb.setAttribute('data-sort-dir', dir); document.querySelectorAll('#ct th').forEach(function(th) { th.classList.remove('sorted', 'asc', 'desc') }); var st = document.querySelector('#ct th[data-col="' + ci + '"]'); if (st) { st.classList.add('sorted', dir) } rows.sort(function(a, b) { var av = a.children[ci] ? a.children[ci].textContent.trim() : '', bv = b.children[ci] ? b.children[ci].textContent.trim() : ''; if (ci === 0) return dir === 'asc' ? parseInt(av) - parseInt(bv) : parseInt(bv) - parseInt(av); if (ci === 2) { var to = { Premium: 1, Mid: 2, Budget: 3 }; return dir === 'asc' ? (to[av] || 99) - (to[bv] || 99) : (to[bv] || 99) - (to[av] || 99) } return dir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av) }); rows.forEach(function(r) { cb.appendChild(r) }) }
+
+    /* ===== CSV EXPORT ===== */
+    function exportCSV() {
+        var csv = 'Score,Venue,County,Policy,Email,Phone,Contact,Website,Source\n';
+        V.forEach(function(v) { csv += v.score + ',"' + v.name.replace(/"/g, '""') + '","' + (v.county || '') + '","' + v.policy + '","' + (v.email || '') + '","' + (v.phone || '') + '","' + (v.contact || '') + '","' + (v.website || '') + '","' + (v.source || '') + '"\n' });
+        var b = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+        var l = document.createElement('a');
+        l.href = URL.createObjectURL(b);
+        l.download = 'hht_venues_' + new Date().toISOString().slice(0, 10) + '.csv';
+        document.body.appendChild(l); l.click(); document.body.removeChild(l);
+    }
+
+    /* ===== FULL REPORT EXPORT ===== */
+    function exportFullReport() {
+        var csv = 'TYPE,Score,Name,County/Location,Policy/Tier,Threat,Email,Phone,Website\n';
+        V.forEach(function(v) { csv += 'VENUE,' + v.score + ',"' + v.name.replace(/"/g, '""') + '","' + (v.county || '') + '","' + v.policy + '",,"' + (v.email || '') + '","' + (v.phone || '') + '","' + (v.website || '') + '"\n' });
+        CP.forEach(function(c) { csv += 'COMPETITOR,' + c.n + ',"' + c.name.replace(/"/g, '""') + '","' + c.loc + '","' + c.tier + '","' + c.threat + '",,,"' + c.web + '"\n' });
+        var b = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+        var l = document.createElement('a');
+        l.href = URL.createObjectURL(b);
+        l.download = 'hht_full_report_' + new Date().toISOString().slice(0, 10) + '.csv';
+        document.body.appendChild(l); l.click(); document.body.removeChild(l);
+    }
+
+    /* ===== PRINT ===== */
+    function printDashboard() { window.print(); }
+
+    /* ===== PEAK COUNTDOWN ===== */
+    (function() {
+        var el = document.getElementById('peakCountdown');
+        var ps = document.getElementById('peakSummary');
+        if (!el) return;
+        var n = new Date(), p = new Date(n.getFullYear(), 4, 1);
+        if (n > p) p.setFullYear(p.getFullYear() + 1);
+        var d = Math.ceil((p - n) / 864e5), w = Math.floor(d / 7), r = d % 7;
+        var txt = w + 'w ' + r + 'd';
+        el.textContent = txt;
+        el.title = 'Days until May 1 (peak wedding season)';
+        if (w <= 6) el.style.color = '#E5484D';
+        else if (w <= 10) el.style.color = '#E5A000';
+        if (ps) ps.textContent = txt;
+    })();
+
+    /* ===== MODAL SWIPE TO CLOSE ===== */
+    (function() {
+        var ms = document.querySelector('.modal-sheet'), startY = 0, dy = 0;
+        if (!ms) return;
+        ms.addEventListener('touchstart', function(e) { startY = e.touches[0].clientY; dy = 0 }, { passive: true });
+        ms.addEventListener('touchmove', function(e) { dy = e.touches[0].clientY - startY; if (dy > 0) ms.style.transform = 'translateY(' + dy + 'px)' }, { passive: true });
+        ms.addEventListener('touchend', function() { if (dy > 80) { closeModal(); ms.style.transform = '' } else { ms.style.transition = 'transform .25s ease'; ms.style.transform = ''; setTimeout(function() { ms.style.transition = '' }, 300) } dy = 0 }, { passive: true });
+    })();
+
+    /* ===== REVENUE CALCULATOR ===== */
+    function uC() {
+        var l = parseInt(document.getElementById('cL').value), c = parseInt(document.getElementById('cCo').value), v = parseInt(document.getElementById('cV').value);
+        var b = Math.round(l * c / 100), r = b * v;
+        document.getElementById('cLv').textContent = l;
+        document.getElementById('cCv').textContent = c + '%';
+        document.getElementById('cVv').textContent = '\u00a3' + v.toLocaleString();
+        var cRel = document.getElementById('cR');
+        cRel.textContent = '\u00a3' + r.toLocaleString();
+        cRel.style.color = r >= 80000 ? 'var(--accent-green)' : r >= 40000 ? 'var(--text-primary)' : 'var(--accent-amber)';
+        document.getElementById('cB').textContent = '~' + b + ' bookings';
+    }
+    </script>
+</body>
+</html>
