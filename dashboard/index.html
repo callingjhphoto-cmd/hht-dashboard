@@ -199,7 +199,7 @@
         .filter-btn { padding: 9px 18px; background: var(--bg-primary); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text-secondary); font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; font-family: inherit; }
         .filter-btn:hover { border-color: rgba(0,0,0,0.2); color: var(--text-primary); background: var(--bg-card-hover); }
         .filter-btn.active { background: var(--accent-gold-dim); border-color: var(--accent-gold); color: var(--accent-gold); box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
-        .table-count { font-size: 12px; color: var(--text-muted); margin-left: auto; }
+        .table-count { font-size: 11px; color: var(--text-muted); margin-left: auto; font-weight: 500; }
         .ext-link { color: var(--accent-blue); text-decoration: none; font-size: 12px; }
         .ext-link:hover { text-decoration: underline; }
         .ig-link { color: var(--accent-purple); text-decoration: none; font-size: 12px; }
@@ -208,14 +208,14 @@
         .tier-mid { color: var(--accent-blue); font-weight: 600; }
         .tier-budget { color: var(--accent-red); font-weight: 600; }
 
-        .threat-high { background: var(--accent-red-dim); color: var(--accent-red); padding: 4px 10px; border-radius: 5px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
-        .threat-med-high { background: var(--accent-orange-dim); color: var(--accent-orange); padding: 4px 10px; border-radius: 5px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
-        .threat-medium { background: var(--accent-amber-dim); color: var(--accent-amber); padding: 4px 10px; border-radius: 5px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
-        .threat-low-med { background: var(--accent-blue-dim); color: var(--accent-blue); padding: 4px 10px; border-radius: 5px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
-        .threat-low { background: var(--accent-green-dim); color: var(--accent-green); padding: 4px 10px; border-radius: 5px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
-        .threat-minimal { background: rgba(0,0,0,0.04); color: var(--text-muted); padding: 4px 10px; border-radius: 5px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
-        .threat-dissolved { background: rgba(220,38,38,0.12); color: var(--accent-red); padding: 4px 10px; border-radius: 5px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; animation: pulseRed 2s ease-in-out infinite; }
-        @keyframes pulseRed { 0%,100%{ box-shadow:0 0 0 0 rgba(248,113,113,0.3); } 50%{ box-shadow:0 0 12px 4px rgba(248,113,113,0.15); } }
+        .threat-high { background: var(--accent-red-dim); color: var(--accent-red); padding: 4px 10px; border-radius: 6px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .threat-med-high { background: var(--accent-orange-dim); color: var(--accent-orange); padding: 4px 10px; border-radius: 6px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .threat-medium { background: var(--accent-amber-dim); color: var(--accent-amber); padding: 4px 10px; border-radius: 6px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .threat-low-med { background: var(--accent-blue-dim); color: var(--accent-blue); padding: 4px 10px; border-radius: 6px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .threat-low { background: var(--accent-green-dim); color: var(--accent-green); padding: 4px 10px; border-radius: 6px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .threat-minimal { background: rgba(0,0,0,0.04); color: var(--text-muted); padding: 4px 10px; border-radius: 6px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .threat-dissolved { background: rgba(220,38,38,0.12); color: var(--accent-red); padding: 4px 10px; border-radius: 6px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; animation: pulseRed 2s ease-in-out infinite; }
+        @keyframes pulseRed { 0%,100%{ box-shadow:0 0 0 0 rgba(220,38,38,0.2); } 50%{ box-shadow:0 0 12px 4px rgba(220,38,38,0.1); } }
 
         .opportunity-banner {
             background: linear-gradient(135deg, rgba(156,126,50,0.05) 0%, rgba(22,163,74,0.04) 100%);
@@ -395,7 +395,7 @@
         .drill-down-panel .dd-close:hover { border-color: var(--accent-red); color: var(--accent-red); }
         .drill-down-panel .dd-body { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
         .drill-down-panel .dd-stat { display: inline-block; font-weight: 700; color: var(--text-primary); margin: 0 2px; }
-        @media print { .header { position: static; } .nav { display: none; } .section { display: block !important; } body { background: white; color: #111; } .card { border: 1px solid #ddd; } }
+        @media print { .header { position: static; box-shadow: none; } .nav, .bottom-nav { display: none !important; } .section { display: block !important; opacity: 1 !important; transform: none !important; } body { background: white; color: #111; padding-bottom: 0 !important; } .card { border: 1px solid #ddd; box-shadow: none; break-inside: avoid; } .kpi-card { break-inside: avoid; box-shadow: none; } .chart-container { break-inside: avoid; } .cta-card { break-inside: avoid; } }
 
         /* ========== CMD+K SEARCH OVERLAY ========== */
         .search-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.3); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
@@ -465,6 +465,10 @@
         .status-in-house::before { content: '\2717 '; }
         .threat-high::before { content: '\25C6 '; }
         .threat-dissolved::before { content: '\2620 '; }
+    
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+        }
     </style>
 </head>
 <body>
@@ -546,7 +550,7 @@
             </div>
 
             <!-- Expansion Intelligence Banner -->
-            <div style="background: linear-gradient(135deg, rgba(22,163,74,0.06) 0%, rgba(96,165,250,0.06) 100%); border: 1px solid rgba(52,211,153,0.25); border-left: 4px solid var(--accent-green); border-radius: var(--radius-md); padding: 20px 24px; margin-bottom: 24px; display: grid; grid-template-columns: 1fr repeat(4,auto); gap: 24px; align-items: center;">
+            <div style="background: linear-gradient(135deg, rgba(22,163,74,0.06) 0%, rgba(37,99,235,0.04) 100%); border: 1px solid rgba(22,163,74,0.15); border-left: 4px solid var(--accent-green); border-radius: var(--radius-md); padding: 20px 24px; margin-bottom: 24px; display: grid; grid-template-columns: 1fr repeat(4,auto); gap: 24px; align-items: center;">
                 <div>
                     <div style="font-size: 10px; text-transform: uppercase; letter-spacing: 1.4px; color: var(--accent-green); font-weight: 700; margin-bottom: 6px;">New Today &mdash; 20 March 2026</div>
                     <div style="font-size: 15px; font-weight: 600; color: var(--text-primary);">Geographic Expansion: 8 New Counties Added</div>
@@ -711,7 +715,7 @@
                     <tr><td class="venue-name">Ace Bar Events</td><td><span class="threat-medium">Medium</span></td><td>London/Essex/Surrey</td><td>Flair bartending specialist, since 2008</td><td>Entertainment-focused, not consultancy-grade</td><td>120+</td></tr>
                     <tr><td class="venue-name">Mix &amp; Twist</td><td><span class="threat-low-med">Low-Med</span></td><td>10 UK cities</td><td>Nationwide, Mercedes/Bentley/McDonald's clients</td><td>Northern-focused, weaker in Cotswolds/Home Counties</td><td>180+</td></tr>
                     <tr><td class="venue-name">Sweet &amp; Chilli Events</td><td><span class="threat-low-med">Low-Med</span></td><td>London, Bristol, Global</td><td>Global agency, Guinness/Hendrick's partnerships</td><td>Brand activation focus, less direct event competition</td><td>100+</td></tr>
-                    <tr style="background:rgba(248,113,113,0.04);"><td class="venue-name" style="text-decoration:line-through;opacity:0.7;">The Cocktail Service</td><td><span class="threat-dissolved">Dissolved</span></td><td>London, Oxford, Edinburgh</td><td>Was: 17K followers, Red Bull/Google/Facebook</td><td style="color:var(--accent-gold);font-weight:600;">CLIENTS NOW ORPHANED &mdash; Immediate land grab</td><td>&mdash;</td></tr>
+                    <tr style="background:rgba(220,38,38,0.04);"><td class="venue-name" style="text-decoration:line-through;opacity:0.7;">The Cocktail Service</td><td><span class="threat-dissolved">Dissolved</span></td><td>London, Oxford, Edinburgh</td><td>Was: 17K followers, Red Bull/Google/Facebook</td><td style="color:var(--accent-gold);font-weight:600;">CLIENTS NOW ORPHANED &mdash; Immediate land grab</td><td>&mdash;</td></tr>
                 </tbody></table></div>
             </div>
 
@@ -911,7 +915,7 @@
                             <div style="font-size:36px;font-weight:800;color:var(--accent-gold);letter-spacing:-1.5px;">&pound;70,800</div>
                             <div style="font-size:12px;color:var(--text-secondary);margin-top:6px;">Based on stage-weighted probability model</div>
                         </div>
-                        <div style="margin-top:16px;padding:14px 18px;background:rgba(22,163,74,0.05);border:1px solid rgba(52,211,153,0.2);border-radius:var(--radius-sm);">
+                        <div style="margin-top:16px;padding:14px 18px;background:rgba(22,163,74,0.05);border:1px solid rgba(22,163,74,0.12);border-radius:var(--radius-sm);">
                             <div style="font-size:12px;color:var(--text-secondary);line-height:1.6;"><strong style="color:var(--accent-green);">Key Insight:</strong> &pound;25,200 already near-certain from 6 deposits paid. Negotiation stage (&pound;21K weighted) is the highest-leverage area for Joe's focus.</div>
                         </div>
                     </div>
@@ -1319,7 +1323,7 @@
 
     function initCompetitorCharts() {
         if(initializedSections.competitors) return; initializedSections.competitors = true;
-        createChart('tierChart',{type:'polarArea',data:{labels:['Premium (16)','Mid Tier (37)','Budget (4)','Dissolved (1)'],datasets:[{data:[16,37,4,1],backgroundColor:['rgba(148,107,45,0.45)','rgba(96,165,250,0.45)','rgba(248,113,113,0.45)','rgba(220,38,38,0.15)'],borderColor:['#946b2d','#2563eb','#dc2626','#dc2626'],borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{font:{size:11}}}}}});
+        createChart('tierChart',{type:'polarArea',data:{labels:['Premium (16)','Mid Tier (37)','Budget (4)','Dissolved (1)'],datasets:[{data:[16,37,4,1],backgroundColor:['rgba(148,107,45,0.45)','rgba(37,99,235,0.45)','rgba(220,38,38,0.35)','rgba(220,38,38,0.15)'],borderColor:['#946b2d','#2563eb','#dc2626','#dc2626'],borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{font:{size:11}}}}}});
         createChart('geoCompChart',{type:'bar',data:{labels:['London','Oxford/Cotswolds','Birmingham/Midlands','Manchester/North','Edinburgh/Scotland','Surrey/Hampshire','Bristol/SW'],datasets:[{label:'Competitors',data:[28,6,5,4,4,5,3],backgroundColor:function(c){return c.dataIndex===1?'rgba(22,163,74,0.5)':'rgba(37,99,235,0.35)';},borderColor:function(c){return c.dataIndex===1?'#16a34a':'#2563eb';},borderWidth:1,borderRadius:4}]},options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false},tooltip:{callbacks:{afterLabel:function(c){return c.dataIndex===1?'HHT TARGET REGION - Low competition!':'';}}}},scales:{x:{grid:{display:false}}}}});
     }
 
@@ -1342,7 +1346,7 @@
     function initInsightsCharts() {
         if(initializedSections.insights) return; initializedSections.insights = true;
         createChart('revenueProjectionChart',{type:'line',data:{labels:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],datasets:[{label:'Projected Revenue',data:[2800,4200,6800,12500,22000,28500,32000,29000,24000,16000,8500,5200],borderColor:'#946b2d',backgroundColor:'rgba(148,107,45,0.08)',fill:true,tension:0.4,pointRadius:5,pointBackgroundColor:'#946b2d',pointHoverRadius:7,borderWidth:2.5},{label:'Secured Revenue',data:[0,0,0,0,28000,28000,28000,28000,28000,28000,28000,28000],borderColor:'#16a34a',backgroundColor:'rgba(22,163,74,0.05)',fill:true,tension:0,pointRadius:3,pointBackgroundColor:'#16a34a',borderWidth:1.5,borderDash:[5,5]}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top',labels:{font:{size:11}}},tooltip:{callbacks:{label:function(c){return c.dataset.label+': \u00a3'+c.raw.toLocaleString();}}}},scales:{y:{beginAtZero:true,ticks:{callback:function(v){return '\u00a3'+v.toLocaleString();}}}}}});
-        createChart('outreachChannelChart',{type:'doughnut',data:{labels:['Email (18)','Phone (4)','Instagram DM (2)'],datasets:[{data:[18,4,2],backgroundColor:['rgba(96,165,250,0.6)','rgba(148,107,45,0.6)','rgba(167,139,250,0.6)'],borderWidth:0,borderRadius:4}]},options:{responsive:true,maintainAspectRatio:false,cutout:'68%',plugins:{legend:{position:'right',labels:{font:{size:11}}}}}});
+        createChart('outreachChannelChart',{type:'doughnut',data:{labels:['Email (18)','Phone (4)','Instagram DM (2)'],datasets:[{data:[18,4,2],backgroundColor:['rgba(37,99,235,0.6)','rgba(148,107,45,0.6)','rgba(167,139,250,0.6)'],borderWidth:0,borderRadius:4}]},options:{responsive:true,maintainAspectRatio:false,cutout:'68%',plugins:{legend:{position:'right',labels:{font:{size:11}}}}}});
         createChart('outreachTimingChart',{type:'bar',data:{labels:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],datasets:[{label:'Response Rate',data:[28,42,38,35,22,8,5],backgroundColor:function(c){return c.dataIndex===1?'rgba(22,163,74,0.5)':'rgba(37,99,235,0.35)';},borderColor:function(c){return c.dataIndex===1?'#16a34a':'#2563eb';},borderWidth:1,borderRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.raw+'% response rate';}}}},scales:{y:{beginAtZero:true,max:50,ticks:{callback:function(v){return v+'%';}}},x:{grid:{display:false}}}}});
     }
 
@@ -1379,7 +1383,7 @@
         var thc={'High':'threat-high','Med-High':'threat-med-high','Medium':'threat-medium','Low-Med':'threat-low-med','Low':'threat-low','Minimal':'threat-minimal','Dissolved':'threat-dissolved'}[c.threat]||'threat-minimal';
         var d=c.threat==='Dissolved';
         var tr=document.createElement('tr'); tr.setAttribute('data-tier',c.tier);
-        if(d)tr.style.background='rgba(248,113,113,0.04)';
+        if(d)tr.style.background='rgba(220,38,38,0.04)';
         tr.innerHTML='<td>'+c.n+'</td><td class="venue-name"'+(d?' style="text-decoration:line-through;opacity:0.6;"':'')+'>'+c.name+'</td><td class="'+tc+'"'+(d?' style="text-decoration:line-through;opacity:0.6;"':'')+'>'+c.tier+'</td><td><span class="'+thc+'">'+c.threat+'</span></td><td>'+c.loc+'</td><td><a href="https://'+c.web+'" target="_blank" class="ext-link">'+c.web+'</a></td><td><a href="https://instagram.com/'+c.ig.replace('@','')+'" target="_blank" class="ig-link">'+c.ig+'</a></td>';
         cb.appendChild(tr);
     });
