@@ -1,0 +1,33 @@
+2026-03-20 13:00:38,164 [INFO] ============================================================
+2026-03-20 13:00:38,164 [INFO] HHT Lead Gen Engine — Multi-Layer Enrichment
+2026-03-20 13:00:38,164 [INFO] Date: 2026-03-20
+2026-03-20 13:00:38,164 [INFO] Layers: ch,hunter,google,scrape
+2026-03-20 13:00:38,164 [INFO] Keys: CH=NO | Hunter=NO | Google=NO
+2026-03-20 13:00:38,164 [INFO] ============================================================
+2026-03-20 13:00:38,165 [INFO] Loaded 372 venues
+2026-03-20 13:00:38,165 [INFO] Venues to process: 20
+2026-03-20 13:00:38,165 [INFO] 
+--- DRY RUN ---
+2026-03-20 13:00:38,165 [INFO]   1. Worton Hall | Oxfordshire | email: enquiries@wortonpark.co.uk
+2026-03-20 13:00:38,165 [INFO]   2. Hampshire Cricket (Utilita Bowl) | Hampshire | email: 
+2026-03-20 13:00:38,165 [INFO]   3. The Chilterns View | Oxfordshire | email: info@thechilternsview.co.uk
+2026-03-20 13:00:38,165 [INFO]   4. Talton Lodge | Warwickshire | email: info@taltonlodge.com
+2026-03-20 13:00:38,165 [INFO]   5. Farnborough International | Hampshire | email: 
+2026-03-20 13:00:38,165 [INFO]   6. Lakeside Country Club | Surrey | email: reservations@lakesideinthotel.com
+2026-03-20 13:00:38,165 [INFO]   7. Easthampstead Park | Berkshire | email: sales@eastpark.co.uk
+2026-03-20 13:00:38,165 [INFO]   8. Hatfield House | Hertfordshire | email: events@hatfieldpark.co.uk
+2026-03-20 13:00:38,165 [INFO]   9. Blenheim Palace | Oxfordshire | email: sales@blenheimpalace.com
+2026-03-20 13:00:38,165 [INFO]   10. Gorse Hill | Surrey | email: sales@gorsehill.co.uk
+2026-03-20 13:00:38,165 [INFO]   11. Woodbury Park Hotel & Golf Club | Oxfordshire | email: info@theclubcompany.com
+2026-03-20 13:00:38,165 [INFO]   12. Weston Manor Hotel | Oxfordshire | email: info@thewestonmanor.com
+2026-03-20 13:00:38,165 [INFO]   13. Hawkwell House Hotel | Oxfordshire | email: hb6p4-fo1@accor.com
+2026-03-20 13:00:38,165 [INFO]   14. Histon Manor | Cambridgeshire | email: histonmanor@gmail.com
+2026-03-20 13:00:38,165 [INFO]   15. Swynford Manor | Cambridgeshire | email: 
+2026-03-20 13:00:38,165 [INFO]   16. Bassmead Manor Barns | Cambridgeshire | email: 
+2026-03-20 13:00:38,165 [INFO]   17. Waresley Park Estate | Cambridgeshire | email: 
+2026-03-20 13:00:38,165 [INFO]   18. The Manor Barn | Cambridgeshire | email: 
+2026-03-20 13:00:38,165 [INFO]   19. Mill Farm | Cambridgeshire | email: 
+2026-03-20 13:00:38,165 [INFO]   20. South Farm | Cambridgeshire | email: info@south-farm.co.uk
+2026-03-20 13:00:38,165 [INFO] 
+Would process 20 venues
+2026-03-20 13:00:38,165 [INFO] Estimated time: ~30s (0.5 min)

@@ -1,0 +1,337 @@
+2026-03-20 06:43:52,624 [INFO] ============================================================
+2026-03-20 06:43:52,625 [INFO] HHT Venue Contact Enricher v2
+2026-03-20 06:43:52,625 [INFO] Date: 2026-03-20 | Limit: 100
+2026-03-20 06:43:52,625 [INFO] ============================================================
+2026-03-20 06:43:52,626 [INFO] Already enriched: 50 venues (will skip)
+2026-03-20 06:43:52,632 [INFO] Venues to enrich: 330
+2026-03-20 06:43:52,632 [INFO] 
+[1/100] Manor Mews (Norfolk)
+2026-03-20 06:43:53,400 [INFO]   No website found via search
+2026-03-20 06:43:56,918 [INFO] 
+[2/100] Pentney Abbey (Norfolk)
+2026-03-20 06:43:57,573 [INFO]   No website found via search
+2026-03-20 06:44:00,978 [INFO] 
+[3/100] Suffolk Barn at Hawstead Place (Suffolk)
+2026-03-20 06:44:01,525 [INFO]   No website found via search
+2026-03-20 06:44:06,210 [INFO] 
+[4/100] The Old Hall Ely (Cambridgeshire)
+2026-03-20 06:44:06,853 [INFO]   No website found via search
+2026-03-20 06:44:10,405 [INFO] 
+[5/100] Sissons Barn (Cambridgeshire)
+2026-03-20 06:44:11,045 [INFO]   No website found via search
+2026-03-20 06:44:15,570 [INFO]   [SAVED] 55 total venues
+2026-03-20 06:44:15,570 [INFO] 
+[6/100] Willow Grange Farm (Cambridgeshire)
+2026-03-20 06:44:16,284 [INFO]   No website found via search
+2026-03-20 06:44:19,568 [INFO] 
+[7/100] Swallows Nest Barn (Warwickshire)
+2026-03-20 06:44:20,143 [INFO]   No website found via search
+2026-03-20 06:44:24,777 [INFO] 
+[8/100] Longbourn Estate Barn (Warwickshire)
+2026-03-20 06:44:25,350 [INFO]   No website found via search
+2026-03-20 06:44:29,946 [INFO] 
+[9/100] Meadow Barn at Stratford Park (Warwickshire)
+2026-03-20 06:44:30,454 [INFO]   No website found via search
+2026-03-20 06:44:35,061 [INFO] 
+[10/100] Barns and Yards (Worcestershire)
+2026-03-20 06:44:35,687 [INFO]   No website found via search
+2026-03-20 06:44:39,241 [INFO]   [SAVED] 60 total venues
+2026-03-20 06:44:39,241 [INFO] 
+[11/100] Bredenbury Court Barns (Herefordshire)
+2026-03-20 06:44:39,857 [INFO]   No website found via search
+2026-03-20 06:44:44,032 [INFO] 
+[12/100] Wood Farm Everdon (Northamptonshire)
+2026-03-20 06:44:44,565 [INFO]   No website found via search
+2026-03-20 06:44:48,515 [INFO] 
+[13/100] The Great Barn Aynho (Northamptonshire)
+2026-03-20 06:44:49,056 [INFO]   No website found via search
+2026-03-20 06:44:52,259 [INFO] 
+[14/100] The Old Kent Barn (Kent)
+2026-03-20 06:44:52,984 [INFO]   No website found via search
+2026-03-20 06:44:56,206 [INFO] 
+[15/100] Rivervale Barn (Hampshire)
+2026-03-20 06:44:56,857 [INFO]   No website found via search
+2026-03-20 06:45:00,822 [INFO]   [SAVED] 65 total venues
+2026-03-20 06:45:00,822 [INFO] 
+[16/100] Launcells Barton (Cornwall)
+2026-03-20 06:45:01,387 [INFO]   No website found via search
+2026-03-20 06:45:05,211 [INFO] 
+[17/100] Curradine Barns (Worcestershire)
+2026-03-20 06:45:05,908 [INFO]   No website found via search
+2026-03-20 06:45:10,362 [INFO] 
+[18/100] Nancarrow Farm (Cornwall)
+2026-03-20 06:45:11,009 [INFO]   No website found via search
+2026-03-20 06:45:15,326 [INFO] 
+[19/100] The Oak Barn (Devon)
+2026-03-20 06:45:16,077 [INFO]   No website found via search
+2026-03-20 06:45:20,342 [INFO] 
+[20/100] Battleswick Farm (Essex)
+2026-03-20 06:45:20,901 [INFO]   No website found via search
+2026-03-20 06:45:23,959 [INFO]   [SAVED] 70 total venues
+2026-03-20 06:45:23,959 [INFO] 
+[21/100] South Stoke Barn (West Sussex)
+2026-03-20 06:45:24,646 [INFO]   No website found via search
+2026-03-20 06:45:29,024 [INFO] 
+[22/100] Brickhouse Vineyard (Devon)
+2026-03-20 06:45:29,504 [INFO]   No website found via search
+2026-03-20 06:45:34,124 [INFO] 
+[23/100] The Great Barn Devon (Devon)
+2026-03-20 06:45:34,763 [INFO]   No website found via search
+2026-03-20 06:45:39,610 [INFO] 
+[24/100] Chaucer Barn (Norfolk)
+2026-03-20 06:45:40,163 [INFO]   No website found via search
+2026-03-20 06:45:43,979 [INFO] 
+[25/100] Rhyse Farm (Worcestershire)
+2026-03-20 06:45:44,516 [INFO]   No website found via search
+2026-03-20 06:45:48,537 [INFO]   [SAVED] 75 total venues
+2026-03-20 06:45:48,537 [INFO] 
+[26/100] Blake Hall (Essex)
+2026-03-20 06:45:49,219 [INFO]   No website found via search
+2026-03-20 06:45:53,031 [INFO] 
+[27/100] The Priory Barn (Hertfordshire)
+2026-03-20 06:45:53,735 [INFO]   No website found via search
+2026-03-20 06:45:56,793 [INFO] 
+[28/100] Trevenna (Cornwall)
+2026-03-20 06:45:57,460 [INFO]   No website found via search
+2026-03-20 06:46:01,710 [INFO] 
+[29/100] Alexandra Palace (Greater London)
+2026-03-20 06:46:02,338 [INFO]   No website found via search
+2026-03-20 06:46:05,569 [INFO] 
+[30/100] Tobacco Dock (Greater London)
+2026-03-20 06:46:06,062 [INFO]   No website found via search
+2026-03-20 06:46:10,920 [INFO]   [SAVED] 80 total venues
+2026-03-20 06:46:10,920 [INFO] 
+[31/100] Troxy (Greater London)
+2026-03-20 06:46:11,658 [INFO]   No website found via search
+2026-03-20 06:46:15,370 [INFO] 
+[32/100] Old Billingsgate (Greater London)
+2026-03-20 06:46:16,080 [INFO]   No website found via search
+2026-03-20 06:46:20,614 [INFO] 
+[33/100] The Roundhouse (Greater London)
+2026-03-20 06:46:21,169 [INFO]   No website found via search
+2026-03-20 06:46:24,600 [INFO] 
+[34/100] The Barbican Centre (Greater London)
+2026-03-20 06:46:25,095 [INFO]   No website found via search
+2026-03-20 06:46:28,155 [INFO] 
+[35/100] The Brewery (Greater London)
+2026-03-20 06:46:28,685 [INFO]   No website found via search
+2026-03-20 06:46:32,252 [INFO]   [SAVED] 85 total venues
+2026-03-20 06:46:32,252 [INFO] 
+[36/100] Kew Gardens (Greater London)
+2026-03-20 06:46:32,774 [INFO]   No website found via search
+2026-03-20 06:46:36,969 [INFO] 
+[37/100] Village Underground (Greater London)
+2026-03-20 06:46:37,607 [INFO]   No website found via search
+2026-03-20 06:46:41,545 [INFO] 
+[38/100] One Marylebone (Greater London)
+2026-03-20 06:46:42,128 [INFO]   No website found via search
+2026-03-20 06:46:45,574 [INFO] 
+[39/100] Guildhall (Greater London)
+2026-03-20 06:46:46,169 [INFO]   No website found via search
+2026-03-20 06:46:50,746 [INFO] 
+[40/100] Royal Hospital Chelsea (Greater London)
+2026-03-20 06:46:51,286 [INFO]   No website found via search
+2026-03-20 06:46:56,005 [INFO]   [SAVED] 90 total venues
+2026-03-20 06:46:56,005 [INFO] 
+[41/100] The Hop Farm (Kent)
+2026-03-20 06:46:56,694 [INFO]   No website found via search
+2026-03-20 06:47:01,176 [INFO] 
+[42/100] The Eden Project (Cornwall)
+2026-03-20 06:47:01,939 [INFO]   No website found via search
+2026-03-20 06:47:06,459 [INFO] 
+[43/100] Banqueting House (Greater London)
+2026-03-20 06:47:07,138 [INFO]   No website found via search
+2026-03-20 06:47:11,845 [INFO] 
+[44/100] Banking Hall (Greater London)
+2026-03-20 06:47:12,444 [INFO]   No website found via search
+2026-03-20 06:47:15,482 [INFO] 
+[45/100] The Ministry (Greater London)
+2026-03-20 06:47:16,167 [INFO]   No website found via search
+2026-03-20 06:47:20,426 [INFO]   [SAVED] 95 total venues
+2026-03-20 06:47:20,426 [INFO] 
+[46/100] Battersea Arts Centre (Greater London)
+2026-03-20 06:47:21,296 [INFO]   No website found via search
+2026-03-20 06:47:25,802 [INFO] 
+[47/100] Warwick Castle (Warwickshire)
+2026-03-20 06:47:26,215 [INFO]   No website found via search
+2026-03-20 06:47:29,571 [INFO] 
+[48/100] Tower of London (Greater London)
+2026-03-20 06:47:30,307 [INFO]   No website found via search
+2026-03-20 06:47:34,817 [INFO] 
+[49/100] Syon Park (Greater London)
+2026-03-20 06:47:35,568 [INFO]   No website found via search
+2026-03-20 06:47:39,966 [INFO] 
+[50/100] Trinity Buoy Wharf (Greater London)
+2026-03-20 06:47:40,527 [INFO]   No website found via search
+2026-03-20 06:47:44,873 [INFO]   [SAVED] 100 total venues
+2026-03-20 06:47:44,873 [INFO] 
+[51/100] Kensington Palace (Greater London)
+2026-03-20 06:47:45,476 [INFO]   No website found via search
+2026-03-20 06:47:49,926 [INFO] 
+[52/100] Hampton Court Palace (Greater London)
+2026-03-20 06:47:50,735 [INFO]   No website found via search
+2026-03-20 06:47:54,990 [INFO] 
+[53/100] Leeds Castle (Kent)
+2026-03-20 06:47:55,516 [INFO]   No website found via search
+2026-03-20 06:48:00,073 [INFO] 
+[54/100] Hatfield House (Hertfordshire)
+2026-03-20 06:48:00,753 [INFO]   No website found via search
+2026-03-20 06:48:05,727 [INFO] 
+[55/100] Hanbury Manor (Hertfordshire)
+2026-03-20 06:48:06,472 [INFO]   No website found via search
+2026-03-20 06:48:09,679 [INFO]   [SAVED] 105 total venues
+2026-03-20 06:48:09,679 [INFO] 
+[56/100] Waddesdon Manor (Buckinghamshire)
+2026-03-20 06:48:10,197 [INFO]   No website found via search
+2026-03-20 06:48:13,246 [INFO] 
+[57/100] Stoke Park (Buckinghamshire)
+2026-03-20 06:48:13,765 [INFO]   No website found via search
+2026-03-20 06:48:17,019 [INFO] 
+[58/100] Froyle Park (Hampshire)
+2026-03-20 06:48:17,456 [INFO]   No website found via search
+2026-03-20 06:48:22,331 [INFO] 
+[59/100] Goodwood House (West Sussex)
+2026-03-20 06:48:22,829 [INFO]   No website found via search
+2026-03-20 06:48:27,258 [INFO] 
+[60/100] Arundel Castle (West Sussex)
+2026-03-20 06:48:27,774 [INFO]   No website found via search
+2026-03-20 06:48:31,726 [INFO]   [SAVED] 110 total venues
+2026-03-20 06:48:31,726 [INFO] 
+[61/100] Bath Guildhall (Somerset)
+2026-03-20 06:48:32,240 [INFO]   No website found via search
+2026-03-20 06:48:35,268 [INFO] 
+[62/100] Holkham Hall (Norfolk)
+2026-03-20 06:48:35,828 [INFO]   No website found via search
+2026-03-20 06:48:39,868 [INFO] 
+[63/100] Warwick Castle (Warwickshire)
+2026-03-20 06:48:40,539 [INFO]   No website found via search
+2026-03-20 06:48:44,157 [INFO] 
+[64/100] Wootton Park (Warwickshire)
+2026-03-20 06:48:44,771 [INFO]   No website found via search
+2026-03-20 06:48:48,578 [INFO] 
+[65/100] Addington Palace (Surrey)
+2026-03-20 06:48:49,202 [INFO]   No website found via search
+2026-03-20 06:48:54,113 [INFO]   [SAVED] 115 total venues
+2026-03-20 06:48:54,113 [INFO] 
+[66/100] The Grove (Hertfordshire)
+2026-03-20 06:48:54,790 [INFO]   No website found via search
+2026-03-20 06:48:57,889 [INFO] 
+[67/100] Powderham Castle (Devon)
+2026-03-20 06:48:58,638 [INFO]   No website found via search
+2026-03-20 06:49:02,304 [INFO] 
+[68/100] Tregothnan (Cornwall)
+2026-03-20 06:49:03,015 [INFO]   No website found via search
+2026-03-20 06:49:06,297 [INFO] 
+[69/100] Holkham Hall (Norfolk)
+2026-03-20 06:49:06,818 [INFO]   No website found via search
+2026-03-20 06:49:10,365 [INFO] 
+[70/100] Thursford Collection (Norfolk)
+2026-03-20 06:49:11,083 [INFO]   No website found via search
+2026-03-20 06:49:15,586 [INFO]   [SAVED] 120 total venues
+2026-03-20 06:49:15,586 [INFO] 
+[71/100] Longleat House (Wiltshire)
+2026-03-20 06:49:16,162 [INFO]   No website found via search
+2026-03-20 06:49:19,986 [INFO] 
+[72/100] Goodwood House (West Sussex)
+2026-03-20 06:49:20,583 [INFO]   No website found via search
+2026-03-20 06:49:24,630 [INFO] 
+[73/100] Bearwood College (Berkshire)
+2026-03-20 06:49:25,260 [INFO]   No website found via search
+2026-03-20 06:49:30,115 [INFO] 
+[74/100] Althorp (Northamptonshire)
+2026-03-20 06:49:30,824 [INFO]   No website found via search
+2026-03-20 06:49:33,936 [INFO] 
+[75/100] Stanbrook Abbey (Worcestershire)
+2026-03-20 06:49:34,550 [INFO]   No website found via search
+2026-03-20 06:49:37,771 [INFO]   [SAVED] 125 total venues
+2026-03-20 06:49:37,771 [INFO] 
+[76/100] Woburn Abbey (Bedfordshire)
+2026-03-20 06:49:38,430 [INFO]   No website found via search
+2026-03-20 06:49:41,686 [INFO] 
+[77/100] Hedingham Castle (Kent)
+2026-03-20 06:49:42,265 [INFO]   No website found via search
+2026-03-20 06:49:46,661 [INFO] 
+[78/100] The Heron (Essex)
+2026-03-20 06:49:47,178 [INFO]   No website found via search
+2026-03-20 06:49:50,939 [INFO] 
+[79/100] Ashridge House (Hertfordshire)
+2026-03-20 06:49:51,511 [INFO]   No website found via search
+2026-03-20 06:49:54,808 [INFO] 
+[80/100] Knebworth House (Hertfordshire)
+2026-03-20 06:49:55,421 [INFO]   No website found via search
+2026-03-20 06:49:58,851 [INFO]   [SAVED] 130 total venues
+2026-03-20 06:49:58,851 [INFO] 
+[81/100] Hedsor House (Buckinghamshire)
+2026-03-20 06:49:59,373 [INFO]   No website found via search
+2026-03-20 06:50:03,849 [INFO] 
+[82/100] Norton Park (Hampshire)
+2026-03-20 06:50:04,303 [INFO]   No website found via search
+2026-03-20 06:50:08,862 [INFO] 
+[83/100] Firle Place (East Sussex)
+2026-03-20 06:50:09,336 [INFO]   No website found via search
+2026-03-20 06:50:12,439 [INFO] 
+[84/100] Longleat (Wiltshire)
+2026-03-20 06:50:13,105 [INFO]   No website found via search
+2026-03-20 06:50:16,819 [INFO] 
+[85/100] Stanbrook Abbey (Worcestershire)
+2026-03-20 06:50:17,403 [INFO]   No website found via search
+2026-03-20 06:50:22,149 [INFO]   [SAVED] 135 total venues
+2026-03-20 06:50:22,149 [INFO] 
+[86/100] Eastnor Castle (Herefordshire)
+2026-03-20 06:50:22,780 [INFO]   No website found via search
+2026-03-20 06:50:26,736 [INFO] 
+[87/100] Woburn Abbey (Bedfordshire)
+2026-03-20 06:50:27,526 [INFO]   No website found via search
+2026-03-20 06:50:31,479 [INFO] 
+[88/100] Althorp (Northamptonshire)
+2026-03-20 06:50:32,118 [INFO]   No website found via search
+2026-03-20 06:50:36,839 [INFO] 
+[89/100] Stowe House (Buckinghamshire)
+2026-03-20 06:50:37,499 [INFO]   No website found via search
+2026-03-20 06:50:40,871 [INFO] 
+[90/100] Storey's Field Centre (Greater London)
+2026-03-20 06:50:41,384 [INFO]   No website found via search
+2026-03-20 06:50:45,858 [INFO]   [SAVED] 140 total venues
+2026-03-20 06:50:45,858 [INFO] 
+[91/100] Wotton House (Surrey)
+2026-03-20 06:50:46,719 [INFO]   No website found via search
+2026-03-20 06:50:50,120 [INFO] 
+[92/100] Down Hall (Essex)
+2026-03-20 06:50:50,642 [INFO]   No website found via search
+2026-03-20 06:50:54,592 [INFO] 
+[93/100] Hedingham Castle (Essex)
+2026-03-20 06:50:55,078 [INFO]   No website found via search
+2026-03-20 06:50:58,440 [INFO] 
+[94/100] Highclere Castle (Hampshire)
+2026-03-20 06:50:59,013 [INFO]   No website found via search
+2026-03-20 06:51:03,637 [INFO] 
+[95/100] Tylney Hall (Hampshire)
+2026-03-20 06:51:04,117 [INFO]   No website found via search
+2026-03-20 06:51:08,097 [INFO]   [SAVED] 145 total venues
+2026-03-20 06:51:08,097 [INFO] 
+[96/100] Moor Park Mansion (Hertfordshire)
+2026-03-20 06:51:08,634 [INFO]   No website found via search
+2026-03-20 06:51:11,912 [INFO] 
+[97/100] Dartington Hall (Devon)
+2026-03-20 06:51:12,621 [INFO]   No website found via search
+2026-03-20 06:51:17,277 [INFO] 
+[98/100] Orchardleigh Estate (Somerset)
+2026-03-20 06:51:17,882 [INFO]   No website found via search
+2026-03-20 06:51:21,552 [INFO] 
+[99/100] Kilver Court (Somerset)
+2026-03-20 06:51:22,035 [INFO]   No website found via search
+2026-03-20 06:51:26,991 [INFO] 
+[100/100] Lulworth Castle (Dorset)
+2026-03-20 06:51:27,555 [INFO]   No website found via search
+2026-03-20 06:51:31,371 [INFO]   [SAVED] 150 total venues
+2026-03-20 06:51:31,374 [INFO] 
+============================================================
+2026-03-20 06:51:31,374 [INFO] ENRICHMENT COMPLETE
+2026-03-20 06:51:31,374 [INFO] ============================================================
+2026-03-20 06:51:31,374 [INFO] Processed: 100
+2026-03-20 06:51:31,374 [INFO] Websites found: 0
+2026-03-20 06:51:31,374 [INFO] Emails found: 0
+2026-03-20 06:51:31,374 [INFO] Phones found: 0
+2026-03-20 06:51:31,374 [INFO] Errors: 0
+2026-03-20 06:51:31,374 [INFO] Total enriched records: 150
+2026-03-20 06:51:31,374 [INFO] Output: /Users/jameshuertas/Documents/Claude/projects/hht/enriched_venues.json

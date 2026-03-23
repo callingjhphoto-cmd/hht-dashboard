@@ -1,0 +1,386 @@
+{
+  "metadata": {
+    "created": "2026-03-20",
+    "purpose": "Festival, outdoor event, and sporting event targets for HHT cocktail bar hire",
+    "total_events": 48,
+    "categories": 6,
+    "avg_revenue_per_festival": 8000,
+    "source": "Web research — Country & Town House, Mini Travellers, Great British Food Festival, Cowdray Polo, Guards Polo, direct event sites"
+  },
+  "categories": {
+    "food_festivals": {
+      "category": "Food & Drink Festivals",
+      "rationale": "Food festivals draw affluent, experience-seeking crowds who buy premium cocktails. Average spend per customer is higher than at music festivals.",
+      "outreach_timing": "January-March for summer festivals, June-August for autumn events",
+      "events": [
+        {
+          "name": "Pub in the Park",
+          "type": "Food & Music Festival",
+          "locations": ["Marlow", "Tunbridge Wells", "Chiswick", "St Albans", "Bath", "Dulwich"],
+          "dates": "Multiple weekends May-September 2026",
+          "capacity": 5000,
+          "website": "https://pubinthepark.com",
+          "notes": "ORPHANED CLIENT — former Cocktail Service venue. Raymond Blanc, James Martin headline. Cocktail bar slot OPEN.",
+          "contact_approach": "Festival director — check website for events team",
+          "priority": "IMMEDIATE",
+          "strategic_priority": "HIGH",
+          "strategic_reason": "orphaned_client",
+          "estimated_revenue": 8000
+        },
+        {
+          "name": "The Big Feastival",
+          "type": "Food & Music Festival",
+          "locations": ["Alex James' Farm, Kingham, Oxfordshire (Cotswolds)"],
+          "dates": "August Bank Holiday 2026",
+          "capacity": 10000,
+          "website": "https://thebigfeastival.com",
+          "notes": "Alex James (Blur) farm in Cotswolds. Live music + exceptional food + cocktails + wines. PRIME target geography.",
+          "contact_approach": "Festival production manager via website",
+          "priority": "HIGH",
+          "estimated_revenue": 12000
+        },
+        {
+          "name": "Taste of London",
+          "type": "Food Festival",
+          "locations": ["Regent's Park, London"],
+          "dates": "June 2026 (5 days)",
+          "capacity": 20000,
+          "website": "https://london.tastefestivals.com",
+          "notes": "Pop-ups from top restaurants, champagne bars, cocktails. Premium audience.",
+          "contact_approach": "Taste Festivals events team",
+          "priority": "HIGH",
+          "estimated_revenue": 15000
+        },
+        {
+          "name": "Meatopia",
+          "type": "Food & Drink Festival",
+          "locations": ["Tobacco Dock, London", "Glasgow"],
+          "dates": "September 2026",
+          "capacity": 8000,
+          "website": "https://www.meatopia.co.uk",
+          "notes": "Dedicated to meat + live fire cooking, craft beers + cocktails. Already has cocktail bar slots.",
+          "contact_approach": "Production team via website",
+          "priority": "HIGH",
+          "estimated_revenue": 10000
+        },
+        {
+          "name": "Great British Food Festival",
+          "type": "Food Festival Circuit",
+          "locations": [
+            "Trentham Gardens, Staffordshire (May)",
+            "Arley Hall, Cheshire (May)",
+            "Castle Howard, Yorkshire (May)",
+            "Englefield House, Berkshire (June)",
+            "Ragley Hall, Warwickshire (July)",
+            "Kelmarsh Hall, Northamptonshire (July)",
+            "Bowood House, Wiltshire (August)",
+            "Harewood House, Yorkshire (August)",
+            "Loseley Park, Surrey (August)",
+            "Fonmon Castle, South Wales (August)"
+          ],
+          "dates": "May-September 2026",
+          "capacity": 3000,
+          "website": "https://greatbritishfoodfestival.com",
+          "notes": "CIRCUIT of 10+ events. Englefield (Berkshire), Ragley (Warwickshire), Bowood (Wiltshire), Loseley (Surrey) all in TARGET geography. One deal = multiple events.",
+          "contact_approach": "Central organiser — one relationship covers all venues",
+          "priority": "HIGH",
+          "estimated_revenue": 5000
+        },
+        {
+          "name": "Blenheim Palace Food Festival",
+          "type": "Food Festival",
+          "locations": ["Blenheim Palace, Woodstock, Oxfordshire"],
+          "dates": "May 2026 (3 days)",
+          "capacity": 5000,
+          "website": "https://www.blenheimpalace.com",
+          "notes": "ORPHANED CLIENT venue. Artisan food + wine tasting, chef demos. Cocktail bar opportunity.",
+          "contact_approach": "Blenheim events team — already orphaned client contact",
+          "priority": "IMMEDIATE",
+          "strategic_priority": "HIGH",
+          "strategic_reason": "orphaned_client",
+          "estimated_revenue": 8000
+        },
+        {
+          "name": "Abergavenny Food Festival",
+          "type": "Food Festival",
+          "locations": ["Abergavenny, Wales"],
+          "dates": "September 2026",
+          "capacity": 4000,
+          "website": "https://www.abergavennyfoodfestival.com",
+          "notes": "150+ exhibitors, Hugh Fearnley-Whittingstall, Jamie Oliver. Premium audience.",
+          "contact_approach": "Festival organisers via website",
+          "priority": "MEDIUM",
+          "estimated_revenue": 6000
+        },
+        {
+          "name": "Maldon Food and Drink Festival",
+          "type": "Food Festival",
+          "locations": ["Maldon, Essex"],
+          "dates": "August 29-30 2026",
+          "capacity": 3000,
+          "website": "https://www.foodanddrinkfestivalsuk.co.uk",
+          "notes": "Growing festival, Essex location, cocktail bar opportunity",
+          "contact_approach": "Festival organisers",
+          "priority": "MEDIUM",
+          "estimated_revenue": 4000
+        }
+      ]
+    },
+    "country_shows": {
+      "category": "Country Shows & County Fairs",
+      "rationale": "Traditional country shows draw affluent rural audiences. Cocktail bars are a premium upgrade from standard beer tents.",
+      "outreach_timing": "January-March for summer shows",
+      "events": [
+        {
+          "name": "Royal County of Berkshire Show",
+          "type": "County Show",
+          "locations": ["Newbury, Berkshire"],
+          "dates": "September 2026",
+          "capacity": 10000,
+          "website": "https://www.berkshireshow.co.uk",
+          "notes": "TARGET GEOGRAPHY. Traditional county show, hospitality area needs premium bar.",
+          "priority": "HIGH",
+          "estimated_revenue": 6000
+        },
+        {
+          "name": "Surrey County Show",
+          "type": "County Show",
+          "locations": ["Guildford, Surrey"],
+          "dates": "May 2026",
+          "capacity": 8000,
+          "website": "https://www.surreycountyshow.co.uk",
+          "notes": "TARGET GEOGRAPHY. Premium cocktail bar in food/drink area.",
+          "priority": "HIGH",
+          "estimated_revenue": 5000
+        },
+        {
+          "name": "South of England Show",
+          "type": "Agricultural Show",
+          "locations": ["Ardingly, West Sussex"],
+          "dates": "June 2026",
+          "capacity": 20000,
+          "website": "https://www.seas.org.uk",
+          "notes": "Major agricultural show, large food/drink area, corporate hospitality",
+          "priority": "HIGH",
+          "estimated_revenue": 8000
+        },
+        {
+          "name": "Bucks County Show",
+          "type": "County Show",
+          "locations": ["Aylesbury, Buckinghamshire"],
+          "dates": "August 2026",
+          "capacity": 5000,
+          "website": "https://www.buckscountyshow.co.uk",
+          "notes": "TARGET GEOGRAPHY. Family-friendly but with food/drink area.",
+          "priority": "MEDIUM",
+          "estimated_revenue": 4000
+        },
+        {
+          "name": "CLA Game Fair",
+          "type": "Country Living Show",
+          "locations": ["Ragley Hall, Warwickshire (2026)"],
+          "dates": "July 2026",
+          "capacity": 30000,
+          "website": "https://www.gamefair.org",
+          "notes": "Flagship countryside event. Premium audience, huge hospitality area.",
+          "priority": "HIGH",
+          "estimated_revenue": 10000
+        },
+        {
+          "name": "Henley Royal Regatta",
+          "type": "Sporting / Social",
+          "locations": ["Henley-on-Thames, Oxfordshire"],
+          "dates": "June-July 2026",
+          "capacity": 15000,
+          "website": "https://www.hrr.co.uk",
+          "notes": "TARGET GEOGRAPHY. Ultra-premium audience. Corporate hospitality. Cocktail bar demand.",
+          "priority": "HIGH",
+          "estimated_revenue": 12000
+        }
+      ]
+    },
+    "polo_racing_cricket": {
+      "category": "Polo, Racing & Cricket Events",
+      "rationale": "Wealthy sporting audiences = premium cocktail spend. Hospitality boxes and member events need bar services.",
+      "outreach_timing": "March-April for summer season",
+      "events": [
+        {
+          "name": "Cowdray Gold Cup Polo",
+          "type": "Polo Tournament",
+          "locations": ["Cowdray Park, Midhurst, West Sussex"],
+          "dates": "June-July 2026",
+          "capacity": 5000,
+          "website": "https://cowdraypolo.co.uk",
+          "notes": "Home of British Polo. Luxury retail village, artisan food outlets, bars. Pagoda hospitality (20 guests each).",
+          "priority": "HIGH",
+          "estimated_revenue": 8000
+        },
+        {
+          "name": "Cartier Queen's Cup Polo",
+          "type": "Polo Tournament",
+          "locations": ["Guards Polo Club, Windsor, Berkshire"],
+          "dates": "June 2026 (Semi-finals 10 Jun)",
+          "capacity": 5000,
+          "website": "https://www.guardspoloclub.com",
+          "notes": "TARGET GEOGRAPHY (Berkshire). Most prestigious polo trophy in England. Champagne reception + lunch. Searcys VIP.",
+          "priority": "HIGH",
+          "estimated_revenue": 10000
+        },
+        {
+          "name": "Royal Ascot",
+          "type": "Horse Racing",
+          "locations": ["Ascot, Berkshire"],
+          "dates": "June 2026",
+          "capacity": 70000,
+          "website": "https://www.ascot.com",
+          "notes": "TARGET GEOGRAPHY. Ultimate premium event. Corporate hospitality suites need cocktail bars.",
+          "priority": "HIGH",
+          "estimated_revenue": 15000
+        },
+        {
+          "name": "Glorious Goodwood",
+          "type": "Horse Racing",
+          "locations": ["Goodwood, West Sussex"],
+          "dates": "July 2026",
+          "capacity": 25000,
+          "website": "https://www.goodwood.com/horseracing",
+          "notes": "5-day festival. Corporate hospitality, private boxes, champagne bars.",
+          "priority": "HIGH",
+          "estimated_revenue": 12000
+        },
+        {
+          "name": "Henley Festival",
+          "type": "Music & Arts Festival",
+          "locations": ["Henley-on-Thames, Oxfordshire"],
+          "dates": "July 2026",
+          "capacity": 5000,
+          "website": "https://www.henley-festival.co.uk",
+          "notes": "TARGET GEOGRAPHY. Black-tie floating stage festival. Ultra-premium audience. Cocktail bars essential.",
+          "priority": "HIGH",
+          "estimated_revenue": 10000
+        }
+      ]
+    },
+    "outdoor_cinema_garden_parties": {
+      "category": "Outdoor Cinema & Garden Party Events",
+      "rationale": "Growing market — outdoor cinema + premium drinks = perfect cocktail bar fit. Garden parties at estates need bar hire.",
+      "events": [
+        {
+          "name": "Luna Cinema",
+          "type": "Outdoor Cinema",
+          "locations": ["Multiple — Blenheim Palace, Kew Gardens, Hampton Court, Leeds Castle, Warwick Castle, etc."],
+          "dates": "May-September 2026",
+          "capacity": 2000,
+          "website": "https://www.thelunacinema.com",
+          "notes": "Screen films at iconic venues. Cocktail bar concession opportunity. Multiple TARGET geography locations.",
+          "contact_approach": "Luna Cinema partnerships team",
+          "priority": "HIGH",
+          "estimated_revenue": 5000
+        },
+        {
+          "name": "The Nomad Cinema",
+          "type": "Outdoor Cinema",
+          "locations": ["Multiple London + Home Counties"],
+          "dates": "Summer 2026",
+          "capacity": 500,
+          "website": "https://www.whereisthenomad.com",
+          "notes": "Pop-up outdoor cinema at unusual locations. Mobile bar partnership.",
+          "priority": "MEDIUM",
+          "estimated_revenue": 3000
+        },
+        {
+          "name": "Glyndebourne",
+          "type": "Opera Festival",
+          "locations": ["Lewes, East Sussex"],
+          "dates": "May-August 2026",
+          "capacity": 1200,
+          "website": "https://www.glyndebourne.com",
+          "notes": "Ultra-premium audience. Picnic interval = cocktail opportunity. Sussex borders Surrey.",
+          "priority": "HIGH",
+          "estimated_revenue": 8000
+        },
+        {
+          "name": "Wilderness Festival",
+          "type": "Boutique Festival",
+          "locations": ["Cornbury Park, Oxfordshire"],
+          "dates": "August 2026",
+          "capacity": 15000,
+          "website": "https://www.wildernessfestival.com",
+          "notes": "TARGET GEOGRAPHY (Oxfordshire). Boutique festival, premium audience, cocktail bars + dining.",
+          "priority": "HIGH",
+          "estimated_revenue": 10000
+        }
+      ]
+    },
+    "private_estate_events": {
+      "category": "Private Estate & Garden Party Events",
+      "rationale": "Private estates hosting seasonal open days, garden parties, and charity events often need external bar services",
+      "events": [
+        {
+          "name": "Highclere Castle (Downton Abbey)",
+          "type": "Stately Home Events",
+          "locations": ["Newbury, Hampshire/Berkshire border"],
+          "dates": "Various 2026",
+          "capacity": 500,
+          "website": "https://www.highclerecastle.co.uk",
+          "notes": "TARGET GEOGRAPHY. Downton Abbey castle. Corporate events, charity galas, seasonal events.",
+          "priority": "HIGH",
+          "estimated_revenue": 8000
+        },
+        {
+          "name": "Waddesdon Manor",
+          "type": "Rothschild Estate",
+          "locations": ["Waddesdon, Buckinghamshire"],
+          "dates": "Various 2026 — Christmas Fair is massive",
+          "capacity": 500,
+          "website": "https://www.waddesdon.org.uk",
+          "notes": "TARGET GEOGRAPHY. Rothschild collection. Christmas Fair = huge bar opportunity.",
+          "priority": "HIGH",
+          "estimated_revenue": 8000
+        },
+        {
+          "name": "Cliveden House Events",
+          "type": "Country House / Hotel",
+          "locations": ["Taplow, Buckinghamshire"],
+          "dates": "Various 2026",
+          "capacity": 300,
+          "website": "https://www.clivedenhouse.co.uk",
+          "notes": "TARGET GEOGRAPHY. National Trust property, luxury hotel. Events + corporate.",
+          "priority": "MEDIUM",
+          "estimated_revenue": 6000
+        },
+        {
+          "name": "Stonor Park",
+          "type": "Country House",
+          "locations": ["Henley-on-Thames, Oxfordshire"],
+          "dates": "Various 2026",
+          "capacity": 300,
+          "website": "https://www.stonor.com",
+          "notes": "TARGET GEOGRAPHY. Annual events programme, corporate hire, wedding hire.",
+          "priority": "MEDIUM",
+          "estimated_revenue": 5000
+        }
+      ]
+    },
+    "bbc_good_food": {
+      "category": "BBC Good Food Shows",
+      "rationale": "ORPHANED CLIENT — former Cocktail Service venue. Major food show circuit with cocktail bar concession slot open.",
+      "events": [
+        {
+          "name": "BBC Good Food Show",
+          "type": "Food Exhibition",
+          "locations": ["NEC Birmingham (Nov/Dec)", "Olympia London", "Glasgow SEC"],
+          "dates": "November-December 2026",
+          "capacity": 50000,
+          "website": "https://www.bbcgoodfoodshow.com",
+          "notes": "ORPHANED CLIENT — former Cocktail Service venue. Multiple shows per year. Massive audience. Cocktail masterclass + bar concession.",
+          "contact_approach": "BBC Good Food Show events/partnerships team",
+          "priority": "IMMEDIATE",
+          "strategic_priority": "HIGH",
+          "strategic_reason": "orphaned_client",
+          "estimated_revenue": 15000
+        }
+      ]
+    }
+  }
+}

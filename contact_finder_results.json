@@ -1,0 +1,2434 @@
+[
+  {
+    "venue_name": "Talton Lodge",
+    "website": "https://www.taltonlodge.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com",
+      "271e9fa3230b4eec94b02bf95780f5f2@sentry.wixpress.com",
+      "460ff4620fa44cba8df530afde949785@sentry.wixpress.com",
+      "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+      "78f7996315bc402f9dcb8a2f974b82d1@sentry.wixpress.com",
+      "8c30b2581acc426badc414e8a5dc04ef@sentry.wixpress.com",
+      "8eb368c655b84e029ed79ad7a5c1718e@sentry.wixpress.com",
+      "9a65e97ebe8141fca0c4fd686f70996b@sentry.wixpress.com",
+      "ed436f5053144538958ad06a5005e99a@sentry.wixpress.com",
+      "info@taltonlodge.com"
+    ],
+    "best_email": "info@taltonlodge.com",
+    "best_email_rank": 7,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Highcroft Retreat",
+    "website": "https://www.thecountrycastlecompany.co.uk/venue/highcroft-retreat/",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "sales@thecountrycastlecompany.co.uk"
+    ],
+    "best_email": "sales@thecountrycastlecompany.co.uk",
+    "best_email_rank": 10,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 5,
+    "error": null
+  },
+  {
+    "venue_name": "Milton Hill House",
+    "website": "https://www.miltonoxfordshire.co.uk",
+    "existing_email": "",
+    "contacts_found": [
+      {
+        "name": "Events FAQs",
+        "role": "How do I book an event space?                    \n\nIf you ar",
+        "source": "https://www.miltonoxfordshire.co.uk/team-building-oxford"
+      }
+    ],
+    "emails_found": [
+      "milton.enquiries@thevenuescollection.co.uk",
+      "milton.reception@thevenuescollection.co.uk"
+    ],
+    "best_email": "milton.reception@thevenuescollection.co.uk",
+    "best_email_rank": 3,
+    "contact_name": "Events FAQs",
+    "contact_role": "How do I book an event space?                    \n\nIf you ar",
+    "pages_checked": 5,
+    "error": null
+  },
+  {
+    "venue_name": "Barnett Hill Hotel",
+    "website": "https://www.barnetthillhotel.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "barnetthillmeetingsevents@alexanderhotels.com"
+    ],
+    "best_email": "barnetthillmeetingsevents@alexanderhotels.com",
+    "best_email_rank": 10,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "De Vere Horsley Estate",
+    "website": "https://www.devere.co.uk/horsley-estate",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "example@email.com",
+      "john123@email.com"
+    ],
+    "best_email": "example@email.com",
+    "best_email_rank": 10,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 3,
+    "error": null
+  },
+  {
+    "venue_name": "Wokefield Estate",
+    "website": "https://www.devere.co.uk/wokefield-estate",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "example@email.com",
+      "james.parkinson@dvcompany.com"
+    ],
+    "best_email": "james.parkinson@dvcompany.com",
+    "best_email_rank": 3,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 5,
+    "error": null
+  },
+  {
+    "venue_name": "Gorse Hill",
+    "website": "https://www.gorsehill.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "info@northwalesresorts.co.uk",
+      "sales@gorsehill.co.uk"
+    ],
+    "best_email": "info@northwalesresorts.co.uk",
+    "best_email_rank": 7,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 4,
+    "error": null
+  },
+  {
+    "venue_name": "Farnborough International",
+    "website": "https://www.farnboroughinternational.org",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 6,
+    "error": null
+  },
+  {
+    "venue_name": "Bodleian Libraries",
+    "website": "https://www.bodleian.ox.ac.uk/venues",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "HTTP 404"
+  },
+  {
+    "venue_name": "Easthampstead Park",
+    "website": "https://www.eastpark.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "finance@eastpark.co.uk",
+      "reception@eastpark.co.uk",
+      "reservations@eastpark.co.uk",
+      "sales@eastpark.co.uk"
+    ],
+    "best_email": "reservations@eastpark.co.uk",
+    "best_email_rank": 5,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 3,
+    "error": null
+  },
+  {
+    "venue_name": "Hatfield House",
+    "website": "https://www.hatfield-house.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "events@hatfieldpark.co.uk"
+    ],
+    "best_email": "events@hatfieldpark.co.uk",
+    "best_email_rank": 1,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 2,
+    "error": null
+  },
+  {
+    "venue_name": "Aubrey Park",
+    "website": "https://www.aubreypark.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "events@aubreypark.co.uk",
+      "rafael.gonzalez@aubreypark.co.uk",
+      "reception@aubreypark.co.uk",
+      "reservations@aubreypark.co.uk"
+    ],
+    "best_email": "events@aubreypark.co.uk",
+    "best_email_rank": 1,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 2,
+    "error": null
+  },
+  {
+    "venue_name": "Lakeside Country Club",
+    "website": "https://lakesidecountryclub.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "reservations@lakesideinthotel.com"
+    ],
+    "best_email": "reservations@lakesideinthotel.com",
+    "best_email_rank": 5,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 8,
+    "error": null
+  },
+  {
+    "venue_name": "Blenheim Palace",
+    "website": "https://www.blenheimpalace.com",
+    "existing_email": "",
+    "contacts_found": [
+      {
+        "name": "Travel Trade",
+        "role": "Private Hire",
+        "source": "https://www.blenheimpalace.com/about-us/"
+      },
+      {
+        "name": "Travel Trade",
+        "role": "Private Hire",
+        "source": "https://www.blenheimpalace.com/about-us/our-goals/"
+      },
+      {
+        "name": "Travel Trade",
+        "role": "Private Hire",
+        "source": "https://www.blenheimpalace.com/"
+      },
+      {
+        "name": "Travel Trade",
+        "role": "Private Hire",
+        "source": "https://www.blenheimpalace.com/about-us/smt/"
+      },
+      {
+        "name": "Travel Trade",
+        "role": "Private Hire",
+        "source": "https://www.blenheimpalace.com/support-us/contact-form/"
+      },
+      {
+        "name": "Travel Trade",
+        "role": "Private Hire",
+        "source": "https://www.blenheimpalace.com/hospitality/"
+      },
+      {
+        "name": "Travel Trade",
+        "role": "Private Hire",
+        "source": "https://www.blenheimpalace.com/"
+      },
+      {
+        "name": "Travel Trade",
+        "role": "Private Hire",
+        "source": "https://www.blenheimpalace.com/tickets-booking/tickets/"
+      }
+    ],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "Travel Trade",
+    "contact_role": "Private Hire",
+    "pages_checked": 9,
+    "error": null
+  },
+  {
+    "venue_name": "Ascot Racecourse",
+    "website": "https://www.ascot.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "accessibility@ascot.com",
+      "boxes@ascot.com",
+      "charities@ascot.com",
+      "csr@ascot.com",
+      "events@ascot.com",
+      "hospitality@ascot.com",
+      "jonny.williams@ascot.com",
+      "memberships@ascot.com",
+      "ownersandtrainers@ascot.com",
+      "partnerships@ascot.com",
+      "privacypolicy@ascot.com",
+      "racesponsorship@ascot.com",
+      "royal.enclosure@ascot.com"
+    ],
+    "best_email": "events@ascot.com",
+    "best_email_rank": 1,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 9,
+    "error": null
+  },
+  {
+    "venue_name": "Kew Gardens",
+    "website": "https://www.kew.org/about-us/venue-hire",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "HTTP 404"
+  },
+  {
+    "venue_name": "Hampton Court Palace",
+    "website": "https://www.hrp.org.uk/hampton-court-palace/venue-hire",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "HTTP 403"
+  },
+  {
+    "venue_name": "Soho Farmhouse",
+    "website": "https://www.sohofarmhouse.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "membership@sohohouse.com",
+      "membershipadmin@sohohouse.com",
+      "u003emembershipadmin@sohohouse.com",
+      "wilfredo@sohohouse.com"
+    ],
+    "best_email": "membership@sohohouse.com",
+    "best_email_rank": 10,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 5,
+    "error": null
+  },
+  {
+    "venue_name": "Hilton Reading",
+    "website": "https://www.hilton.com/en/hotels/rdghthn-hilton-reading",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "HTTP 403"
+  },
+  {
+    "venue_name": "Hilton Cobham",
+    "website": "https://www.hilton.com/en/hotels/lhrcbhn-hilton-cobham",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "HTTP 403"
+  },
+  {
+    "venue_name": "Wentworth Golf Club",
+    "website": "https://www.wentworthclub.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "contact@wentworthclub.com"
+    ],
+    "best_email": "contact@wentworthclub.com",
+    "best_email_rank": 10,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Guards Polo Club",
+    "website": "https://www.guardspoloclub.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "events@guardspoloclub.com"
+    ],
+    "best_email": "events@guardspoloclub.com",
+    "best_email_rank": 1,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 4,
+    "error": null
+  },
+  {
+    "venue_name": "Newbury Racecourse",
+    "website": "https://www.newburyracecourse.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "accreditation@newburyracecourse.co.uk",
+      "crobson@newburyracecourse.co.uk",
+      "events@newburyracecourse.co.uk",
+      "hospitality@newburyracecourse.co.uk",
+      "info@newburyracecourse.co.uk",
+      "info@rockinghorsenewbury.co.uk",
+      "info@thelodgenewbury.co.uk",
+      "membership@newburyracecourse.co.uk",
+      "nrcmarketing@newburyracecourse.co.uk",
+      "ownerstrainers@newburyracecourse.co.uk"
+    ],
+    "best_email": "events@newburyracecourse.co.uk",
+    "best_email_rank": 1,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 3,
+    "error": null
+  },
+  {
+    "venue_name": "Epsom Downs Racecourse",
+    "website": "https://www.epsomdowns.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Hampshire Cricket (Utilita Bowl)",
+    "website": "https://www.ageasbowl.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "The Big Feastival",
+    "website": "https://thebigfeastival.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Great British Food Festival",
+    "website": "https://greatbritishfoodfestival.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "info@greatbritishfoodfestival.com"
+    ],
+    "best_email": "info@greatbritishfoodfestival.com",
+    "best_email_rank": 7,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 6,
+    "error": null
+  },
+  {
+    "venue_name": "Blenheim Palace Food Festival",
+    "website": "https://www.blenheimpalace.com",
+    "existing_email": "",
+    "contacts_found": [
+      {
+        "name": "Travel Trade",
+        "role": "Private Hire",
+        "source": "https://www.blenheimpalace.com/about-us/"
+      },
+      {
+        "name": "Travel Trade",
+        "role": "Private Hire",
+        "source": "https://www.blenheimpalace.com/about-us/our-goals/"
+      },
+      {
+        "name": "Travel Trade",
+        "role": "Private Hire",
+        "source": "https://www.blenheimpalace.com/"
+      },
+      {
+        "name": "Travel Trade",
+        "role": "Private Hire",
+        "source": "https://www.blenheimpalace.com/about-us/smt/"
+      },
+      {
+        "name": "Travel Trade",
+        "role": "Private Hire",
+        "source": "https://www.blenheimpalace.com/support-us/contact-form/"
+      },
+      {
+        "name": "Travel Trade",
+        "role": "Private Hire",
+        "source": "https://www.blenheimpalace.com/hospitality/"
+      },
+      {
+        "name": "Travel Trade",
+        "role": "Private Hire",
+        "source": "https://www.blenheimpalace.com/"
+      },
+      {
+        "name": "Travel Trade",
+        "role": "Private Hire",
+        "source": "https://www.blenheimpalace.com/tickets-booking/tickets/"
+      }
+    ],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "Travel Trade",
+    "contact_role": "Private Hire",
+    "pages_checked": 9,
+    "error": null
+  },
+  {
+    "venue_name": "Royal County of Berkshire Show",
+    "website": "https://www.berkshireshow.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 6,
+    "error": null
+  },
+  {
+    "venue_name": "Surrey County Show",
+    "website": "https://www.surreycountyshow.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "HTTP 503"
+  },
+  {
+    "venue_name": "Bucks County Show",
+    "website": "https://www.buckscountyshow.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "info@buckscountyshow.co.uk"
+    ],
+    "best_email": "info@buckscountyshow.co.uk",
+    "best_email_rank": 7,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Henley Royal Regatta",
+    "website": "https://www.hrr.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "badges@hrr.co.uk",
+      "email@hrr.co.uk",
+      "press@hrr.co.uk",
+      "shop@hrr.co.uk",
+      "temple@hrr.co.uk"
+    ],
+    "best_email": "badges@hrr.co.uk",
+    "best_email_rank": 10,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 9,
+    "error": null
+  },
+  {
+    "venue_name": "Cartier Queen's Cup Polo",
+    "website": "https://www.guardspoloclub.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "events@guardspoloclub.com"
+    ],
+    "best_email": "events@guardspoloclub.com",
+    "best_email_rank": 1,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 4,
+    "error": null
+  },
+  {
+    "venue_name": "Royal Ascot",
+    "website": "https://www.ascot.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "accessibility@ascot.com",
+      "boxes@ascot.com",
+      "charities@ascot.com",
+      "csr@ascot.com",
+      "events@ascot.com",
+      "hospitality@ascot.com",
+      "jonny.williams@ascot.com",
+      "memberships@ascot.com",
+      "ownersandtrainers@ascot.com",
+      "partnerships@ascot.com",
+      "privacypolicy@ascot.com",
+      "racesponsorship@ascot.com",
+      "royal.enclosure@ascot.com"
+    ],
+    "best_email": "events@ascot.com",
+    "best_email_rank": 1,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 9,
+    "error": null
+  },
+  {
+    "venue_name": "Henley Festival",
+    "website": "https://www.henley-festival.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "info@henley-festival.co.uk"
+    ],
+    "best_email": "info@henley-festival.co.uk",
+    "best_email_rank": 7,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "The Nomad Cinema",
+    "website": "https://www.whereisthenomad.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 3,
+    "error": null
+  },
+  {
+    "venue_name": "Wilderness Festival",
+    "website": "https://www.wildernessfestival.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 4,
+    "error": null
+  },
+  {
+    "venue_name": "Highclere Castle (Downton Abbey)",
+    "website": "https://www.highclerecastle.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 5,
+    "error": null
+  },
+  {
+    "venue_name": "Waddesdon Manor",
+    "website": "https://www.waddesdon.org.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Cliveden House Events",
+    "website": "https://www.clivedenhouse.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "reservations@clivedenhouse.co.uk",
+      "weddings@clivedenhouse.co.uk"
+    ],
+    "best_email": "weddings@clivedenhouse.co.uk",
+    "best_email_rank": 2,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 5,
+    "error": null
+  },
+  {
+    "venue_name": "Stonor Park",
+    "website": "https://www.stonor.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "enquiries@stonor.com",
+      "john@doe.com"
+    ],
+    "best_email": "enquiries@stonor.com",
+    "best_email_rank": 5,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 4,
+    "error": null
+  },
+  {
+    "venue_name": "Histon Manor",
+    "website": "https://www.histonmanor.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "user@domain.com"
+    ],
+    "best_email": "user@domain.com",
+    "best_email_rank": 10,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 6,
+    "error": null
+  },
+  {
+    "venue_name": "Swynford Manor",
+    "website": "https://www.swynfordmanor.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "Connection failed"
+  },
+  {
+    "venue_name": "Bassmead Manor Barns",
+    "website": "https://www.bassmeadmanorbarns.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "Connection failed"
+  },
+  {
+    "venue_name": "Waresley Park Estate",
+    "website": "https://www.waresleypark.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "Connection failed"
+  },
+  {
+    "venue_name": "The Manor Barn",
+    "website": "",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "No website"
+  },
+  {
+    "venue_name": "Mill Farm",
+    "website": "",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "No website"
+  },
+  {
+    "venue_name": "South Farm",
+    "website": "https://www.south-farm.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "info@south-farm.co.uk"
+    ],
+    "best_email": "info@south-farm.co.uk",
+    "best_email_rank": 7,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Childerley Hall",
+    "website": "https://www.childerley.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Madingley Hall",
+    "website": "https://www.madingleyhall.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "enquiries@madingleyhall.cam.ac.uk"
+    ],
+    "best_email": "enquiries@madingleyhall.cam.ac.uk",
+    "best_email_rank": 5,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 2,
+    "error": null
+  },
+  {
+    "venue_name": "Chippenham Park",
+    "website": "https://www.chippenhampark.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Longstowe Hall",
+    "website": "https://www.longstowehall.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 2,
+    "error": null
+  },
+  {
+    "venue_name": "The Old Hall Ely",
+    "website": "https://www.theoldhallely.co.uk",
+    "existing_email": "",
+    "contacts_found": [
+      {
+        "name": "Ili Brooks",
+        "role": "Sales Events Manager",
+        "source": "https://www.theoldhallely.co.uk/meet-the-team/"
+      }
+    ],
+    "emails_found": [
+      "events@theoldhallely.co.uk"
+    ],
+    "best_email": "events@theoldhallely.co.uk",
+    "best_email_rank": 1,
+    "contact_name": "Ili Brooks",
+    "contact_role": "Sales Events Manager",
+    "pages_checked": 6,
+    "error": null
+  },
+  {
+    "venue_name": "Norfolk Garden Weddings",
+    "website": "https://norfolkgardenweddings.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "info@norfolkgardenweddings.co.uk"
+    ],
+    "best_email": "info@norfolkgardenweddings.co.uk",
+    "best_email_rank": 7,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 4,
+    "error": null
+  },
+  {
+    "venue_name": "Chaucer Barn",
+    "website": "https://www.chaucerbarn.com",
+    "existing_email": "",
+    "contacts_found": [
+      {
+        "name": "Quick Links",
+        "role": "Weddings",
+        "source": "https://www.chaucerbarn.com/private-hire/"
+      },
+      {
+        "name": "Quick Links",
+        "role": "Weddings",
+        "source": "https://www.chaucerbarn.com#contact-chaucer-barn"
+      },
+      {
+        "name": "Quick Links",
+        "role": "Weddings",
+        "source": "https://www.chaucerbarn.com/contact/"
+      }
+    ],
+    "emails_found": [
+      "info@chaucerbarn.com",
+      "u003einfo@chaucerbarn.com"
+    ],
+    "best_email": "info@chaucerbarn.com",
+    "best_email_rank": 7,
+    "contact_name": "Quick Links",
+    "contact_role": "Weddings",
+    "pages_checked": 4,
+    "error": null
+  },
+  {
+    "venue_name": "Holkham Hall",
+    "website": "https://www.holkham.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "adventure@holkham.co.uk",
+      "bilbo@holkham.netmatters-test.co.uk",
+      "corporate@holkham.co.uk",
+      "george@norfolklocations.co.uk",
+      "harriet@hunt-communications.com",
+      "holkham@hunt-communications.com",
+      "info@holkham.co.uk",
+      "marketing@holkham.co.uk",
+      "victoria@holkham.co.uk",
+      "weddings@holkham.co.uk"
+    ],
+    "best_email": "weddings@holkham.co.uk",
+    "best_email_rank": 2,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 9,
+    "error": null
+  },
+  {
+    "venue_name": "Voewood",
+    "website": "https://www.voewood.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "info@voewood.com",
+      "user@domain.com"
+    ],
+    "best_email": "info@voewood.com",
+    "best_email_rank": 7,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 3,
+    "error": null
+  },
+  {
+    "venue_name": "The Granary Estates",
+    "website": "https://www.thegranaryestates.co.uk",
+    "existing_email": "",
+    "contacts_found": [
+      {
+        "name": "Jenna Flatt",
+        "role": "Weddings and Events Manager",
+        "source": "https://www.thegranaryestates.co.uk/meettheteam"
+      }
+    ],
+    "emails_found": [
+      "info@thegranaryestates.co.uk",
+      "philip.greer@universityarms.com",
+      "user@domain.com"
+    ],
+    "best_email": "philip.greer@universityarms.com",
+    "best_email_rank": 3,
+    "contact_name": "Jenna Flatt",
+    "contact_role": "Weddings and Events Manager",
+    "pages_checked": 6,
+    "error": null
+  },
+  {
+    "venue_name": "Oxnead Hall",
+    "website": "https://www.oxneadhall.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "Connection failed"
+  },
+  {
+    "venue_name": "Godwick Hall",
+    "website": "https://www.godwickhall.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "info@godwickhall.co.uk"
+    ],
+    "best_email": "info@godwickhall.co.uk",
+    "best_email_rank": 7,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 2,
+    "error": null
+  },
+  {
+    "venue_name": "Elms Barn",
+    "website": "https://www.elmsbarn.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "Timeout"
+  },
+  {
+    "venue_name": "The Norfolk Mead Hotel",
+    "website": "https://www.norfolkmead.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "events@norfolkmead.co.uk",
+      "info@norfolkmead.co.uk"
+    ],
+    "best_email": "events@norfolkmead.co.uk",
+    "best_email_rank": 1,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 7,
+    "error": null
+  },
+  {
+    "venue_name": "Bressingham Hall",
+    "website": "https://www.bressinghamhall.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "Connection failed"
+  },
+  {
+    "venue_name": "Thursford Garden Pavilion",
+    "website": "https://www.thursford.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 4,
+    "error": null
+  },
+  {
+    "venue_name": "Rookery Meadow",
+    "website": "https://www.rookerymeadow.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "info@example.com",
+      "info@rookerymeadow.co.uk"
+    ],
+    "best_email": "info@example.com",
+    "best_email_rank": 7,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 3,
+    "error": null
+  },
+  {
+    "venue_name": "Copdock Hall",
+    "website": "https://copdockhall.com",
+    "existing_email": "",
+    "contacts_found": [
+      {
+        "name": "Taylor Howe",
+        "role": "Head of Events",
+        "source": "https://copdockhall.com/about/"
+      },
+      {
+        "name": "Julie Tydeman",
+        "role": "Deputy Head of Events",
+        "source": "https://copdockhall.com/about/"
+      },
+      {
+        "name": "Jessica Harper",
+        "role": "Event Manager",
+        "source": "https://copdockhall.com/about/"
+      },
+      {
+        "name": "Abigail Finbow",
+        "role": "Event Manager",
+        "source": "https://copdockhall.com/about/"
+      },
+      {
+        "name": "Sophie Cown",
+        "role": "Event Manager",
+        "source": "https://copdockhall.com/about/"
+      },
+      {
+        "name": "Sophie McGonigle",
+        "role": "Event Manager",
+        "source": "https://copdockhall.com/about/"
+      },
+      {
+        "name": "Taylor Howe",
+        "role": "Head of Events",
+        "source": "https://copdockhall.com/about/?hsLang=en-gb"
+      },
+      {
+        "name": "Julie Tydeman",
+        "role": "Deputy Head of Events",
+        "source": "https://copdockhall.com/about/?hsLang=en-gb"
+      },
+      {
+        "name": "Jessica Harper",
+        "role": "Event Manager",
+        "source": "https://copdockhall.com/about/?hsLang=en-gb"
+      },
+      {
+        "name": "Abigail Finbow",
+        "role": "Event Manager",
+        "source": "https://copdockhall.com/about/?hsLang=en-gb"
+      },
+      {
+        "name": "Sophie Cown",
+        "role": "Event Manager",
+        "source": "https://copdockhall.com/about/?hsLang=en-gb"
+      },
+      {
+        "name": "Sophie McGonigle",
+        "role": "Event Manager",
+        "source": "https://copdockhall.com/about/?hsLang=en-gb"
+      }
+    ],
+    "emails_found": [
+      "info@copdockhall.com"
+    ],
+    "best_email": "info@copdockhall.com",
+    "best_email_rank": 7,
+    "contact_name": "Taylor Howe",
+    "contact_role": "Head of Events",
+    "pages_checked": 9,
+    "error": null
+  },
+  {
+    "venue_name": "Henham Barns",
+    "website": "https://www.henhambarns.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "Connection failed"
+  },
+  {
+    "venue_name": "The Anchor Walberswick",
+    "website": "https://human-nature.events/secret-venues/the-anchor/",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "ed@human-nature.events"
+    ],
+    "best_email": "ed@human-nature.events",
+    "best_email_rank": 10,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 4,
+    "error": null
+  },
+  {
+    "venue_name": "Glemham Hall",
+    "website": "https://www.glemhamhall.co.uk",
+    "existing_email": "",
+    "contacts_found": [
+      {
+        "name": "HOLLY CLARKE",
+        "role": "Weddings & Events Manager07711 945896info@glemhamhall.co.uk",
+        "source": "https://www.glemhamhall.co.uk/contact"
+      }
+    ],
+    "emails_found": [
+      "events@glemhamhall.co.uk",
+      "info@glemhamhall.co.uk",
+      "user@domain.com"
+    ],
+    "best_email": "events@glemhamhall.co.uk",
+    "best_email_rank": 1,
+    "contact_name": "HOLLY CLARKE",
+    "contact_role": "Weddings & Events Manager07711 945896info@glemhamhall.co.uk",
+    "pages_checked": 2,
+    "error": null
+  },
+  {
+    "venue_name": "Smeetham Hall Barn",
+    "website": "https://www.smeethamhallbarn.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "Connection failed"
+  },
+  {
+    "venue_name": "Bruisyard Hall",
+    "website": "https://www.bruisyard.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Haughley Park Barn",
+    "website": "https://www.haughleyparkbarn.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "Connection failed"
+  },
+  {
+    "venue_name": "Helmingham Hall",
+    "website": "https://www.helmingham.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "info@helmingham.com",
+      "name@email.com"
+    ],
+    "best_email": "info@helmingham.com",
+    "best_email_rank": 7,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 3,
+    "error": null
+  },
+  {
+    "venue_name": "Woodhall Manor",
+    "website": "https://www.woodhallmanor.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "info@woodhallmanor.com"
+    ],
+    "best_email": "info@woodhallmanor.com",
+    "best_email_rank": 7,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Suffolk Barns at Hasketon",
+    "website": "",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "No website"
+  },
+  {
+    "venue_name": "Elmhay Park",
+    "website": "https://www.elmhaypark.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
+      "2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com",
+      "271e9fa3230b4eec94b02bf95780f5f2@sentry.wixpress.com",
+      "460ff4620fa44cba8df530afde949785@sentry.wixpress.com",
+      "463991d7bca24f02a0baf16f9e6eda73@sentry.wixpress.com",
+      "5d1795a2db124a268f1e1bd88f503500@sentry.wixpress.com",
+      "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+      "78f7996315bc402f9dcb8a2f974b82d1@sentry.wixpress.com",
+      "88170cb0c9d64f94b5821ca7fd2d55a4@sentry-next.wixpress.com",
+      "8eb368c655b84e029ed79ad7a5c1718e@sentry.wixpress.com",
+      "9a65e97ebe8141fca0c4fd686f70996b@sentry.wixpress.com",
+      "annie@orchardleigh.net",
+      "c183baa23371454f99f417f6616b724d@sentry.wixpress.com",
+      "dd0a55ccb8124b9c9d938e3acf41f8aa@sentry.wixpress.com",
+      "ed436f5053144538958ad06a5005e99a@sentry.wixpress.com",
+      "info@elmhaypark.co.uk"
+    ],
+    "best_email": "info@elmhaypark.co.uk",
+    "best_email_rank": 7,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 6,
+    "error": null
+  },
+  {
+    "venue_name": "Pennard Hill Farm",
+    "website": "https://www.pennard.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "Connection failed"
+  },
+  {
+    "venue_name": "St Audries Park",
+    "website": "https://www.staudriespark.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "Timeout"
+  },
+  {
+    "venue_name": "The Cider Barn at Cheddar",
+    "website": "",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "No website"
+  },
+  {
+    "venue_name": "Kilver Court",
+    "website": "https://www.kilvercourt.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "marketing@kilvercourt.com"
+    ],
+    "best_email": "marketing@kilvercourt.com",
+    "best_email_rank": 10,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Quantock Lakes",
+    "website": "https://www.quantocklakes.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Haselbury Mill",
+    "website": "https://www.haselburymill.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "info@haselburymill.co.uk",
+      "user@domain.com"
+    ],
+    "best_email": "info@haselburymill.co.uk",
+    "best_email_rank": 7,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 4,
+    "error": null
+  },
+  {
+    "venue_name": "Maunsel House",
+    "website": "https://www.maunselhouse.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "enquiries@maunselhouse.co.uk"
+    ],
+    "best_email": "enquiries@maunselhouse.co.uk",
+    "best_email_rank": 5,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 6,
+    "error": null
+  },
+  {
+    "venue_name": "Barley Wood Walled Garden",
+    "website": "https://www.barleywood.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "user@domain.com"
+    ],
+    "best_email": "user@domain.com",
+    "best_email_rank": 10,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 2,
+    "error": null
+  },
+  {
+    "venue_name": "The Priests House Hotel",
+    "website": "",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "No website"
+  },
+  {
+    "venue_name": "Hale Park",
+    "website": "https://www.halepark.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "anouska@haleparkweddings.co.uk"
+    ],
+    "best_email": "anouska@haleparkweddings.co.uk",
+    "best_email_rank": 10,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Tithe Barn Hinton St Mary",
+    "website": "",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "No website"
+  },
+  {
+    "venue_name": "Deans Court",
+    "website": "https://www.deanscourt.org",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "accommodation@deanscourt.org",
+      "cafe@deanscourt.org",
+      "deanscourtestateoffice@deanscourt.org",
+      "events@deanscourt.org",
+      "info@deanscourt.org",
+      "shop@deanscourt.org",
+      "user@domain.com",
+      "weddings@deanscourt.org"
+    ],
+    "best_email": "events@deanscourt.org",
+    "best_email_rank": 1,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 4,
+    "error": null
+  },
+  {
+    "venue_name": "Mapperton",
+    "website": "https://www.mapperton.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "office@mapperton.com"
+    ],
+    "best_email": "office@mapperton.com",
+    "best_email_rank": 10,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Sopley Lake",
+    "website": "https://www.sopleylake.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "Timeout"
+  },
+  {
+    "venue_name": "Smedmore House",
+    "website": "https://www.smedmorehouse.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "Connection failed"
+  },
+  {
+    "venue_name": "Plush Manor",
+    "website": "https://www.plushmanor.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "Connection failed"
+  },
+  {
+    "venue_name": "Kingston Country Courtyard",
+    "website": "https://www.kingstoncountrycourtyard.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "Connection failed"
+  },
+  {
+    "venue_name": "Sculpture by the Lakes",
+    "website": "https://www.sculpturebythelakes.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 5,
+    "error": null
+  },
+  {
+    "venue_name": "The Italian Villa",
+    "website": "https://www.theitalianvilla.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Huntsham Court",
+    "website": "https://www.huntshamcourt.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "enquiries@huntshamcourt.co.uk"
+    ],
+    "best_email": "enquiries@huntshamcourt.co.uk",
+    "best_email_rank": 5,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 6,
+    "error": null
+  },
+  {
+    "venue_name": "Pirzwell Barn",
+    "website": "https://www.pirzwellbarn.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "Connection failed"
+  },
+  {
+    "venue_name": "The Great Barn Devon",
+    "website": "https://www.thegreatbarndevon.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "info@thegreatbarndevon.co.uk"
+    ],
+    "best_email": "info@thegreatbarndevon.co.uk",
+    "best_email_rank": 7,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 5,
+    "error": null
+  },
+  {
+    "venue_name": "Rockbeare Manor",
+    "website": "https://www.rockbearemanor.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 5,
+    "error": null
+  },
+  {
+    "venue_name": "Bickleigh Castle",
+    "website": "https://www.bickleighcastle.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "accounts@bickleighcastle.com",
+      "bickleigh@bickleighcastle.com",
+      "info@bickleighcastle.com",
+      "reservations@bickleighcastle.com",
+      "weddings@bickleighcastle.com"
+    ],
+    "best_email": "weddings@bickleighcastle.com",
+    "best_email_rank": 2,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 3,
+    "error": null
+  },
+  {
+    "venue_name": "Shilstone House",
+    "website": "https://www.shilstone.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "support@any-mail.org.uk"
+    ],
+    "best_email": "support@any-mail.org.uk",
+    "best_email_rank": 10,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Upton Barn & Walled Garden",
+    "website": "https://www.uptonbarn.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "info@uptonbarn.co.uk"
+    ],
+    "best_email": "info@uptonbarn.co.uk",
+    "best_email_rank": 7,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 2,
+    "error": null
+  },
+  {
+    "venue_name": "Boringdon Hall",
+    "website": "https://www.boringdonhall.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "info@boringdonhall.co.uk"
+    ],
+    "best_email": "info@boringdonhall.co.uk",
+    "best_email_rank": 7,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 3,
+    "error": null
+  },
+  {
+    "venue_name": "Ash Barton Estate",
+    "website": "https://www.ashbarton.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "Connection failed"
+  },
+  {
+    "venue_name": "Dartington Hall",
+    "website": "https://www.dartington.org",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "archiveinfo@dartington.org",
+      "devonarchives@swheritage.org.uk",
+      "hellohr@dartington.org",
+      "mailto@volunteering@dartington.org",
+      "volunteering@dartington.org"
+    ],
+    "best_email": "hellohr@dartington.org",
+    "best_email_rank": 6,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 7,
+    "error": null
+  },
+  {
+    "venue_name": "Hadsham Farm",
+    "website": "https://www.hadshamfarm.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+      "88170cb0c9d64f94b5821ca7fd2d55a4@sentry-next.wixpress.com",
+      "8eb368c655b84e029ed79ad7a5c1718e@sentry.wixpress.com",
+      "9a65e97ebe8141fca0c4fd686f70996b@sentry.wixpress.com",
+      "c183baa23371454f99f417f6616b724d@sentry.wixpress.com",
+      "dd0a55ccb8124b9c9d938e3acf41f8aa@sentry.wixpress.com"
+    ],
+    "best_email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+    "best_email_rank": 10,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 4,
+    "error": null
+  },
+  {
+    "venue_name": "Alveston Pastures Farm",
+    "website": "https://www.alvestonpasturesfarm.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "marionclaytonwright@hotmail.co.uk"
+    ],
+    "best_email": "marionclaytonwright@hotmail.co.uk",
+    "best_email_rank": 10,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 2,
+    "error": null
+  },
+  {
+    "venue_name": "Park Farm",
+    "website": "https://www.parkfarmweddings.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "Connection failed"
+  },
+  {
+    "venue_name": "Wootton Park",
+    "website": "https://www.woottonparkweddings.co.uk",
+    "existing_email": "",
+    "contacts_found": [
+      {
+        "name": "Wedding Night Farmhouse Accommodation",
+        "role": "Wootton Park Wedding Planner",
+        "source": "https://www.woottonparkweddings.co.uk/the-magic-team/"
+      },
+      {
+        "name": "Wedding Night Farmhouse Accommodation",
+        "role": "Wootton Park Wedding Planner",
+        "source": "https://www.woottonparkweddings.co.uk/book-camping/"
+      },
+      {
+        "name": "Wedding Night Farmhouse Accommodation",
+        "role": "Wootton Park Wedding Planner",
+        "source": "https://www.woottonparkweddings.co.uk/enquire-now/"
+      },
+      {
+        "name": "Wedding Night Farmhouse Accommodation",
+        "role": "Wootton Park Wedding Planner",
+        "source": "https://www.woottonparkweddings.co.uk/venue-tour-booking/"
+      }
+    ],
+    "emails_found": [
+      "magic@woottonpark.co.uk"
+    ],
+    "best_email": "magic@woottonpark.co.uk",
+    "best_email_rank": 10,
+    "contact_name": "Wedding Night Farmhouse Accommodation",
+    "contact_role": "Wootton Park Wedding Planner",
+    "pages_checked": 5,
+    "error": null
+  },
+  {
+    "venue_name": "Compton Verney",
+    "website": "https://www.comptonverney.org.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "events@comptonverney.org.uk",
+      "info@comptonverney.org.uk"
+    ],
+    "best_email": "events@comptonverney.org.uk",
+    "best_email_rank": 1,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 4,
+    "error": null
+  },
+  {
+    "venue_name": "Ettington Park",
+    "website": "https://www.handpickedhotels.co.uk/ettingtonpark",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "HTTP 403"
+  },
+  {
+    "venue_name": "Wroxall Abbey Estate",
+    "website": "https://www.wroxallabbeyestate.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "Connection failed"
+  },
+  {
+    "venue_name": "Shustoke Farm Barns",
+    "website": "https://www.shustokefarmbarns.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Nuthurst Grange Country House",
+    "website": "https://www.nuthurst-grange.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 2,
+    "error": null
+  },
+  {
+    "venue_name": "Westenhanger Castle",
+    "website": "https://www.westenhangercastle.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "castle@glowevents.co.uk",
+      "team@westenhanger.sonas.email"
+    ],
+    "best_email": "castle@glowevents.co.uk",
+    "best_email_rank": 10,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 2,
+    "error": null
+  },
+  {
+    "venue_name": "The Orangery Maidstone",
+    "website": "https://www.theorangerymaidstone.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "orangery@glowevents.co.uk",
+      "team@orangery.sonas.email"
+    ],
+    "best_email": "orangery@glowevents.co.uk",
+    "best_email_rank": 10,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Kent Event Centre",
+    "website": "https://www.kenteventcentre.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "info@kenteventcentre.co.uk"
+    ],
+    "best_email": "info@kenteventcentre.co.uk",
+    "best_email_rank": 7,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "The Barn at Bore Place",
+    "website": "https://www.boreplace.org",
+    "existing_email": "",
+    "contacts_found": [
+      {
+        "name": "Caroline Simpson",
+        "role": "Events and Wedding Coordinator",
+        "source": "https://www.boreplace.org/about-us/people"
+      }
+    ],
+    "emails_found": [
+      "bookings@boreplace.org",
+      "hello@boreplace.org"
+    ],
+    "best_email": "bookings@boreplace.org",
+    "best_email_rank": 4,
+    "contact_name": "Caroline Simpson",
+    "contact_role": "Events and Wedding Coordinator",
+    "pages_checked": 9,
+    "error": null
+  },
+  {
+    "venue_name": "Cooling Castle Barn",
+    "website": "https://www.coolingcastlebarn.com",
+    "existing_email": "",
+    "contacts_found": [
+      {
+        "name": "Contact Us",
+        "role": "Wedding Coordinators | Cooling Castle Barn",
+        "source": "https://www.coolingcastlebarn.com/contact-us"
+      }
+    ],
+    "emails_found": [
+      "enquiries@coolingcastlebarn.com",
+      "office@coolingcastlebarn.com",
+      "user@domain.com"
+    ],
+    "best_email": "enquiries@coolingcastlebarn.com",
+    "best_email_rank": 5,
+    "contact_name": "Contact Us",
+    "contact_role": "Wedding Coordinators | Cooling Castle Barn",
+    "pages_checked": 4,
+    "error": null
+  },
+  {
+    "venue_name": "Penshurst Place",
+    "website": "https://www.penshurstplace.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "banqueting@penshurstplace.com",
+      "contactus@penshurstplace.com",
+      "daisy@penshurstplace.com",
+      "jacqui@jgmpr.com",
+      "lucy@penshurstplace.com",
+      "maryannwebster@penshurstplace.com",
+      "nicky@penshurstplace.com",
+      "paul@penshurstplace.com",
+      "porcupinepantry@penshurstplace.com",
+      "sarahchatten@penshurstplace.com",
+      "visitorco-ord@penshurstplace.com"
+    ],
+    "best_email": "banqueting@penshurstplace.com",
+    "best_email_rank": 10,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 4,
+    "error": null
+  },
+  {
+    "venue_name": "The Hop Farm",
+    "website": "https://www.thehopfarm.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Port Lympne Hotel & Reserve",
+    "website": "https://www.portlympne.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Leeds Castle",
+    "website": "https://www.leeds-castle.com",
+    "existing_email": "",
+    "contacts_found": [
+      {
+        "name": "Senior LeadershipTeam",
+        "role": "Helen Bonser-Wilton",
+        "source": "https://www.leeds-castle.com/support-us/about-leeds-castle-foundation/"
+      },
+      {
+        "name": "Mark Delin",
+        "role": "Marketing & Events Director",
+        "source": "https://www.leeds-castle.com/support-us/about-leeds-castle-foundation/"
+      }
+    ],
+    "emails_found": [
+      "hospitality@leeds-castle.co.uk"
+    ],
+    "best_email": "hospitality@leeds-castle.co.uk",
+    "best_email_rank": 10,
+    "contact_name": "Senior LeadershipTeam",
+    "contact_role": "Helen Bonser-Wilton",
+    "pages_checked": 7,
+    "error": null
+  },
+  {
+    "venue_name": "Hadlow Manor",
+    "website": "https://www.hadlowmanor.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Knowle Country House",
+    "website": "https://www.knowlecountryhouse.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "kelly@knowlecountryhouse.com"
+    ],
+    "best_email": "kelly@knowlecountryhouse.com",
+    "best_email_rank": 10,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 2,
+    "error": null
+  },
+  {
+    "venue_name": "The Underglobe",
+    "website": "https://www.shakespearesglobe.com/your-event",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "HTTP 404"
+  },
+  {
+    "venue_name": "Goodwood House",
+    "website": "https://www.goodwood.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      ".07544044177.chris@christopherison.com.www.christopherison.com",
+      ".07544044177.chris@christopherison.com.www.christopherison.com..important",
+      "aeroclub@goodwood.com",
+      "aircraft.engineering@goodwood.com",
+      "careers@goodwood.com",
+      "catherine.cannon@goodwood.com",
+      "circuit@goodwood.com",
+      "clerkofthecourse@goodwood.com",
+      "competitors@goodwood.com",
+      "control.tower@goodwood.com",
+      "curator@goodwood.com",
+      "events@goodwood.com",
+      "exhibitionssales@goodwood.com",
+      "farm@goodwood.com",
+      "farmfood@goodwood.com",
+      "flyingschool@goodwood.com",
+      "golf@goodwood.com",
+      "golfacademy@goodwood.com",
+      "golfevents@goodwood.com",
+      "golfmembership@goodwood.com",
+      "grog@goodwood.com",
+      "grrc@goodwood.com",
+      "hospitality@goodwood.com",
+      "hotel@goodwood.com",
+      "hrc@goodwood.com",
+      "images@goodwood.com",
+      "kennels.membership@goodwood.com",
+      "kennelsreservations@goodwood.com",
+      "madmin@goodwood.com",
+      "mail@stephenhayward.com",
+      "media@goodwood.com",
+      "owners@goodwood.com",
+      "property@goodwood.com",
+      "racecoursereception@goodwood.com",
+      "reservations@goodwood.com",
+      "retail@goodwood.com",
+      "sponsorshipsales@goodwood.com",
+      "ticket.office@goodwood.com",
+      "weddings@goodwood.com"
+    ],
+    "best_email": "events@goodwood.com",
+    "best_email_rank": 1,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 5,
+    "error": null
+  },
+  {
+    "venue_name": "The Brewery London",
+    "website": "https://www.thebrewery.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "feedback@thebrewery.co.uk",
+      "info@thebrewery.co.uk"
+    ],
+    "best_email": "info@thebrewery.co.uk",
+    "best_email_rank": 7,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 7,
+    "error": null
+  },
+  {
+    "venue_name": "Tobacco Dock",
+    "website": "https://www.tobaccodocklondon.com",
+    "existing_email": "",
+    "contacts_found": [
+      {
+        "name": "Chelsey Hulbert",
+        "role": "Once a client of Tobacco Dock, Chelsey has a great insight i",
+        "source": "https://www.tobaccodocklondon.com/about/"
+      },
+      {
+        "name": "David Byrne",
+        "role": "David began in the Tobacco Dock facilities team, so has an i",
+        "source": "https://www.tobaccodocklondon.com/about/"
+      },
+      {
+        "name": "Arron Campbell",
+        "role": "With a background in operations management across a number o",
+        "source": "https://www.tobaccodocklondon.com/about/"
+      }
+    ],
+    "emails_found": [
+      "workspaces@tobaccodocklondon.com"
+    ],
+    "best_email": "workspaces@tobaccodocklondon.com",
+    "best_email_rank": 10,
+    "contact_name": "Chelsey Hulbert",
+    "contact_role": "Once a client of Tobacco Dock, Chelsey has a great insight i",
+    "pages_checked": 5,
+    "error": null
+  },
+  {
+    "venue_name": "Banqueting House",
+    "website": "https://www.hrp.org.uk/banqueting-house",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "HTTP 403"
+  },
+  {
+    "venue_name": "The Spitfire Ground",
+    "website": "https://www.spitfireground.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 0,
+    "error": "Connection failed"
+  },
+  {
+    "venue_name": "BOOM BATTLE BAR venues",
+    "website": "https://boombattlebar.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Prestige Venues (Sodexo)",
+    "website": "https://www.prestigevenuesandevents.sodexo.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 4,
+    "error": null
+  },
+  {
+    "venue_name": "Lime Venue Portfolio",
+    "website": "https://www.limevenueportfolio.com",
+    "existing_email": "",
+    "contacts_found": [
+      {
+        "name": "Emma Hinsley",
+        "role": "Business Development Manager",
+        "source": "https://www.limevenueportfolio.com/about-us/the-hub/"
+      },
+      {
+        "name": "Georgina Porter",
+        "role": "Business Development Manager",
+        "source": "https://www.limevenueportfolio.com/about-us/the-hub/"
+      }
+    ],
+    "emails_found": [
+      "enquiries@limevenueportfolio.com",
+      "marketing@limevenueportfolio.com"
+    ],
+    "best_email": "enquiries@limevenueportfolio.com",
+    "best_email_rank": 5,
+    "contact_name": "Emma Hinsley",
+    "contact_role": "Business Development Manager",
+    "pages_checked": 8,
+    "error": null
+  },
+  {
+    "venue_name": "Cowdray Park Polo Club",
+    "website": "https://cowdraypolo.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 7,
+    "error": null
+  },
+  {
+    "venue_name": "Edgbaston Stadium",
+    "website": "https://edgbaston.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 9,
+    "error": null
+  },
+  {
+    "venue_name": "Pub in the Park",
+    "website": "https://pubinthepark.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Taste of London",
+    "website": "https://london.tastefestivals.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "hospitality@tastefestivals.com",
+      "queries@tastefestivals.com"
+    ],
+    "best_email": "hospitality@tastefestivals.com",
+    "best_email_rank": 10,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 3,
+    "error": null
+  },
+  {
+    "venue_name": "Meatopia",
+    "website": "https://www.meatopia.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [],
+    "best_email": "",
+    "best_email_rank": 99,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 1,
+    "error": null
+  },
+  {
+    "venue_name": "Abergavenny Food Festival",
+    "website": "https://www.abergavennyfoodfestival.com",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "tickets@abergavennyfoodfestival.com"
+    ],
+    "best_email": "tickets@abergavennyfoodfestival.com",
+    "best_email_rank": 10,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 3,
+    "error": null
+  },
+  {
+    "venue_name": "Maldon Food and Drink Festival",
+    "website": "https://www.foodanddrinkfestivalsuk.co.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "enquiries@colchesterfoodanddrink.co.uk"
+    ],
+    "best_email": "enquiries@colchesterfoodanddrink.co.uk",
+    "best_email_rank": 5,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 2,
+    "error": null
+  },
+  {
+    "venue_name": "South of England Show",
+    "website": "https://www.seas.org.uk",
+    "existing_email": "",
+    "contacts_found": [],
+    "emails_found": [
+      "education@seas.org.uk",
+      "eventcentre@seas.org.uk",
+      "exhibitors@seas.org.uk",
+      "gemma.lewis@pmwcom.co.uk",
+      "hello@seas.org.uk",
+      "info@seas.org.uk",
+      "sponsorship@seas.org.uk",
+      "suzie.farrell@pmwcom.co.uk",
+      "volunteer@seas.org.uk"
+    ],
+    "best_email": "gemma.lewis@pmwcom.co.uk",
+    "best_email_rank": 3,
+    "contact_name": "",
+    "contact_role": "",
+    "pages_checked": 4,
+    "error": null
+  }
+]

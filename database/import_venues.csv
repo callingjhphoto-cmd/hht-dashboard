@@ -1,0 +1,362 @@
+name,county,category,classification,capacity,website,email,phone,instagram,facebook,has_events_section,score,tier,enrichment_date,source
+Upwaltham Barns,West Sussex,Barn Venue,DRY_HIRE,200,https://upwalthambarns-weddings.co.uk/,weddings@upwalthambarns.co.uk,01798 300242,instagram.com/upwalthambarns,facebook.com/upwalthambarns,True,90,CALL_NOW,2026-03-20,enriched
+Lains Barn,Oxfordshire,Barn Venue,DRY_HIRE,200,https://lainsbarn.co.uk/,events@lainsbarn.co.uk,07771 511653,instagram.com/lainsbarn,facebook.com/lainsbarnoxfordshire,True,90,CALL_NOW,2026-03-20,enriched
+Manor by the Lake,Gloucestershire,Country Estate,DRY_HIRE,180,https://www.manorbythelake.co.uk/,events@manorbythelake.co.uk,01242 245071,instagram.com/manorbythelake,facebook.com/ManorbytheLake.Cheltenham,True,90,CALL_NOW,2026-03-20,enriched
+The Great Tythe Barn,Gloucestershire,Barn Venue,DRY_HIRE,200,https://www.gtb.co.uk/,events@gtb.co.uk,01666 502475,instagram.com/thegreattythebarn,facebook.com/profile.php,True,90,CALL_NOW,2026-03-20,enriched
+Blackthorpe Barn,Suffolk,Barn Venue,DRY_HIRE,250,https://www.weddingsatblackthorpebarn.co.uk/,weddings@foragekitchen.co.uk,003591170715,instagram.com/blackthorpebarn.weddings,,True,90,CALL_NOW,2026-03-20,enriched
+Notley Tythe Barn,Buckinghamshire,Barn Venue,DRY_HIRE,200,https://www.notleyfarm.co.uk/,weddings@notleyfarm.co.uk,01844 201226,instagram.com/notleytythebarn,facebook.com/people,True,90,CALL_NOW,2026-03-20,enriched
+Tanner Warehouse,Greater London,Event Space,DRY_HIRE,250,https://www.tannerwarehouse.co.uk/,events@tannerwarehouse.co.uk,+442073570244,instagram.com/cammandhooper,facebook.com/cammandhooper,True,85,CALL_NOW,2026-03-20,enriched
+Rackleys,Buckinghamshire,Barn Venue,DRY_HIRE,200,https://rackleys.co.uk/,hello@rackleys.co.uk,01494 412515,instagram.com/RackleysBarn,facebook.com/RackleysChilternHills,True,85,CALL_NOW,2026-03-20,enriched
+Sheepdrove,Berkshire,Barn Venue,DRY_HIRE,200,https://sheepdrove.com/,farm@sheepdrove.com,001678291968,instagram.com/sheepdrove,facebook.com/Sheepdrove,True,85,CALL_NOW,2026-03-20,enriched
+Primrose Hill Farm,Oxfordshire,Barn Venue,DRY_HIRE,200,https://primrose-hill-farm.com/,play@primrose-hill-farm.com,00950632381,instagram.com/primrosehillfarm,facebook.com/primrosehillfarmarlescote,True,85,CALL_NOW,2026-03-20,enriched
+Quantock Lakes,Somerset,Barn Venue,DRY_HIRE,250,https://www.quantocklakes.com,hello@quantockevents.co.uk,01278733202,instagram.com/quantocklakesuk,facebook.com/2008,True,85,CALL_NOW,2026-03-20,enriched
+Priston Mill,Somerset,Barn Venue,DRY_HIRE,200,https://www.pristonmill.co.uk/,hello@pristonmill.co.uk,01225 423894,instagram.com/pristonmill,facebook.com/pristonmill,True,85,CALL_NOW,2026-03-20,enriched
+Waterside Country Barn,Somerset,Barn Venue,DRY_HIRE,200,https://watersidecountrybarn.com/,hello@watersidecountrybarn.co.uk,+44 7597 707505,instagram.com/waterside_country_barn,facebook.com/WatersideCountryBarn,True,85,CALL_NOW,2026-03-20,enriched
+Dodford Manor,Northamptonshire,Barn Venue,DRY_HIRE,200,https://www.dodfordmanor-venue.co.uk/,hello@dodfordmanor-venue.co.uk,01327 349761,instagram.com/dodford_manor,facebook.com/Dodford,True,85,CALL_NOW,2026-03-20,enriched
+Cooling Castle Barn,Kent,Barn Venue,DRY_HIRE,200,https://www.coolingcastlebarn.com/,office@coolingcastlebarn.com,005347593583,instagram.com/coolingcastlebarn,facebook.com/2008,True,85,CALL_NOW,2026-03-20,enriched
+Gaynes Park,Essex,Barn Venue,DRY_HIRE,200,https://gaynespark.co.uk/,gaynespark@wedding-venues.co.uk,01992 660329,instagram.com/gaynespark,facebook.com/pages,True,85,CALL_NOW,2026-03-20,enriched
+Gate Street Barn,Surrey,Barn Venue,DRY_HIRE,150,https://gatestreet.co.uk/,info@gatestreet.co.uk,01483 894362,instagram.com/gatestreetvenue,facebook.com/gatestreetvenue,True,80,CALL_NOW,2026-03-20,enriched
+High House,Essex,Barn Venue,DRY_HIRE,200,https://www.highhouseweddings.com/,info@highhouseweddings.com,01621 929178,instagram.com/highhouseweddings,facebook.com/highhouseweddings,True,80,CALL_NOW,2026-03-20,enriched
+Colville Hall,Essex,Barn Venue,DRY_HIRE,200,https://colvillehallwedding.co.uk/,info@colvillehall.co.uk,01462 420751,instagram.com/colvillehall,facebook.com/colvillehallweddingvenue,True,80,CALL_NOW,2026-03-20,enriched
+Old Brook Barn,Essex,Barn Venue,DRY_HIRE,150,https://oldbrookbarn.co.uk/,info@oldbrookbarn.co.uk,07747 116100,instagram.com/oldbrookbarn,facebook.com/OldBrookBarn,True,80,CALL_NOW,2026-03-20,enriched
+The Barn at Alswick,Hertfordshire,Barn Venue,DRY_HIRE,150,https://www.alswick.co.uk/,info@alswick.co.uk,00915601228,instagram.com/thebarnatalswick,facebook.com/thebarnatalswick,True,80,CALL_NOW,2026-03-20,enriched
+Winters Tale Country Barn,Buckinghamshire,Barn Venue,DRY_HIRE,200,https://winterstalecountrybarn.co.uk/,info@winterstalecountrybarn.co.uk,01296 738040,instagram.com/winterstalecountrybarn,facebook.com/winterstalecountrybarn,True,80,CALL_NOW,2026-03-20,enriched
+The Post at Burghfield,Berkshire,Country Estate,DRY_HIRE,150,https://www.thepostbarn.co.uk/,info@thepostbarn.co.uk,01635 881800,instagram.com/thepostbarnberkshire,facebook.com/thepostbarn,True,80,CALL_NOW,2026-03-20,enriched
+Selden Barns,West Sussex,Barn Venue,DRY_HIRE,150,https://seldenbarns.co.uk/,enquiries@seldenbarns.co.uk,01903 372990,instagram.com/seldenbarns,facebook.com/SeldenBarns,True,80,CALL_NOW,2026-03-20,enriched
+Pangdean Barn,East Sussex,Barn Venue,DRY_HIRE,200,https://www.pangdean.com/,office@pangdean.com,01273 843302,,,True,80,CALL_NOW,2026-03-20,enriched
+Dovecote Events,Oxfordshire,Barn Venue,DRY_HIRE,200,https://www.dovecoteevents.uk/,info@dovecoteevents.uk,01295 816566,instagram.com/dovecoteevents,facebook.com/DovecoteEvents,True,80,CALL_NOW,2026-03-20,enriched
+Stone Barn,Gloucestershire,Barn Venue,DRY_HIRE,180,https://crippsandco.com/stone-barn,enquiries@crippsstonebarn.com,+441285721909,instagram.com/crippsandco,facebook.com/crippsandco,True,80,CALL_NOW,2026-03-20,enriched
+Bredon Manor,Gloucestershire,Country Estate,DRY_HIRE,150,https://www.bredonmanor.com,info@bredonmanor.com,01684 773432,instagram.com/bredonmanor,facebook.com/bredonmanor,True,80,CALL_NOW,2026-03-20,enriched
+Barn at Upcote,Gloucestershire,Barn Venue,DRY_HIRE,150,https://thebarnatupcote.co.uk/,enquiries@thebarnatupcote.co.uk,01242890332,instagram.com/upcote_barn,facebook.com/theBarnatUpcote,True,80,CALL_NOW,2026-03-20,enriched
+Lapstone Barn,Gloucestershire,Barn Venue,DRY_HIRE,150,https://www.lapstonebarn.co.uk/,info@lapstonebarn.co.uk,01386 849024,instagram.com/lapstonebarn,facebook.com/LapstoneBarn,True,80,CALL_NOW,2026-03-20,enriched
+Upton Barn,Devon,Barn Venue,DRY_HIRE,200,https://www.uptonbarn.com/,info@uptonbarn.com,004077571312,instagram.com/uptonbarnweddings,facebook.com/Upton,True,80,CALL_NOW,2026-03-20,enriched
+Godwick Hall,Norfolk,Barn Venue,DRY_HIRE,200,https://godwickhall.co.uk/,info@godwickhall.co.uk,01328 701948,instagram.com/godwickweddings,facebook.com/GodwickGreatBarn,True,80,CALL_NOW,2026-03-20,enriched
+The Compasses at Pattiswick,Essex,Barn Venue,DRY_HIRE,180,https://compassesweddings.co.uk/,info@thecompassesatpattiswick.co.uk,01376 561322,instagram.com/compassespattiswick,facebook.com/CompassesatPattiswick,True,80,CALL_NOW,2026-03-20,enriched
+Kingston Country Courtyard,Dorset,Barn Venue,DRY_HIRE,180,https://kingstoncountrycourtyard.com/,enquiries@kingstoncountrycourtyard.com,01929 481066,instagram.com/kcc_bed.and.breakfast,facebook.com/Kingston,True,80,CALL_NOW,2026-03-20,enriched
+The Granary Estates,Suffolk,Barn Venue,DRY_HIRE,200,https://www.thegranaryestates.co.uk/,info@thegranaryestates.co.uk,012870476407,instagram.com/granaryestates,facebook.com/2008,True,80,CALL_NOW,2026-03-20,enriched
+South Farm,Cambridgeshire,Barn Venue,DRY_HIRE,200,https://south-farm.co.uk/,info@south-farm.co.uk,01223 207581,instagram.com/southfarmweddings,facebook.com/South,True,80,CALL_NOW,2026-03-20,enriched
+Cripps Barn,Gloucestershire,Barn Venue,DRY_HIRE,200,https://crippsandco.com/cripps-barn,enquiries@crippsandco.com,+44 1285 721909,instagram.com/crippsandco,facebook.com/crippsandco,True,80,CALL_NOW,2026-03-20,enriched
+Millbridge Court,Surrey,Barn Venue,DRY_HIRE,150,https://www.millbridgecourt.co.uk/,hello@millbridgecourt.co.uk,01252 792572,instagram.com/millbridgecourt,facebook.com/MillbridgeCourt,False,75,HIGH_PRIORITY,2026-03-20,enriched
+Winters Barns,Kent,Barn Venue,DRY_HIRE,200,https://www.winters-barns.co.uk/,,01227 472581,instagram.com/wintersbarns,facebook.com/pages,True,75,HIGH_PRIORITY,2026-03-20,enriched
+Huntsmill Farm,Buckinghamshire,Barn Venue,DRY_HIRE,150,https://huntsmillweddings.co.uk/,info@huntsmill.com,01280 704852,,facebook.com/huntsmillfarmweddings,True,75,HIGH_PRIORITY,2026-03-20,enriched
+Stratton Court Barn,Oxfordshire,Barn Venue,DRY_HIRE,150,https://www.strattoncourtbarn.co.uk/,enquiries@strattoncourtbarn.co.uk,01869 278899,,facebook.com/strattoncourtbarn,True,75,HIGH_PRIORITY,2026-03-20,enriched
+Hyde House,Gloucestershire,Country Estate,DRY_HIRE,150,https://hyde-house.uk/,hello@hyde-house.uk,+447447753176,instagram.com/hyde_house,facebook.com/p,False,75,HIGH_PRIORITY,2026-03-20,enriched
+Cleeve House,Wiltshire,Country Estate,DRY_HIRE,150,https://cleeve-house.com/,info@cleeve-house.com,01380 827129,,facebook.com/CleeveHouse,True,75,HIGH_PRIORITY,2026-03-20,enriched
+Spinney Abbey,Cambridgeshire,Barn Venue,DRY_HIRE,175,https://www.spinneystays.com/,,+4407445038728,instagram.com/spinney_stays,facebook.com/profile.php,True,75,HIGH_PRIORITY,2026-03-20,enriched
+Caswell House,Oxfordshire,Country Estate,EXTERNAL_OK,160,https://caswellhouse.co.uk/,events@caswellhouse.co.uk,,instagram.com/caswellhouse,,True,70,HIGH_PRIORITY,2026-03-20,enriched
+Almonry Barn,Somerset,Barn Venue,DRY_HIRE,150,https://almonrybarnsomerset.com/,enquiries@almonrybarnsomerset.com,07879 890145,instagram.com/almonrybarnsomerset,facebook.com/profile.php,False,70,HIGH_PRIORITY,2026-03-20,enriched
+Chilford Hall,Cambridgeshire,Barn Venue,DRY_HIRE,200,https://www.chilfordhall.co.uk/,events@the-garden-rooms.co.uk,,instagram.com/chilford_hall_vineyard,facebook.com/chilfordhall,False,70,HIGH_PRIORITY,2026-03-20,enriched
+Childerley Long Barn,Cambridgeshire,Barn Venue,DRY_HIRE,180,https://www.childerley.org/,,,instagram.com/childerley_weddings,facebook.com/childerleyevents,True,65,HIGH_PRIORITY,2026-03-20,enriched
+Dodmoor House,Northamptonshire,Barn Venue,DRY_HIRE,200,https://www.dodmoorhouse.co.uk/,,,instagram.com/dodmoor_house,facebook.com/Dodmoor.House,True,65,HIGH_PRIORITY,2026-03-20,enriched
+Merriscourt,Oxfordshire,Barn Venue,DRY_HIRE,250,https://www.merriscourt.com/,,,,,False,50,STANDARD,2026-03-20,enriched
+Battleswick Farm,Essex,Barn Venue,DRY_HIRE,120,,,,,,False,45,STANDARD,2026-03-20,enriched
+The Priory Barn,Hertfordshire,Barn Venue,DRY_HIRE,100,,,,,,False,45,STANDARD,2026-03-20,enriched
+South Stoke Barn,West Sussex,Barn Venue,DRY_HIRE,120,,,,,,False,45,STANDARD,2026-03-20,enriched
+Cogges Manor Farm,Oxfordshire,Barn Venue,DRY_HIRE,150,,,,,,False,45,STANDARD,,venue_classifications
+Kingscote Barn,Gloucestershire,Barn Venue,DRY_HIRE,200,,,,,,False,45,STANDARD,,venue_classifications
+Brickhouse Vineyard,Devon,Barn Venue,DRY_HIRE,120,,,,,,False,45,STANDARD,2026-03-20,enriched
+The Great Barn Devon,Devon,Barn Venue,DRY_HIRE,120,,,,,,False,45,STANDARD,2026-03-20,enriched
+The Oak Barn,Devon,Barn Venue,DRY_HIRE,125,,,,,,False,45,STANDARD,2026-03-20,enriched
+Nancarrow Farm,Cornwall,Barn Venue,DRY_HIRE,130,,,,,,False,45,STANDARD,2026-03-20,enriched
+Manor Mews,Norfolk,Barn Venue,DRY_HIRE,150,,,,,,False,45,STANDARD,2026-03-20,enriched
+Pentney Abbey,Norfolk,Barn Venue,DRY_HIRE,150,,,,,,False,45,STANDARD,2026-03-20,enriched
+Chaucer Barn,Norfolk,Barn Venue,DRY_HIRE,120,,,,,,False,45,STANDARD,2026-03-20,enriched
+Suffolk Barn at Hawstead Place,Suffolk,Barn Venue,DRY_HIRE,150,,,,,,False,45,STANDARD,2026-03-20,enriched
+The Old Hall Ely,Cambridgeshire,Country Estate,DRY_HIRE,150,,,,,,False,45,STANDARD,2026-03-20,enriched
+Sissons Barn,Cambridgeshire,Barn Venue,DRY_HIRE,150,,,,,,False,45,STANDARD,2026-03-20,enriched
+Willow Grange Farm,Cambridgeshire,Barn Venue,DRY_HIRE,150,,,,,,False,45,STANDARD,2026-03-20,enriched
+Swallows Nest Barn,Warwickshire,Barn Venue,DRY_HIRE,150,,,,,,False,45,STANDARD,2026-03-20,enriched
+Longbourn Estate Barn,Warwickshire,Barn Venue,DRY_HIRE,150,,,,,,False,45,STANDARD,2026-03-20,enriched
+Meadow Barn at Stratford Park,Warwickshire,Barn Venue,DRY_HIRE,150,,,,,,False,45,STANDARD,2026-03-20,enriched
+Barns and Yards,Worcestershire,Barn Venue,DRY_HIRE,150,,,,,,False,45,STANDARD,2026-03-20,enriched
+Rhyse Farm,Worcestershire,Barn Venue,DRY_HIRE,120,,,,,,False,45,STANDARD,2026-03-20,enriched
+Bredenbury Court Barns,Herefordshire,Barn Venue,DRY_HIRE,150,,,,,,False,45,STANDARD,2026-03-20,enriched
+Wood Farm Everdon,Northamptonshire,Barn Venue,DRY_HIRE,150,,,,,,False,45,STANDARD,2026-03-20,enriched
+The Great Barn Aynho,Northamptonshire,Barn Venue,DRY_HIRE,150,,,,,,False,45,STANDARD,2026-03-20,enriched
+The Old Kent Barn,Kent,Barn Venue,DRY_HIRE,150,,,,,,False,45,STANDARD,2026-03-20,enriched
+Blake Hall,Essex,Barn Venue,DRY_HIRE,120,,,,,,False,45,STANDARD,2026-03-20,enriched
+Rivervale Barn,Hampshire,Barn Venue,DRY_HIRE,150,,,,,,False,45,STANDARD,2026-03-20,enriched
+Launcells Barton,Cornwall,Barn Venue,DRY_HIRE,150,,,,,,False,45,STANDARD,2026-03-20,enriched
+Trevenna,Cornwall,Barn Venue,DRY_HIRE,100,,,,,,False,45,STANDARD,2026-03-20,enriched
+Curradine Barns,Worcestershire,Barn Venue,DRY_HIRE,150,,,,,,False,45,STANDARD,2026-03-20,enriched
+Loseley Park,Surrey,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Botleys Mansion,Surrey,Country Estate,EXTERNAL_OK,220,,,,,,False,35,NURTURE,,venue_classifications
+Clandon Park,Surrey,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Painshill Park,Surrey,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Russets Country House,Surrey,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Bradbourne House,Kent,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Knowlton Court,Kent,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Chilston Park,Kent,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Hylands House,Essex,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Channels Estate,Essex,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Wivenhoe House,Essex,Country Estate,EXTERNAL_OK,120,,,,,,False,35,NURTURE,,venue_classifications
+The Heron,Essex,Country Estate,EXTERNAL_OK,250,,,,,,False,35,NURTURE,2026-03-20,enriched
+Hatfield House,Hertfordshire,Country Estate,EXTERNAL_OK,300,,,,,,False,35,NURTURE,2026-03-20,enriched
+Ashridge House,Hertfordshire,Country Estate,EXTERNAL_OK,250,,,,,,False,35,NURTURE,2026-03-20,enriched
+Hanbury Manor,Hertfordshire,Country Estate,EXTERNAL_OK,300,,,,,,False,35,NURTURE,2026-03-20,enriched
+Sopwell House,Hertfordshire,Country Estate,EXTERNAL_OK,250,,,,,,False,35,NURTURE,,venue_classifications
+St Michael's Manor,Hertfordshire,Country Estate,EXTERNAL_OK,120,,,,,,False,35,NURTURE,,venue_classifications
+Micklefield Hall,Hertfordshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Offley Place,Hertfordshire,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Knebworth House,Hertfordshire,Country Estate,EXTERNAL_OK,250,,,,,,False,35,NURTURE,2026-03-20,enriched
+Hedsor House,Surrey,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,2026-03-20,enriched
+Cliveden House,Berkshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Waddesdon Manor,Buckinghamshire,Country Estate,EXTERNAL_OK,250,,,,,,False,35,NURTURE,2026-03-20,enriched
+Stoke Park,Buckinghamshire,Country Estate,EXTERNAL_OK,300,,,,,,False,35,NURTURE,2026-03-20,enriched
+Hartwell House,Buckinghamshire,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Lillibrooke Manor,Buckinghamshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+The Vineyard,Berkshire,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Wasing Park,Berkshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Benham Park,Berkshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Avington Park,Hampshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Froyle Park,Hampshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,2026-03-20,enriched
+Rhinefield House,Hampshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Pylewell Park,Hampshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Wintershill Hall,Hampshire,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Balmer Lawn,Hampshire,Country Estate,EXTERNAL_OK,180,,,,,,False,35,NURTURE,,venue_classifications
+Elmers Court,Hampshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Careys Manor,Hampshire,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Rotherwick,Hampshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Goodwood House,West Sussex,Country Estate,EXTERNAL_OK,300,,,,,,False,35,NURTURE,2026-03-20,enriched
+Wiston House,West Sussex,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Firle Place,East Sussex,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,2026-03-20,enriched
+Glynde Place,East Sussex,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Buxted Park,East Sussex,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Hawkwell House,Oxfordshire,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Elmore Court,Gloucestershire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Owlpen Manor,Gloucestershire,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Longleat,Wiltshire,Country Estate,EXTERNAL_OK,250,,,,,,False,35,NURTURE,2026-03-20,enriched
+Syrencot,Wiltshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Henge Estate,Wiltshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Trafalgar Park,Wiltshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Mapperton House,Dorset,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Came House,Dorset,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Warmwell House,Dorset,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Abbots Court,Dorset,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Minterne House,Dorset,Country Estate,EXTERNAL_OK,120,,,,,,False,35,NURTURE,,venue_classifications
+Orchardleigh,Somerset,Country Estate,EXTERNAL_OK,160,,,,,,False,35,NURTURE,,venue_classifications
+Crowcombe Court,Somerset,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Rockbeare Manor,Devon,Country Estate,EXTERNAL_OK,180,,,,,,False,35,NURTURE,,venue_classifications
+Pynes House,Devon,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Boconnoc,Cornwall,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Tredudwell Manor,Cornwall,Country Estate,EXTERNAL_OK,100,,,,,,False,35,NURTURE,,venue_classifications
+Holkham Hall,Norfolk,Country Estate,EXTERNAL_OK,300,,,,,,False,35,NURTURE,2026-03-20,enriched
+Blickling Hall,Norfolk,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+West Lexham Manor,Norfolk,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Hengrave Hall,Suffolk,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Haughley Park,Suffolk,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Wilderness Reserve,Suffolk,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Bruisyard Hall,Suffolk,Country Estate,EXTERNAL_OK,140,,,,,,False,35,NURTURE,,venue_classifications
+Chippenham Park,Cambridgeshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Swynford Manor,Cambridgeshire,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Compton Verney,Warwickshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Wethele Manor,Warwickshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Wootton Park,Warwickshire,Country Estate,EXTERNAL_OK,300,,,,,,False,35,NURTURE,2026-03-20,enriched
+Birtsmorton Court,Worcestershire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+The Wood Norton,Worcestershire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Brinsop Court,Herefordshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Dewsall Court,Herefordshire,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Hellens Manor,Herefordshire,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Turvey House,Bedfordshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Woburn Abbey,Bedfordshire,Country Estate,EXTERNAL_OK,300,,,,,,False,35,NURTURE,2026-03-20,enriched
+Southill Park,Bedfordshire,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Althorp,Northamptonshire,Country Estate,EXTERNAL_OK,300,,,,,,False,35,NURTURE,2026-03-20,enriched
+Plum Park Manor,Northamptonshire,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Northwood House,Isle of Wight,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Appuldurcombe House,Isle of Wight,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Littlecote House,Berkshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Knepp Castle Estate,West Sussex,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Hastoe Hall,Hertfordshire,Country Estate,EXTERNAL_OK,100,,,,,,False,35,NURTURE,,venue_classifications
+Coworth Park,Berkshire,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Stowe House,Buckinghamshire,Country Estate,EXTERNAL_OK,250,,,,,,False,35,NURTURE,2026-03-20,enriched
+Marks Hall,Essex,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Parley Manor,Dorset,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Port Lympne,Kent,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Kirtlington Park,Oxfordshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Aynhoe Park,Oxfordshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Euridge Manor,Wiltshire,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Ston Easton Park,Somerset,Country Estate,EXTERNAL_OK,120,,,,,,False,35,NURTURE,,venue_classifications
+Iscoyd Park,Shropshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Wotton House,Surrey,Country Estate,EXTERNAL_OK,250,,,,,,False,35,NURTURE,2026-03-20,enriched
+Hampton Estate,Surrey,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Burrows Lea Country House,Surrey,Country Estate,EXTERNAL_OK,100,,,,,,False,35,NURTURE,,venue_classifications
+Bore Place,Kent,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Boughton Monchelsea Place,Kent,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Down Hall,Essex,Country Estate,EXTERNAL_OK,250,,,,,,False,35,NURTURE,2026-03-20,enriched
+Prested Hall,Essex,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Tylney Hall,Hampshire,Country Estate,EXTERNAL_OK,250,,,,,,False,35,NURTURE,2026-03-20,enriched
+The Grove,Hertfordshire,Country Estate,EXTERNAL_OK,300,,,,,,False,35,NURTURE,2026-03-20,enriched
+Brocket Hall,Hertfordshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Pendley Manor,Hertfordshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Bovey Castle,Devon,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+The Deer Park,Devon,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Shilstone House,Devon,Country Estate,EXTERNAL_OK,140,,,,,,False,35,NURTURE,,venue_classifications
+Tregothnan,Cornwall,Country Estate,EXTERNAL_OK,300,,,,,,False,35,NURTURE,2026-03-20,enriched
+Pencarrow House,Cornwall,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Scorrier House,Cornwall,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Hestercombe Gardens,Somerset,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Orchardleigh Estate,Somerset,Country Estate,EXTERNAL_OK,250,,,,,,False,35,NURTURE,2026-03-20,enriched
+Clevedon Hall,Somerset,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Brympton House,Somerset,Country Estate,EXTERNAL_OK,180,,,,,,False,35,NURTURE,,venue_classifications
+Deans Court,Dorset,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Smedmore House,Dorset,Country Estate,EXTERNAL_OK,100,,,,,,False,35,NURTURE,,venue_classifications
+Blickling Estate,Norfolk,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Voewood,Norfolk,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Narborough Hall,Norfolk,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Ickworth House,Suffolk,Country Estate,EXTERNAL_OK,250,,,,,,False,35,NURTURE,,venue_classifications
+Helmingham Hall,Suffolk,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Somerleyton Hall,Suffolk,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Woodhall Manor,Suffolk,Country Estate,EXTERNAL_OK,120,,,,,,False,35,NURTURE,,venue_classifications
+Wimpole Estate,Cambridgeshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Longstowe Hall,Cambridgeshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Elton Hall,Cambridgeshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Ditchley Park,Oxfordshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Cornwell Manor,Oxfordshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+The Painswick,Gloucestershire,Country Estate,EXTERNAL_OK,100,,,,,,False,35,NURTURE,,venue_classifications
+Longleat House,Wiltshire,Country Estate,EXTERNAL_OK,300,,,,,,False,35,NURTURE,2026-03-20,enriched
+Bowood House,Wiltshire,Country Estate,EXTERNAL_OK,250,,,,,,False,35,NURTURE,,venue_classifications
+Stanton Manor,Wiltshire,Country Estate,EXTERNAL_OK,150,,,,,,False,35,NURTURE,,venue_classifications
+Guyers House,Wiltshire,Country Estate,EXTERNAL_OK,120,,,,,,False,35,NURTURE,,venue_classifications
+Ettington Park,Warwickshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Weston Park,Warwickshire,Country Estate,EXTERNAL_OK,250,,,,,,False,35,NURTURE,,venue_classifications
+Mallory Court,Warwickshire,Country Estate,EXTERNAL_OK,100,,,,,,False,35,NURTURE,,venue_classifications
+Dorton House,Buckinghamshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Leonardslee Gardens,West Sussex,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Wokefield Estate,Berkshire,Country Estate,EXTERNAL_OK,250,,,,,,False,35,NURTURE,,venue_classifications
+Kelmarsh Hall,Northamptonshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Lamport Hall,Northamptonshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Madresfield Court,Worcestershire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Homme House,Herefordshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Luton Hoo,Bedfordshire,Country Estate,EXTERNAL_OK,250,,,,,,False,35,NURTURE,,venue_classifications
+Combermere Abbey,Shropshire,Country Estate,EXTERNAL_OK,200,,,,,,False,35,NURTURE,,venue_classifications
+Wollerton Old Hall,Shropshire,Country Estate,EXTERNAL_OK,100,,,,,,False,35,NURTURE,,venue_classifications
+Hawkstone Hall,Shropshire,Country Estate,EXTERNAL_OK,250,,,,,,False,35,NURTURE,,venue_classifications
+Northcourt Manor,Isle of Wight,Country Estate,EXTERNAL_OK,120,,,,,,False,35,NURTURE,,venue_classifications
+Kensington Palace,Greater London,Historic Hall,EXTERNAL_OK,300,,,,,,False,30,NURTURE,2026-03-20,enriched
+Eltham Palace,Greater London,Historic Hall,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Hampton Court Palace,Greater London,Historic Hall,EXTERNAL_OK,300,,,,,,False,30,NURTURE,2026-03-20,enriched
+Gunnersbury Park,Greater London,Historic Hall,EXTERNAL_OK,100,,,,,,False,30,NURTURE,,venue_classifications
+Syon Park,Greater London,Country Estate,EXTERNAL_OK,350,,,,,,False,30,NURTURE,2026-03-20,enriched
+Ham House,Greater London,Historic Hall,EXTERNAL_OK,120,,,,,,False,30,NURTURE,,venue_classifications
+Nonsuch Mansion,Surrey,Historic Hall,EXTERNAL_OK,120,,,,,,False,30,NURTURE,,venue_classifications
+Leeds Castle,Kent,Castle,EXTERNAL_OK,300,,,,,,False,30,NURTURE,2026-03-20,enriched
+Hever Castle,Kent,Castle,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Penshurst Place,Kent,Historic Hall,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Wadhurst Castle,Kent,Castle,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Canterbury Cathedral Lodge,Kent,Historic Hall,EXTERNAL_OK,160,,,,,,False,30,NURTURE,,venue_classifications
+Lympne Castle,Kent,Castle,EXTERNAL_OK,120,,,,,,False,30,NURTURE,,venue_classifications
+Hedingham Castle,Essex,Castle,EXTERNAL_OK,250,,,,,,False,30,NURTURE,2026-03-20,enriched
+Gosfield Hall,Essex,Historic Hall,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Leez Priory,Essex,Historic Hall,EXTERNAL_OK,150,,,,,,False,30,NURTURE,,venue_classifications
+Old Tudor Hall,Hertfordshire,Historic Hall,EXTERNAL_OK,100,,,,,,False,30,NURTURE,,venue_classifications
+Crowne Plaza Marlow,Buckinghamshire,Wedding Venue,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Windsor Castle,Berkshire,Castle,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Norton Park,Hampshire,Wedding Venue,EXTERNAL_OK,250,,,,,,False,30,NURTURE,2026-03-20,enriched
+Arundel Castle,West Sussex,Castle,EXTERNAL_OK,300,,,,,,False,30,NURTURE,2026-03-20,enriched
+Arundel Town Hall,West Sussex,Historic Hall,EXTERNAL_OK,120,,,,,,False,30,NURTURE,,venue_classifications
+The Seahorse,East Sussex,Event Space,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Blenheim Palace,Oxfordshire,Country Estate,EXTERNAL_OK,500,,,,,,False,30,NURTURE,,venue_classifications
+Bodleian Libraries,Oxfordshire,Historic Hall,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Sudeley Castle,Gloucestershire,Castle,EXTERNAL_OK,250,,,,,,False,30,NURTURE,,venue_classifications
+Berkeley Castle,Gloucestershire,Castle,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Larmer Tree,Wiltshire,Wedding Venue,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Lulworth Castle,Dorset,Castle,EXTERNAL_OK,250,,,,,,False,30,NURTURE,2026-03-20,enriched
+Canford School,Dorset,Historic Hall,EXTERNAL_OK,180,,,,,,False,30,NURTURE,,venue_classifications
+Italian Villa,Dorset,Wedding Venue,EXTERNAL_OK,150,,,,,,False,30,NURTURE,,venue_classifications
+Moonacre,Dorset,Wedding Venue,EXTERNAL_OK,120,,,,,,False,30,NURTURE,,venue_classifications
+The Orangery Suite,Dorset,Wedding Venue,EXTERNAL_OK,150,,,,,,False,30,NURTURE,,venue_classifications
+Sopley Mill,Dorset,Historic Hall,EXTERNAL_OK,120,,,,,,False,30,NURTURE,,venue_classifications
+Bath Guildhall,Somerset,Historic Hall,EXTERNAL_OK,300,,,,,,False,30,NURTURE,2026-03-20,enriched
+Powderham Castle,Devon,Castle,EXTERNAL_OK,300,,,,,,False,30,NURTURE,2026-03-20,enriched
+The Alverton,Cornwall,Wedding Venue,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Fir Hill Estate,Cornwall,Wedding Venue,EXTERNAL_OK,150,,,,,,False,30,NURTURE,,venue_classifications
+St Michaels Resort,Cornwall,Wedding Venue,EXTERNAL_OK,150,,,,,,False,30,NURTURE,,venue_classifications
+Bury St Edmunds Guildhall,Suffolk,Historic Hall,EXTERNAL_OK,100,,,,,,False,30,NURTURE,,venue_classifications
+Stanbrook Abbey,Worcestershire,Historic Hall,EXTERNAL_OK,300,,,,,,False,30,NURTURE,2026-03-20,enriched
+Eastnor Castle,Herefordshire,Castle,EXTERNAL_OK,250,,,,,,False,30,NURTURE,2026-03-20,enriched
+Highclere Castle,Hampshire,Castle,EXTERNAL_OK,250,,,,,,False,30,NURTURE,2026-03-20,enriched
+Denbies Wine Estate,Surrey,Wedding Venue,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Woburn Safari Lodge,Bedfordshire,Event Space,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Layer Marney Tower,Essex,Historic Hall,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+The Matara Centre,Gloucestershire,Wedding Venue,EXTERNAL_OK,180,,,,,,False,30,NURTURE,,venue_classifications
+Spencer House,Greater London,Historic Hall,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Fulham Palace,Greater London,Historic Hall,EXTERNAL_OK,180,,,,,,False,30,NURTURE,,venue_classifications
+Storey's Field Centre,Greater London,Event Space,EXTERNAL_OK,250,,,,,,False,30,NURTURE,2026-03-20,enriched
+The Charterhouse,Greater London,Historic Hall,EXTERNAL_OK,150,,,,,,False,30,NURTURE,,venue_classifications
+Two Temple Place,Greater London,Historic Hall,EXTERNAL_OK,150,,,,,,False,30,NURTURE,,venue_classifications
+Asylum Chapel,Greater London,Event Space,EXTERNAL_OK,120,,,,,,False,30,NURTURE,,venue_classifications
+Strawberry Hill House,Greater London,Historic Hall,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Addington Palace,Surrey,Historic Hall,EXTERNAL_OK,300,,,,,,False,30,NURTURE,2026-03-20,enriched
+Cobham Hall,Kent,Historic Hall,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Moor Park Mansion,Hertfordshire,Historic Hall,EXTERNAL_OK,250,,,,,,False,30,NURTURE,2026-03-20,enriched
+Dartington Hall,Devon,Historic Hall,EXTERNAL_OK,250,,,,,,False,30,NURTURE,2026-03-20,enriched
+Bickleigh Castle,Devon,Castle,EXTERNAL_OK,120,,,,,,False,30,NURTURE,,venue_classifications
+Caerhays Castle,Cornwall,Castle,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Kilver Court,Somerset,Event Space,EXTERNAL_OK,250,,,,,,False,30,NURTURE,2026-03-20,enriched
+Haselbury Mill,Somerset,Event Space,EXTERNAL_OK,150,,,,,,False,30,NURTURE,,venue_classifications
+Athelhampton House,Dorset,Historic Hall,EXTERNAL_OK,150,,,,,,False,30,NURTURE,,venue_classifications
+The Assembly House,Norfolk,Historic Hall,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Thursford Collection,Norfolk,Event Space,EXTERNAL_OK,300,,,,,,False,30,NURTURE,2026-03-20,enriched
+Chilford Hall Vineyard,Cambridgeshire,Event Space,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Notley Abbey,Oxfordshire,Historic Hall,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Missenden Abbey,Buckinghamshire,Historic Hall,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+The Spread Eagle,West Sussex,Historic Hall,EXTERNAL_OK,120,,,,,,False,30,NURTURE,,venue_classifications
+Bearwood College,Berkshire,Historic Hall,EXTERNAL_OK,300,,,,,,False,30,NURTURE,2026-03-20,enriched
+Delapre Abbey,Northamptonshire,Historic Hall,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Ludlow Castle,Shropshire,Castle,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+Osborne House,Isle of Wight,Historic Hall,EXTERNAL_OK,200,,,,,,False,30,NURTURE,,venue_classifications
+The Brewery,Greater London,Event Space,EXTERNAL_OK,900,,,,,,False,25,NURTURE,2026-03-20,enriched
+Banqueting House,Greater London,Historic Hall,EXTERNAL_OK,450,,,,,,False,25,NURTURE,2026-03-20,enriched
+Guildhall,Greater London,Historic Hall,EXTERNAL_OK,500,,,,,,False,25,NURTURE,2026-03-20,enriched
+Tower of London,Greater London,Castle,EXTERNAL_OK,350,,,,,,False,25,NURTURE,2026-03-20,enriched
+The Roundhouse,Greater London,Event Space,EXTERNAL_OK,1800,,,,,,False,25,NURTURE,2026-03-20,enriched
+Alexandra Palace,Greater London,Event Space,EXTERNAL_OK,10000,,,,,,False,25,NURTURE,2026-03-20,enriched
+One Marylebone,Greater London,Event Space,EXTERNAL_OK,550,,,,,,False,25,NURTURE,2026-03-20,enriched
+Banking Hall,Greater London,Event Space,EXTERNAL_OK,450,,,,,,False,25,NURTURE,2026-03-20,enriched
+Old Billingsgate,Greater London,Event Space,EXTERNAL_OK,2000,,,,,,False,25,NURTURE,2026-03-20,enriched
+Tobacco Dock,Greater London,Event Space,EXTERNAL_OK,3000,,,,,,False,25,NURTURE,2026-03-20,enriched
+The Ministry,Greater London,Event Space,EXTERNAL_OK,400,,,,,,False,25,NURTURE,2026-03-20,enriched
+Village Underground,Greater London,Event Space,EXTERNAL_OK,600,,,,,,False,25,NURTURE,2026-03-20,enriched
+Trinity Buoy Wharf,Greater London,Event Space,EXTERNAL_OK,350,,,,,,False,25,NURTURE,2026-03-20,enriched
+Farnham Castle,Surrey,Castle,EXTERNAL_OK,350,,,,,,False,25,NURTURE,,venue_classifications
+Worton Hall,Oxfordshire,Historic Hall,EXTERNAL_OK,400,,,,,,False,25,NURTURE,,venue_classifications
+Treseren,Cornwall,Country Estate,EXTERNAL_OK,80,,,,,,False,25,NURTURE,,venue_classifications
+Fowey Hall,Cornwall,Country Estate,EXTERNAL_OK,80,,,,,,False,25,NURTURE,,venue_classifications
+Warwick Castle,Warwickshire,Castle,EXTERNAL_OK,400,,,,,,False,25,NURTURE,2026-03-20,enriched
+Kew Gardens,Greater London,Event Space,EXTERNAL_OK,800,,,,,,False,25,NURTURE,2026-03-20,enriched
+Battersea Arts Centre,Greater London,Event Space,EXTERNAL_OK,400,,,,,,False,25,NURTURE,2026-03-20,enriched
+The Barbican Centre,Greater London,Event Space,EXTERNAL_OK,1000,,,,,,False,25,NURTURE,2026-03-20,enriched
+Royal Hospital Chelsea,Greater London,Historic Hall,EXTERNAL_OK,500,,,,,,False,25,NURTURE,2026-03-20,enriched
+Troxy,Greater London,Event Space,EXTERNAL_OK,3000,,,,,,False,25,NURTURE,2026-03-20,enriched
+The Hop Farm,Kent,Event Space,EXTERNAL_OK,500,,,,,,False,25,NURTURE,2026-03-20,enriched
+The Eden Project,Cornwall,Event Space,EXTERNAL_OK,500,,,,,,False,25,NURTURE,2026-03-20,enriched
+Greyfriars House,Surrey,Wedding Venue,EXTERNAL_OK,80,,,,,,False,20,NURTURE,,venue_classifications
+Amberley Castle,West Sussex,Castle,EXTERNAL_OK,60,,,,,,False,20,NURTURE,,venue_classifications
+The Woburn Coffee House,Bedfordshire,Wedding Venue,EXTERNAL_OK,80,,,,,,False,20,NURTURE,,venue_classifications
+The Gallivant,East Sussex,Event Space,EXTERNAL_OK,80,,,,,,False,20,NURTURE,,venue_classifications
+The Spa Hotel,Kent,Country Estate,IN_HOUSE_ONLY,200,,,,,,False,15,LOW,,venue_classifications
+The Mill House Hotel,Berkshire,Country Estate,IN_HOUSE_ONLY,120,,,,,,False,15,LOW,,venue_classifications
+Bowood Hotel & Spa,Wiltshire,Country Estate,IN_HOUSE_ONLY,200,,,,,,False,15,LOW,,venue_classifications
+Elvetham Hotel,Hampshire,Country Estate,IN_HOUSE_ONLY,300,,,,,,False,15,LOW,,venue_classifications
+Goldsmiths' Hall,Greater London,Livery Hall,IN_HOUSE_ONLY,300,,,,,,False,10,LOW,,venue_classifications
+Drapers' Hall,Greater London,Livery Hall,IN_HOUSE_ONLY,260,,,,,,False,10,LOW,,venue_classifications
+Stationers' Hall,Greater London,Livery Hall,IN_HOUSE_ONLY,200,,,,,,False,10,LOW,,venue_classifications
+Ironmongers' Hall,Greater London,Livery Hall,IN_HOUSE_ONLY,180,,,,,,False,10,LOW,,venue_classifications
+Pitzhanger Manor & Gallery,Greater London,Museum/Gallery,IN_HOUSE_ONLY,150,,,,,,False,10,LOW,,venue_classifications
+Weald & Downland Museum,West Sussex,Museum/Gallery,IN_HOUSE_ONLY,180,,,,,,False,10,LOW,,venue_classifications
+Fabrica,East Sussex,Museum/Gallery,IN_HOUSE_ONLY,120,,,,,,False,10,LOW,,venue_classifications
+Thornbury Castle,Gloucestershire,Castle,IN_HOUSE_ONLY,120,,,,,,False,10,LOW,,venue_classifications
+Bristol Museum & Art Gallery,Somerset,Museum/Gallery,IN_HOUSE_ONLY,200,,,,,,False,10,LOW,,venue_classifications
+National Motor Museum,Hampshire,Museum/Gallery,IN_HOUSE_ONLY,200,,,,,,False,10,LOW,,venue_classifications
+Horniman Museum,Greater London,Museum/Gallery,IN_HOUSE_ONLY,200,,,,,,False,10,LOW,,venue_classifications
+Dulwich Picture Gallery,Greater London,Museum/Gallery,IN_HOUSE_ONLY,200,,,,,,False,10,LOW,,venue_classifications
+Marwell Hotel,Hampshire,Event Space,IN_HOUSE_ONLY,250,,,,,,False,10,LOW,,venue_classifications
+Salcombe Harbour Hotel,Devon,Event Space,IN_HOUSE_ONLY,100,,,,,,False,10,LOW,,venue_classifications
+The Sharnbrook Hotel,Bedfordshire,Event Space,IN_HOUSE_ONLY,200,,,,,,False,10,LOW,,venue_classifications
+The Royal Hotel Ventnor,Isle of Wight,Event Space,IN_HOUSE_ONLY,150,,,,,,False,10,LOW,,venue_classifications
+Merchant Taylors' Hall,Greater London,Livery Hall,IN_HOUSE_ONLY,350,,,,,,False,5,LOW,,venue_classifications
+Natural History Museum,Greater London,Museum/Gallery,IN_HOUSE_ONLY,400,,,,,,False,5,LOW,,venue_classifications
+Victoria and Albert Museum,Greater London,Museum/Gallery,IN_HOUSE_ONLY,350,,,,,,False,5,LOW,,venue_classifications
+Science Museum,Greater London,Museum/Gallery,IN_HOUSE_ONLY,500,,,,,,False,5,LOW,,venue_classifications
+Farnborough International,Hampshire,Conference Centre,IN_HOUSE_ONLY,5000,,,,,,False,5,LOW,,venue_classifications
+IWM London,Greater London,Museum/Gallery,IN_HOUSE_ONLY,800,,,,,,False,5,LOW,,venue_classifications

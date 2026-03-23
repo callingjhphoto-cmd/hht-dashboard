@@ -1,0 +1,917 @@
+{
+  "metadata": {
+    "created": "2026-03-20",
+    "purpose": "Geographic expansion target venues — new counties for HHT lead generation",
+    "total_venues": 96,
+    "counties_added": 8,
+    "source": "Web research from Guides for Brides, Coco Wedding Venues, Bridebook, Tagvenue, direct venue sites"
+  },
+  "counties": {
+    "cambridgeshire": {
+      "county": "Cambridgeshire",
+      "rationale": "Wealthy wedding belt — Cambridge university town, affluent villages, strong country house market",
+      "postcode_prefixes": ["CB", "PE"],
+      "venues": [
+        {
+          "name": "Histon Manor",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 150,
+          "location": "Histon, Cambridge",
+          "website": "https://www.histonmanor.com",
+          "notes": "11 acres, only 5 weddings/year, exclusive use, 3 miles from Cambridge",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Swynford Manor",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 120,
+          "location": "Near Cambridge",
+          "website": "https://www.swynfordmanor.co.uk",
+          "notes": "Exclusive-use, sylvan charm, heart of Cambridgeshire",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Bassmead Manor Barns",
+          "type": "Barn Venue",
+          "classification": "DRY_HIRE",
+          "capacity": 200,
+          "location": "Cambridgeshire-Bedfordshire border",
+          "website": "https://www.bassmeadmanorbarns.co.uk",
+          "notes": "Romantic barn setting, historic features + contemporary style",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Waresley Park Estate",
+          "type": "Country Estate",
+          "classification": "DRY_HIRE",
+          "capacity": 250,
+          "location": "Waresley, Cambridgeshire",
+          "website": "https://www.waresleypark.co.uk",
+          "notes": "120 acres, marquee/tipi/sperry tent options, totally flexible",
+          "priority": "HIGH"
+        },
+        {
+          "name": "The Manor Barn",
+          "type": "Barn Venue",
+          "classification": "DRY_HIRE",
+          "capacity": 150,
+          "location": "Near Cambridge",
+          "website": "",
+          "notes": "Exclusive 3-day hire, 2026 availability Jul/Oct/Nov/Dec",
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Mill Farm",
+          "type": "Outdoor / Barn",
+          "classification": "DRY_HIRE",
+          "capacity": 120,
+          "location": "Cambridgeshire",
+          "website": "",
+          "notes": "4 acre meadow, contemporary open barn, bell tents available",
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "South Farm",
+          "type": "Farm Venue",
+          "classification": "EXTERNAL_OK",
+          "capacity": 200,
+          "location": "Shingay-cum-Wendy, Cambridgeshire",
+          "website": "https://www.south-farm.co.uk",
+          "notes": "Popular wedding venue, mature gardens, multiple ceremony spaces",
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Childerley Hall",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 180,
+          "location": "Dry Drayton, Cambridge",
+          "website": "https://www.childerley.com",
+          "notes": "Elizabethan long barn, walled garden, exclusive use",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Madingley Hall",
+          "type": "Country House",
+          "classification": "EXTERNAL_OK",
+          "capacity": 120,
+          "location": "Madingley, Cambridge",
+          "website": "https://www.madingleyhall.co.uk",
+          "notes": "16th century hall, University of Cambridge venue, formal gardens",
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Chippenham Park",
+          "type": "Country Estate",
+          "classification": "DRY_HIRE",
+          "capacity": 300,
+          "location": "Chippenham, Cambridgeshire",
+          "website": "https://www.chippenhampark.com",
+          "notes": "Large estate, marquee weddings, blank canvas",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Longstowe Hall",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 200,
+          "location": "Longstowe, Cambridgeshire",
+          "website": "https://www.longstowehall.co.uk",
+          "notes": "Elizabethan manor, extensive grounds, marquee site",
+          "priority": "HIGH"
+        },
+        {
+          "name": "The Old Hall Ely",
+          "type": "Historic Venue",
+          "classification": "DRY_HIRE",
+          "capacity": 100,
+          "location": "Ely, Cambridgeshire",
+          "website": "https://www.theoldhallely.co.uk",
+          "notes": "Medieval building next to Ely Cathedral, intimate events",
+          "priority": "MEDIUM"
+        }
+      ]
+    },
+    "norfolk": {
+      "county": "Norfolk",
+      "rationale": "Destination wedding county — stunning coastline, country estates, barn conversions, affluent North Norfolk coast",
+      "postcode_prefixes": ["NR", "IP"],
+      "venues": [
+        {
+          "name": "Norfolk Garden Weddings",
+          "type": "Outdoor / Garden",
+          "classification": "DRY_HIRE",
+          "capacity": 200,
+          "location": "Norfolk",
+          "website": "https://norfolkgardenweddings.co.uk",
+          "notes": "Flexible dry-hire, freedom to choose own caterers/entertainment/decor",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Chaucer Barn",
+          "type": "Barn Venue",
+          "classification": "DRY_HIRE",
+          "capacity": 100,
+          "location": "Norfolk countryside",
+          "website": "https://www.chaucerbarn.com",
+          "notes": "Historic barn, exclusive-use dry-hire, marquee/tipi/outdoor ceremony options",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Holkham Hall",
+          "type": "Stately Home",
+          "classification": "EXTERNAL_OK",
+          "capacity": 300,
+          "location": "Holkham, North Norfolk",
+          "website": "https://www.holkham.co.uk",
+          "notes": "Iconic Palladian mansion, multiple event spaces, huge capacity",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Voewood",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 150,
+          "location": "High Kelling, North Norfolk",
+          "website": "https://www.voewood.com",
+          "notes": "Arts & Crafts house, bohemian style, exclusive use, blank canvas",
+          "priority": "HIGH"
+        },
+        {
+          "name": "The Granary Estates",
+          "type": "Barn / Estate",
+          "classification": "DRY_HIRE",
+          "capacity": 200,
+          "location": "Woodbridge, Suffolk/Norfolk border",
+          "website": "https://www.thegranaryestates.co.uk",
+          "notes": "Converted barns, lakeside setting, flexible catering",
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Oxnead Hall",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 180,
+          "location": "Oxnead, Norfolk",
+          "website": "https://www.oxneadhall.com",
+          "notes": "Jacobean hall, exclusive use, approved caterers list",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Godwick Hall",
+          "type": "Country House / Barn",
+          "classification": "DRY_HIRE",
+          "capacity": 200,
+          "location": "Godwick, Norfolk",
+          "website": "https://www.godwickhall.co.uk",
+          "notes": "Medieval ruin backdrop, great barn, exclusive use",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Elms Barn",
+          "type": "Barn Venue",
+          "classification": "DRY_HIRE",
+          "capacity": 150,
+          "location": "Toft Monks, Norfolk",
+          "website": "https://www.elmsbarn.co.uk",
+          "notes": "Converted Norfolk barn, bring your own caterers",
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "The Norfolk Mead Hotel",
+          "type": "Country Hotel",
+          "classification": "EXTERNAL_OK",
+          "capacity": 100,
+          "location": "Coltishall, Norfolk",
+          "website": "https://www.norfolkmead.co.uk",
+          "notes": "Boutique hotel — may allow external bar for larger events",
+          "priority": "LOW"
+        },
+        {
+          "name": "Bressingham Hall",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 250,
+          "location": "Bressingham, Norfolk",
+          "website": "https://www.bressinghamhall.com",
+          "notes": "Stunning grounds, famous gardens, marquee weddings",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Thursford Garden Pavilion",
+          "type": "Pavilion / Garden",
+          "classification": "DRY_HIRE",
+          "capacity": 250,
+          "location": "Thursford, North Norfolk",
+          "website": "https://www.thursford.com",
+          "notes": "Famous for Thursford Christmas Show — dry hire pavilion for weddings",
+          "priority": "MEDIUM"
+        }
+      ]
+    },
+    "suffolk": {
+      "county": "Suffolk",
+      "rationale": "Affluent coastal + rural county, strong barn/country house wedding market, destination weddings on Suffolk coast",
+      "postcode_prefixes": ["IP", "CO", "CB"],
+      "venues": [
+        {
+          "name": "Rookery Meadow",
+          "type": "Outdoor / Blank Canvas",
+          "classification": "DRY_HIRE",
+          "capacity": 200,
+          "location": "Near Harleston, Suffolk",
+          "website": "https://www.rookerymeadow.co.uk",
+          "notes": "9 acres: meadow, ancient oaks, private lake, 3-day hire, total blank canvas",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Copdock Hall",
+          "type": "Barn Venue",
+          "classification": "DRY_HIRE",
+          "capacity": 200,
+          "location": "Copdock, Suffolk",
+          "website": "https://copdockhall.com",
+          "notes": "Elizabethan barn, evening courtyard, own vineyard, landscaped grounds",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Henham Barns",
+          "type": "Barn Venue",
+          "classification": "DRY_HIRE",
+          "capacity": 250,
+          "location": "Henham, Suffolk",
+          "website": "https://www.henhambarns.co.uk",
+          "notes": "Blank canvas, high ceilings, underfloor heating, LED lighting, speaker system, projector",
+          "priority": "HIGH"
+        },
+        {
+          "name": "The Anchor Walberswick",
+          "type": "Pub / Marquee",
+          "classification": "DRY_HIRE",
+          "capacity": 120,
+          "location": "Walberswick, Suffolk Coast",
+          "website": "https://human-nature.events/secret-venues/the-anchor/",
+          "notes": "Best pub in Suffolk 2025, blank canvas marquee in secluded garden",
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Glemham Hall",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 250,
+          "location": "Little Glemham, Suffolk",
+          "website": "https://www.glemhamhall.co.uk",
+          "notes": "300 acres, Great Hall + semi-permanent marquee, secret garden entrance",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Smeetham Hall Barn",
+          "type": "Barn Venue",
+          "classification": "DRY_HIRE",
+          "capacity": 180,
+          "location": "Sudbury, Suffolk",
+          "website": "https://www.smeethamhallbarn.co.uk",
+          "notes": "Heart of Suffolk, idyllic charm, rustic elegance, exclusive venue",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Bruisyard Hall",
+          "type": "Country House",
+          "classification": "EXTERNAL_OK",
+          "capacity": 150,
+          "location": "Bruisyard, Suffolk",
+          "website": "https://www.bruisyard.co.uk",
+          "notes": "16th century hall, walled garden, also has vineyard",
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Haughley Park Barn",
+          "type": "Barn Venue",
+          "classification": "DRY_HIRE",
+          "capacity": 160,
+          "location": "Haughley, Suffolk",
+          "website": "https://www.haughleyparkbarn.co.uk",
+          "notes": "17th century barn, Jacobean manor backdrop, exclusive use",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Helmingham Hall",
+          "type": "Stately Home",
+          "classification": "DRY_HIRE",
+          "capacity": 250,
+          "location": "Helmingham, Suffolk",
+          "website": "https://www.helmingham.com",
+          "notes": "Tudor hall, moated gardens, marquee events in grounds",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Woodhall Manor",
+          "type": "Country House",
+          "classification": "EXTERNAL_OK",
+          "capacity": 120,
+          "location": "Sutton, Suffolk",
+          "website": "https://www.woodhallmanor.com",
+          "notes": "Elizabethan manor, exclusive use, rural Suffolk",
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Suffolk Barns at Hasketon",
+          "type": "Barn Venue",
+          "classification": "DRY_HIRE",
+          "capacity": 180,
+          "location": "Hasketon, Suffolk",
+          "website": "",
+          "notes": "Converted agricultural barns, flexible space",
+          "priority": "MEDIUM"
+        }
+      ]
+    },
+    "somerset": {
+      "county": "Somerset",
+      "rationale": "Destination weddings, beautiful countryside, strong festival scene (Glastonbury area), barn venues",
+      "postcode_prefixes": ["BA", "TA", "BS"],
+      "venues": [
+        {
+          "name": "Elmhay Park",
+          "type": "Country Estate",
+          "classification": "DRY_HIRE",
+          "capacity": 200,
+          "location": "Somerset",
+          "website": "https://www.elmhaypark.co.uk",
+          "notes": "Stunning dry hire venue, flexibility and elegance",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Pennard Hill Farm",
+          "type": "Farm Venue",
+          "classification": "DRY_HIRE",
+          "capacity": 250,
+          "location": "Near Glastonbury, Somerset",
+          "website": "https://www.pennard.com",
+          "notes": "Blank canvas, exclusive use for 60-250 guests",
+          "priority": "HIGH"
+        },
+        {
+          "name": "St Audries Park",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 150,
+          "location": "Quantock Hills, Somerset",
+          "website": "https://www.staudriespark.co.uk",
+          "notes": "100 acres of scenic deer park, 60-150 guests",
+          "priority": "HIGH"
+        },
+        {
+          "name": "The Cider Barn at Cheddar",
+          "type": "Barn Venue",
+          "classification": "DRY_HIRE",
+          "capacity": 120,
+          "location": "Cheddar, Somerset",
+          "website": "",
+          "notes": "Simple, rustic, charming barn venue",
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Kilver Court",
+          "type": "Historic / Garden",
+          "classification": "EXTERNAL_OK",
+          "capacity": 200,
+          "location": "Shepton Mallet, Somerset",
+          "website": "https://www.kilvercourt.com",
+          "notes": "Roger Saul's estate, designer gardens, Mulberry heritage",
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Quantock Lakes",
+          "type": "Barn Venue",
+          "classification": "DRY_HIRE",
+          "capacity": 250,
+          "location": "Quantock Hills, Somerset",
+          "website": "https://www.quantocklakes.co.uk",
+          "notes": "Already in enriched_venues.json — waterside barns, exclusive use",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Haselbury Mill",
+          "type": "Mill / Country",
+          "classification": "EXTERNAL_OK",
+          "capacity": 150,
+          "location": "Crewkerne, Somerset",
+          "website": "https://www.haselburymill.co.uk",
+          "notes": "Historic watermill, gardens, flexible catering options",
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Maunsel House",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 200,
+          "location": "North Petherton, Somerset",
+          "website": "https://www.maunselhouse.co.uk",
+          "notes": "13th century manor, 100 acres, exclusive use, no in-house catering",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Barley Wood Walled Garden",
+          "type": "Garden Venue",
+          "classification": "DRY_HIRE",
+          "capacity": 150,
+          "location": "Wrington, Somerset",
+          "website": "https://www.barleywood.co.uk",
+          "notes": "Beautiful walled garden, outdoor ceremonies, bring your own everything",
+          "priority": "HIGH"
+        },
+        {
+          "name": "The Priests House Hotel",
+          "type": "Country Hotel",
+          "classification": "EXTERNAL_OK",
+          "capacity": 100,
+          "location": "Castle Cary, Somerset",
+          "website": "",
+          "notes": "Boutique hotel, may allow external bar services",
+          "priority": "LOW"
+        }
+      ]
+    },
+    "dorset": {
+      "county": "Dorset",
+      "rationale": "Destination weddings — Jurassic Coast, country estates, New Forest border, affluent demographic",
+      "postcode_prefixes": ["DT", "BH", "SP"],
+      "venues": [
+        {
+          "name": "Hale Park",
+          "type": "Country Estate",
+          "classification": "DRY_HIRE",
+          "capacity": 200,
+          "location": "Hale, Dorset",
+          "website": "https://www.halepark.co.uk",
+          "notes": "Dry-hire, church in grounds, multiple ceremony/dining options",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Tithe Barn Hinton St Mary",
+          "type": "Barn Venue",
+          "classification": "DRY_HIRE",
+          "capacity": 150,
+          "location": "Hinton St Mary, Dorset",
+          "website": "",
+          "notes": "In grounds of Hinton Manor, exclusive weekend hire, dry hire",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Deans Court",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 150,
+          "location": "Wimborne Minster, Dorset",
+          "website": "https://www.deanscourt.org",
+          "notes": "Elegant historic house, ancient gardens, near centre of Wimborne",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Mapperton",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 200,
+          "location": "West Dorset",
+          "website": "https://www.mapperton.com",
+          "notes": "Rolling hills location, Italianate garden, country house wedding",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Sopley Lake",
+          "type": "Outdoor / Marquee",
+          "classification": "DRY_HIRE",
+          "capacity": 200,
+          "location": "Edge of New Forest, Dorset",
+          "website": "https://www.sopleylake.co.uk",
+          "notes": "25 acres, exclusive private space, marquee receptions",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Smedmore House",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 120,
+          "location": "Kimmeridge, Dorset",
+          "website": "https://www.smedmorehouse.co.uk",
+          "notes": "Georgian manor, Jurassic Coast views, exclusive use",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Plush Manor",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 100,
+          "location": "Plush, Dorset",
+          "website": "https://www.plushmanor.co.uk",
+          "notes": "Intimate manor house, valley setting, own suppliers",
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Kingston Country Courtyard",
+          "type": "Barn / Courtyard",
+          "classification": "DRY_HIRE",
+          "capacity": 160,
+          "location": "Kingston, Dorset",
+          "website": "https://www.kingstoncountrycourtyard.co.uk",
+          "notes": "Converted farm buildings, Purbeck area, Corfe Castle nearby",
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Sculpture by the Lakes",
+          "type": "Garden / Outdoor",
+          "classification": "DRY_HIRE",
+          "capacity": 200,
+          "location": "Dorchester, Dorset",
+          "website": "https://www.sculpturebythelakes.co.uk",
+          "notes": "26 acres of art-filled landscape, unique ceremony backdrop",
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "The Italian Villa",
+          "type": "Historic Villa",
+          "classification": "EXTERNAL_OK",
+          "capacity": 180,
+          "location": "Compton Acres, Dorset",
+          "website": "https://www.theitalianvilla.co.uk",
+          "notes": "Mediterranean-style venue, approved caterers, flexible bar options",
+          "priority": "MEDIUM"
+        }
+      ]
+    },
+    "devon": {
+      "county": "Devon",
+      "rationale": "Destination weddings, country estates, Dartmoor/Exmoor settings, coastal venues",
+      "postcode_prefixes": ["EX", "TQ", "PL"],
+      "venues": [
+        {
+          "name": "Huntsham Court",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 200,
+          "location": "Huntsham, Devon",
+          "website": "https://www.huntshamcourt.co.uk",
+          "notes": "18th century estate, exclusive use, 40 bedrooms, South West UK",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Pirzwell Barn",
+          "type": "Barn Venue",
+          "classification": "DRY_HIRE",
+          "capacity": 120,
+          "location": "Heart of Devon",
+          "website": "https://www.pirzwellbarn.co.uk",
+          "notes": "Secluded, family-run, exclusive barn venue",
+          "priority": "HIGH"
+        },
+        {
+          "name": "The Great Barn Devon",
+          "type": "Barn Venue",
+          "classification": "DRY_HIRE",
+          "capacity": 200,
+          "location": "Honiton, Devon",
+          "website": "https://www.thegreatbarndevon.co.uk",
+          "notes": "Medieval cruck barn, 16th century, exclusive use",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Rockbeare Manor",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 150,
+          "location": "Near Exeter, Devon",
+          "website": "https://www.rockbearemanor.co.uk",
+          "notes": "Georgian manor, Capability Brown grounds, exclusive use",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Bickleigh Castle",
+          "type": "Castle",
+          "classification": "DRY_HIRE",
+          "capacity": 120,
+          "location": "Bickleigh, Devon",
+          "website": "https://www.bickleighcastle.com",
+          "notes": "11th century castle, chapel, gardens",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Shilstone House",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 150,
+          "location": "Modbury, South Devon",
+          "website": "https://www.shilstone.co.uk",
+          "notes": "Georgian country house, own suppliers welcome",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Upton Barn & Walled Garden",
+          "type": "Barn / Garden",
+          "classification": "DRY_HIRE",
+          "capacity": 180,
+          "location": "Cullompton, Devon",
+          "website": "https://www.uptonbarn.co.uk",
+          "notes": "Award-winning venue, contemporary barn, walled garden",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Boringdon Hall",
+          "type": "Country House / Hotel",
+          "classification": "EXTERNAL_OK",
+          "capacity": 200,
+          "location": "Colebrook, Plymouth",
+          "website": "https://www.boringdonhall.co.uk",
+          "notes": "Elizabethan manor — hotel but may allow external bar for large events",
+          "priority": "LOW"
+        },
+        {
+          "name": "Ash Barton Estate",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 300,
+          "location": "Braunton, North Devon",
+          "website": "https://www.ashbarton.co.uk",
+          "notes": "17th century manor, 30 beds, huge capacity, blank canvas",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Dartington Hall",
+          "type": "Historic Estate",
+          "classification": "EXTERNAL_OK",
+          "capacity": 250,
+          "location": "Totnes, Devon",
+          "website": "https://www.dartington.org",
+          "notes": "Medieval courtyard, 1200 acres, cultural venue, flexible caterers",
+          "priority": "MEDIUM"
+        }
+      ]
+    },
+    "warwickshire": {
+      "county": "Warwickshire",
+      "rationale": "Shakespeare Country, strong country house market, Stratford-upon-Avon draws affluent weddings, Midlands corporate market",
+      "postcode_prefixes": ["CV", "B"],
+      "venues": [
+        {
+          "name": "Hadsham Farm",
+          "type": "Tipi / Outdoor",
+          "classification": "DRY_HIRE",
+          "capacity": 150,
+          "location": "Near Banbury, Warwickshire",
+          "website": "https://www.hadshamfarm.co.uk",
+          "notes": "Lakeside permanent tipi (Apr-Oct), 3-day exclusive hire, no set suppliers, no corkage",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Alveston Pastures Farm",
+          "type": "Barn Venue",
+          "classification": "DRY_HIRE",
+          "capacity": 130,
+          "location": "Near Stratford-upon-Avon",
+          "website": "https://www.alvestonpasturesfarm.co.uk",
+          "notes": "Renovated rustic barn, bring own suppliers, year-round, near Stratford",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Park Farm",
+          "type": "Farm / Barn",
+          "classification": "DRY_HIRE",
+          "capacity": 130,
+          "location": "Warwickshire/Northamptonshire border",
+          "website": "https://www.parkfarmweddings.co.uk",
+          "notes": "Rustic country venue, exclusive 3-day hire, on-site accommodation",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Talton Lodge",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 200,
+          "location": "Heart of Cotswolds, Warwickshire",
+          "website": "https://www.taltonlodge.co.uk",
+          "notes": "Family-run, 34 acres, tipis/marquees, rustic charm",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Wootton Park",
+          "type": "Country Estate",
+          "classification": "DRY_HIRE",
+          "capacity": 200,
+          "location": "Wootton Wawen, Warwickshire",
+          "website": "https://www.woottonparkweddings.co.uk",
+          "notes": "Private estate, lake views, blank canvas, marquee site",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Compton Verney",
+          "type": "Country House / Gallery",
+          "classification": "EXTERNAL_OK",
+          "capacity": 250,
+          "location": "Kineton, Warwickshire",
+          "website": "https://www.comptonverney.org.uk",
+          "notes": "Capability Brown landscape, art gallery, weddings + corporate events",
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Ettington Park",
+          "type": "Country House Hotel",
+          "classification": "EXTERNAL_OK",
+          "capacity": 200,
+          "location": "Near Stratford-upon-Avon",
+          "website": "https://www.handpickedhotels.co.uk/ettingtonpark",
+          "notes": "Gothic Victorian manor — hotel but may accommodate external bar",
+          "priority": "LOW"
+        },
+        {
+          "name": "Wroxall Abbey Estate",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 250,
+          "location": "Wroxall, Warwickshire",
+          "website": "https://www.wroxallabbeyestate.co.uk",
+          "notes": "Gothic revival mansion, 27 acres, exclusive use available",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Shustoke Farm Barns",
+          "type": "Barn Venue",
+          "classification": "DRY_HIRE",
+          "capacity": 180,
+          "location": "Shustoke, Warwickshire",
+          "website": "https://www.shustokefarmbarns.co.uk",
+          "notes": "Converted barns, outdoor ceremony space, bring own bar/caterers",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Nuthurst Grange Country House",
+          "type": "Country House Hotel",
+          "classification": "EXTERNAL_OK",
+          "capacity": 100,
+          "location": "Hockley Heath, Warwickshire",
+          "website": "https://www.nuthurst-grange.co.uk",
+          "notes": "Edwardian country house — check external bar policy",
+          "priority": "LOW"
+        }
+      ]
+    },
+    "kent": {
+      "county": "Kent",
+      "rationale": "Garden of England — HUGE wedding market, wealthy commuter belt, country houses, castles, barns, proximity to London",
+      "postcode_prefixes": ["CT", "ME", "TN", "DA", "BR"],
+      "venues": [
+        {
+          "name": "Westenhanger Castle",
+          "type": "Castle",
+          "classification": "DRY_HIRE",
+          "capacity": 200,
+          "location": "Westenhanger, Kent",
+          "website": "https://www.westenhangercastle.co.uk",
+          "notes": "Dry hire weddings from £9,180 (50 day / 200 evening), choose own cuisine",
+          "priority": "HIGH"
+        },
+        {
+          "name": "The Orangery Maidstone",
+          "type": "Orangery / Garden",
+          "classification": "DRY_HIRE",
+          "capacity": 180,
+          "location": "Maidstone, Kent",
+          "website": "https://www.theorangerymaidstone.com",
+          "notes": "Dry hire, approved external catering partners, civil ceremony licensed",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Kent Event Centre",
+          "type": "Event Space",
+          "classification": "DRY_HIRE",
+          "capacity": 500,
+          "location": "Detling, Kent",
+          "website": "https://www.kenteventcentre.co.uk",
+          "notes": "200+ acres including private woodland, music festivals, country shows, corporate",
+          "priority": "HIGH"
+        },
+        {
+          "name": "The Barn at Bore Place",
+          "type": "Barn Venue",
+          "classification": "DRY_HIRE",
+          "capacity": 120,
+          "location": "Chiddingstone, Kent",
+          "website": "https://www.boreplace.org",
+          "notes": "Organic estate, blank canvas barn, ethical/eco weddings",
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Cooling Castle Barn",
+          "type": "Barn Venue",
+          "classification": "EXTERNAL_OK",
+          "capacity": 200,
+          "location": "Cooling, Kent",
+          "website": "https://www.coolingcastlebarn.com",
+          "notes": "Historic castle ruins backdrop, converted barns, Kent countryside",
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Penshurst Place",
+          "type": "Stately Home",
+          "classification": "EXTERNAL_OK",
+          "capacity": 300,
+          "location": "Penshurst, Kent",
+          "website": "https://www.penshurstplace.com",
+          "notes": "Medieval manor house, 14th century Baron's Hall, formal gardens",
+          "priority": "HIGH"
+        },
+        {
+          "name": "The Hop Farm",
+          "type": "Farm / Barn",
+          "classification": "DRY_HIRE",
+          "capacity": 250,
+          "location": "Paddock Wood, Kent",
+          "website": "https://www.thehopfarm.co.uk",
+          "notes": "Victorian oast houses, multiple event spaces, festivals + weddings",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Port Lympne Hotel & Reserve",
+          "type": "Country House",
+          "classification": "EXTERNAL_OK",
+          "capacity": 200,
+          "location": "Lympne, Kent",
+          "website": "https://www.portlympne.com",
+          "notes": "Mansion overlooking Romney Marshes, safari park — unique venue",
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Leeds Castle",
+          "type": "Castle",
+          "classification": "EXTERNAL_OK",
+          "capacity": 300,
+          "location": "Maidstone, Kent",
+          "website": "https://www.leeds-castle.com",
+          "notes": "Iconic moated castle, multiple event spaces, huge corporate potential",
+          "priority": "HIGH"
+        },
+        {
+          "name": "Hadlow Manor",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 150,
+          "location": "Hadlow, Kent",
+          "website": "https://www.hadlowmanor.co.uk",
+          "notes": "Georgian manor, gardens, flexible wedding/event packages",
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Knowle Country House",
+          "type": "Country House",
+          "classification": "DRY_HIRE",
+          "capacity": 120,
+          "location": "Cranbrook, Kent",
+          "website": "https://www.knowlecountryhouse.co.uk",
+          "notes": "Edwardian house, exclusive use, Weald of Kent location",
+          "priority": "HIGH"
+        }
+      ]
+    }
+  }
+}

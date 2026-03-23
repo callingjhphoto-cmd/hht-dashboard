@@ -1,0 +1,13 @@
+{
+  "ORPHAN-001": {
+    "venue_name": "BBC Good Food Show",
+    "status": "email_sent",
+    "events": [
+      {
+        "type": "initial_email",
+        "timestamp": "2026-03-20T06:25:02.385964",
+        "details": "template=orphaned_client, to=info@goodfoodshow.com"
+      }
+    ]
+  }
+}

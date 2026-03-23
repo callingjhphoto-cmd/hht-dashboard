@@ -1,0 +1,435 @@
+{
+  "metadata": {
+    "created": "2026-03-20",
+    "purpose": "Corporate event venue targets for HHT — conferences, retreats, awards, Christmas, product launches",
+    "total_venues": 60,
+    "categories": 5,
+    "source": "Web research — Executive Retreats, Lime Venue Portfolio, DesignMyNight, OfficeChristmas.co.uk, Sodexo Prestige, direct venue sites"
+  },
+  "categories": {
+    "conference_retreat": {
+      "category": "Conference Centres & Corporate Retreats",
+      "rationale": "Companies hiring external caterers for multi-day retreats = cocktail bar opportunity for evening socials",
+      "avg_revenue_per_event": 5000,
+      "venues": [
+        {
+          "name": "Highcroft Retreat",
+          "type": "Country House",
+          "classification": "EXTERNAL_OK",
+          "capacity": 170,
+          "location": "Berkshire",
+          "website": "https://www.thecountrycastlecompany.co.uk/venue/highcroft-retreat/",
+          "notes": "Historic stately home, 52 bedrooms, 90 acres, spa, corporate retreats",
+          "event_types": ["corporate_retreat", "team_building", "conference"],
+          "priority": "HIGH"
+        },
+        {
+          "name": "Milton Hill House",
+          "type": "Conference Centre",
+          "classification": "EXTERNAL_OK",
+          "capacity": 170,
+          "location": "Oxfordshire",
+          "website": "https://www.miltonoxfordshire.co.uk",
+          "notes": "Heart of Oxford, 120 double rooms, near A34, 40 min train to Paddington",
+          "event_types": ["corporate_retreat", "conference", "awards"],
+          "priority": "HIGH"
+        },
+        {
+          "name": "Barnett Hill Hotel",
+          "type": "Country House Hotel",
+          "classification": "EXTERNAL_OK",
+          "capacity": 120,
+          "location": "Surrey",
+          "website": "https://www.barnetthillhotel.co.uk",
+          "notes": "Private, secluded, near M25, hidden gem for corporate retreat",
+          "event_types": ["corporate_retreat", "team_building"],
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "De Vere Horsley Estate",
+          "type": "Country Estate",
+          "classification": "EXTERNAL_OK",
+          "capacity": 300,
+          "location": "Surrey",
+          "website": "https://www.devere.co.uk/horsley-estate",
+          "notes": "Built 1820 by Charles Barry, 51 meeting spaces, 6 min from Guildford",
+          "event_types": ["conference", "corporate_retreat", "awards"],
+          "priority": "HIGH"
+        },
+        {
+          "name": "Wokefield Estate",
+          "type": "Country Estate Hotel",
+          "classification": "EXTERNAL_OK",
+          "capacity": 250,
+          "location": "Berkshire",
+          "website": "https://www.devere.co.uk/wokefield-estate",
+          "notes": "De Vere property, elegant setting, holiday parties + conferences",
+          "event_types": ["conference", "christmas_party", "corporate_retreat"],
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Gorse Hill",
+          "type": "Country House Hotel",
+          "classification": "EXTERNAL_OK",
+          "capacity": 150,
+          "location": "Surrey (between M25 and M3)",
+          "website": "https://www.gorsehill.co.uk",
+          "notes": "Country house in Surrey countryside, green gardens, woodlands",
+          "event_types": ["corporate_retreat", "team_building", "christmas_party"],
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Farnborough International",
+          "type": "Exhibition / Conference",
+          "classification": "DRY_HIRE",
+          "capacity": 2000,
+          "location": "Hampshire",
+          "website": "https://www.farnboroughinternational.org",
+          "notes": "Versatile spaces, modern facilities, excellent transport links",
+          "event_types": ["conference", "product_launch", "awards"],
+          "priority": "HIGH"
+        },
+        {
+          "name": "Bodleian Libraries",
+          "type": "Historic / Academic",
+          "classification": "EXTERNAL_OK",
+          "capacity": 200,
+          "location": "Oxford, Oxfordshire",
+          "website": "https://www.bodleian.ox.ac.uk/venues",
+          "notes": "Spectacular setting, lectures, presentations, drinks receptions, dinners, awards",
+          "event_types": ["awards", "product_launch", "conference", "dinner"],
+          "priority": "HIGH"
+        },
+        {
+          "name": "Easthampstead Park",
+          "type": "Country House",
+          "classification": "EXTERNAL_OK",
+          "capacity": 200,
+          "location": "Berkshire",
+          "website": "https://www.eastpark.co.uk",
+          "notes": "Product launch venue, diverse catering, drink receptions to buffets",
+          "event_types": ["product_launch", "conference", "corporate_retreat"],
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Hatfield House",
+          "type": "Stately Home",
+          "classification": "EXTERNAL_OK",
+          "capacity": 500,
+          "location": "Hertfordshire",
+          "website": "https://www.hatfield-house.co.uk",
+          "notes": "Jacobean house, Riding School perfect for grand events, Christmas",
+          "event_types": ["christmas_party", "awards", "product_launch"],
+          "priority": "HIGH"
+        },
+        {
+          "name": "Aubrey Park",
+          "type": "Country Hotel",
+          "classification": "EXTERNAL_OK",
+          "capacity": 200,
+          "location": "Between St Albans and Hemel Hempstead, Hertfordshire",
+          "website": "https://www.aubreypark.co.uk",
+          "notes": "Corporate events, between two major Herts towns",
+          "event_types": ["conference", "christmas_party"],
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Lakeside Country Club",
+          "type": "Country Club",
+          "classification": "DRY_HIRE",
+          "capacity": 300,
+          "location": "Surrey",
+          "website": "https://lakesidecountryclub.co.uk",
+          "notes": "Large versatile setting, on-site hotel, corporate showcases",
+          "event_types": ["corporate_showcase", "product_launch", "conference"],
+          "priority": "HIGH"
+        }
+      ]
+    },
+    "awards_ceremony": {
+      "category": "Award Ceremony & Gala Dinner Venues",
+      "rationale": "Awards nights always need a cocktail bar for pre-dinner drinks and post-ceremony socialising",
+      "avg_revenue_per_event": 5000,
+      "venues": [
+        {
+          "name": "Blenheim Palace",
+          "type": "Stately Home",
+          "classification": "EXTERNAL_OK",
+          "capacity": 500,
+          "location": "Woodstock, Oxfordshire",
+          "website": "https://www.blenheimpalace.com",
+          "notes": "ORPHANED CLIENT — former Cocktail Service venue. Awards, galas, corporate",
+          "event_types": ["awards", "gala_dinner", "product_launch", "corporate"],
+          "priority": "IMMEDIATE",
+          "strategic_priority": "HIGH",
+          "strategic_reason": "orphaned_client"
+        },
+        {
+          "name": "The Underglobe",
+          "type": "Event Space",
+          "classification": "DRY_HIRE",
+          "capacity": 400,
+          "location": "Bankside, London",
+          "website": "https://www.shakespearesglobe.com/your-event",
+          "notes": "Beneath Shakespeare's Globe, awards + corporate events",
+          "event_types": ["awards", "gala_dinner", "corporate"],
+          "priority": "HIGH"
+        },
+        {
+          "name": "Ascot Racecourse",
+          "type": "Racecourse",
+          "classification": "EXTERNAL_OK",
+          "capacity": 1000,
+          "location": "Ascot, Berkshire",
+          "website": "https://www.ascot.com",
+          "notes": "Multiple event spaces, huge corporate events market",
+          "event_types": ["awards", "christmas_party", "corporate"],
+          "priority": "HIGH"
+        },
+        {
+          "name": "Kew Gardens",
+          "type": "Gardens / Historic",
+          "classification": "EXTERNAL_OK",
+          "capacity": 300,
+          "location": "Richmond, Surrey",
+          "website": "https://www.kew.org/about-us/venue-hire",
+          "notes": "Nash Conservatory, Temperate House, Orangery — stunning award venues",
+          "event_types": ["awards", "gala_dinner", "corporate"],
+          "priority": "HIGH"
+        },
+        {
+          "name": "Goodwood House",
+          "type": "Country House",
+          "classification": "EXTERNAL_OK",
+          "capacity": 300,
+          "location": "Chichester, West Sussex",
+          "website": "https://www.goodwood.com",
+          "notes": "Motorsport heritage, luxury setting, corporate awards + events",
+          "event_types": ["awards", "corporate", "product_launch"],
+          "priority": "HIGH"
+        },
+        {
+          "name": "Hampton Court Palace",
+          "type": "Palace",
+          "classification": "EXTERNAL_OK",
+          "capacity": 400,
+          "location": "East Molesey, Surrey",
+          "website": "https://www.hrp.org.uk/hampton-court-palace/venue-hire",
+          "notes": "Historic Royal Palace, Great Hall, gardens — premium corporate venue",
+          "event_types": ["awards", "gala_dinner", "product_launch"],
+          "priority": "HIGH"
+        }
+      ]
+    },
+    "product_launch": {
+      "category": "Product Launch Venues",
+      "rationale": "Brands launching products want cocktail bars for VIP/press events — high-value one-off bookings",
+      "avg_revenue_per_event": 6000,
+      "venues": [
+        {
+          "name": "The Brewery London",
+          "type": "Event Space",
+          "classification": "DRY_HIRE",
+          "capacity": 1000,
+          "location": "Chiswell Street, London",
+          "website": "https://www.thebrewery.co.uk",
+          "notes": "Major dry hire venue, explicit wet/dry hire options, product launches",
+          "event_types": ["product_launch", "awards", "conference"],
+          "priority": "HIGH"
+        },
+        {
+          "name": "Tobacco Dock",
+          "type": "Event Space",
+          "classification": "DRY_HIRE",
+          "capacity": 2000,
+          "location": "Wapping, London",
+          "website": "https://www.tobaccodocklondon.com",
+          "notes": "Grade I listed, blank canvas, Meatopia venue, product launches",
+          "event_types": ["product_launch", "festival", "conference"],
+          "priority": "HIGH"
+        },
+        {
+          "name": "Banqueting House",
+          "type": "Palace / Historic",
+          "classification": "DRY_HIRE",
+          "capacity": 300,
+          "location": "Whitehall, London",
+          "website": "https://www.hrp.org.uk/banqueting-house",
+          "notes": "Reopened Oct 2025 with flexible supplier arrangements",
+          "event_types": ["product_launch", "awards", "gala_dinner"],
+          "priority": "HIGH"
+        },
+        {
+          "name": "Soho Farmhouse",
+          "type": "Country Club / Members",
+          "classification": "EXTERNAL_OK",
+          "capacity": 300,
+          "location": "Great Tew, Oxfordshire",
+          "website": "https://www.sohofarmhouse.com",
+          "notes": "Soho House members club, celebrity clientele, premium brand launches",
+          "event_types": ["product_launch", "brand_activation"],
+          "priority": "HIGH"
+        }
+      ]
+    },
+    "christmas_party": {
+      "category": "Christmas Party Venues",
+      "rationale": "HUGE seasonal market — Dec bookings start September. Corporate Christmas = cocktail bar demand at peak",
+      "avg_revenue_per_event": 4000,
+      "booking_window": "September-October for December events",
+      "outreach_timing": "Start outreach by August to secure Dec bookings",
+      "venues": [
+        {
+          "name": "Hilton Reading",
+          "type": "Hotel",
+          "classification": "EXTERNAL_OK",
+          "capacity": 500,
+          "location": "Reading, Berkshire",
+          "website": "https://www.hilton.com/en/hotels/rdghthn-hilton-reading",
+          "notes": "500 capacity, off A33, near M4 — hotel but may hire external bar for Christmas events",
+          "event_types": ["christmas_party"],
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Hilton Cobham",
+          "type": "Hotel",
+          "classification": "EXTERNAL_OK",
+          "capacity": 300,
+          "location": "Cobham, Surrey",
+          "website": "https://www.hilton.com/en/hotels/lhrcbhn-hilton-cobham",
+          "notes": "Three course meals, themed nights, accommodation, between M25 and M3",
+          "event_types": ["christmas_party"],
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "The Spitfire Ground",
+          "type": "Cricket Ground / Event",
+          "classification": "DRY_HIRE",
+          "capacity": 400,
+          "location": "Canterbury, Kent",
+          "website": "https://www.spitfireground.co.uk",
+          "notes": "Accepts external caterers, heart of Canterbury, Christmas + corporate",
+          "event_types": ["christmas_party", "corporate", "conference"],
+          "priority": "HIGH"
+        },
+        {
+          "name": "BOOM BATTLE BAR venues",
+          "type": "Entertainment Venue",
+          "classification": "IN_HOUSE_ONLY",
+          "capacity": 200,
+          "location": "Multiple UK locations (30+)",
+          "website": "https://boombattlebar.co.uk",
+          "notes": "30 locations — these are COMPETITORS for Christmas, not leads. Monitor.",
+          "event_types": ["christmas_party", "team_building"],
+          "priority": "MONITOR_COMPETITOR"
+        },
+        {
+          "name": "Wentworth Golf Club",
+          "type": "Golf Club",
+          "classification": "EXTERNAL_OK",
+          "capacity": 250,
+          "location": "Virginia Water, Surrey",
+          "website": "https://www.wentworthclub.com",
+          "notes": "Premium members club, corporate Christmas events, may allow external bar",
+          "event_types": ["christmas_party", "corporate"],
+          "priority": "HIGH"
+        },
+        {
+          "name": "Prestige Venues (Sodexo)",
+          "type": "Venue Network",
+          "classification": "EXTERNAL_OK",
+          "capacity": "Varies",
+          "location": "Multiple — UK heritage + sporting venues",
+          "website": "https://www.prestigevenuesandevents.sodexo.com",
+          "notes": "Network of venues that explicitly accept external caterers — research each one",
+          "event_types": ["christmas_party", "awards", "conference", "product_launch"],
+          "priority": "HIGH"
+        },
+        {
+          "name": "Lime Venue Portfolio",
+          "type": "Venue Network",
+          "classification": "EXTERNAL_OK",
+          "capacity": "Varies",
+          "location": "UK-wide",
+          "website": "https://www.limevenueportfolio.com",
+          "notes": "Portfolio of venues for awards, product launches — many accept external bar",
+          "event_types": ["awards", "product_launch", "christmas_party"],
+          "priority": "HIGH"
+        }
+      ]
+    },
+    "racecourse_sporting": {
+      "category": "Racecourses & Sporting Venues",
+      "rationale": "Sporting venues need bars for hospitality boxes, corporate days, and private events when not in season",
+      "avg_revenue_per_event": 6000,
+      "venues": [
+        {
+          "name": "Cowdray Park Polo Club",
+          "type": "Polo Club",
+          "classification": "EXTERNAL_OK",
+          "capacity": 500,
+          "location": "Midhurst, West Sussex",
+          "website": "https://cowdraypolo.co.uk",
+          "notes": "Home of British Polo, Gold Cup (Jul 2026), luxury hospitality, Gusbourne wines bars",
+          "event_types": ["polo", "hospitality", "corporate"],
+          "priority": "HIGH"
+        },
+        {
+          "name": "Guards Polo Club",
+          "type": "Polo Club",
+          "classification": "EXTERNAL_OK",
+          "capacity": 500,
+          "location": "Windsor, Berkshire",
+          "website": "https://www.guardspoloclub.com",
+          "notes": "Cartier Queen's Cup (Jun 2026), Searcys VIP hospitality, premium events",
+          "event_types": ["polo", "hospitality", "corporate"],
+          "priority": "HIGH"
+        },
+        {
+          "name": "Newbury Racecourse",
+          "type": "Racecourse",
+          "classification": "EXTERNAL_OK",
+          "capacity": 1000,
+          "location": "Newbury, Berkshire",
+          "website": "https://www.newburyracecourse.co.uk",
+          "notes": "Conference + events centre, race day hospitality, corporate entertainment",
+          "event_types": ["corporate", "christmas_party", "conference"],
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Epsom Downs Racecourse",
+          "type": "Racecourse",
+          "classification": "EXTERNAL_OK",
+          "capacity": 800,
+          "location": "Epsom, Surrey",
+          "website": "https://www.epsomdowns.co.uk",
+          "notes": "Derby venue, corporate events year-round, conference facilities",
+          "event_types": ["corporate", "awards", "christmas_party"],
+          "priority": "MEDIUM"
+        },
+        {
+          "name": "Edgbaston Stadium",
+          "type": "Cricket Ground",
+          "classification": "DRY_HIRE",
+          "capacity": 600,
+          "location": "Birmingham",
+          "website": "https://edgbaston.com",
+          "notes": "Major cricket venue, corporate events, hospitality bars needed",
+          "event_types": ["corporate", "hospitality", "christmas_party"],
+          "priority": "HIGH"
+        },
+        {
+          "name": "Hampshire Cricket (Utilita Bowl)",
+          "type": "Cricket Ground",
+          "classification": "DRY_HIRE",
+          "capacity": 500,
+          "location": "Southampton, Hampshire",
+          "website": "https://www.ageasbowl.com",
+          "notes": "Hilton hotel attached, terraces for corporate BBQs, mobile bar hire",
+          "event_types": ["corporate", "hospitality"],
+          "priority": "HIGH"
+        }
+      ]
+    }
+  }
+}

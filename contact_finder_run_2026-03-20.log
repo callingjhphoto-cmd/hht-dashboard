@@ -1,0 +1,400 @@
+2026-03-20 12:41:43,642 [INFO] ============================================================
+2026-03-20 12:41:43,642 [INFO] HHT Contact Finder — Decision Maker Identification
+2026-03-20 12:41:43,642 [INFO] Date: 2026-03-20 | Limit: 142
+2026-03-20 12:41:43,642 [INFO] ============================================================
+2026-03-20 12:41:43,643 [INFO] Loaded 148 venues from projects/hht/enriched_leads_2026-03-20.json
+2026-03-20 12:41:43,643 [INFO] 
+[1/142] Talton Lodge
+2026-03-20 12:41:45,043 [INFO]   EMAIL UPGRADE:  -> info@taltonlodge.com
+2026-03-20 12:41:47,842 [INFO] 
+[2/142] Highcroft Retreat
+2026-03-20 12:41:57,823 [INFO] 
+[3/142] Milton Hill House
+2026-03-20 12:42:07,581 [INFO]   CONTACT: Events FAQs — How do I book an event space?                    
+
+If you ar
+2026-03-20 12:42:07,581 [INFO]   EMAIL UPGRADE:  -> milton.reception@thevenuescollection.co.uk
+2026-03-20 12:42:10,660 [INFO] 
+[4/142] Barnett Hill Hotel
+2026-03-20 12:42:17,546 [INFO] 
+[5/142] De Vere Horsley Estate
+2026-03-20 12:42:30,347 [INFO] 
+[6/142] Wokefield Estate
+2026-03-20 12:42:41,185 [INFO]   EMAIL UPGRADE:  -> james.parkinson@dvcompany.com
+2026-03-20 12:42:45,017 [INFO] 
+[7/142] Gorse Hill
+2026-03-20 12:43:03,929 [INFO]   EMAIL UPGRADE:  -> info@northwalesresorts.co.uk
+2026-03-20 12:43:07,242 [INFO] 
+[8/142] Farnborough International
+2026-03-20 12:43:19,047 [INFO] 
+[9/142] Bodleian Libraries
+2026-03-20 12:43:20,303 [WARNING]   ERROR: HTTP 404
+2026-03-20 12:43:23,001 [INFO] 
+[10/142] Easthampstead Park
+2026-03-20 12:43:26,481 [INFO]   EMAIL UPGRADE:  -> reservations@eastpark.co.uk
+2026-03-20 12:43:29,207 [INFO] 
+[11/142] Hatfield House
+2026-03-20 12:43:33,591 [INFO]   EMAIL UPGRADE:  -> events@hatfieldpark.co.uk
+2026-03-20 12:43:37,370 [INFO] 
+[12/142] Aubrey Park
+2026-03-20 12:43:39,225 [INFO]   EMAIL UPGRADE:  -> events@aubreypark.co.uk
+2026-03-20 12:43:42,841 [INFO] 
+[13/142] Lakeside Country Club
+2026-03-20 12:44:01,045 [INFO]   EMAIL UPGRADE:  -> reservations@lakesideinthotel.com
+2026-03-20 12:44:04,022 [INFO] 
+[14/142] Blenheim Palace
+2026-03-20 12:44:20,195 [INFO]   CONTACT: Travel Trade — Private Hire
+2026-03-20 12:44:23,015 [INFO] 
+[15/142] Ascot Racecourse
+2026-03-20 12:44:42,565 [INFO]   EMAIL UPGRADE:  -> events@ascot.com
+2026-03-20 12:44:45,608 [INFO] 
+[16/142] Kew Gardens
+2026-03-20 12:44:46,706 [WARNING]   ERROR: HTTP 404
+2026-03-20 12:44:50,212 [INFO] 
+[17/142] Hampton Court Palace
+2026-03-20 12:44:50,364 [WARNING]   ERROR: HTTP 403
+2026-03-20 12:44:52,840 [INFO] 
+[18/142] Soho Farmhouse
+2026-03-20 12:45:09,143 [INFO] 
+[19/142] Hilton Reading
+2026-03-20 12:45:09,336 [WARNING]   ERROR: HTTP 403
+2026-03-20 12:45:12,484 [INFO] 
+[20/142] Hilton Cobham
+2026-03-20 12:45:12,751 [WARNING]   ERROR: HTTP 403
+2026-03-20 12:45:15,173 [INFO] 
+[21/142] Wentworth Golf Club
+2026-03-20 12:45:18,859 [INFO] 
+[22/142] Guards Polo Club
+2026-03-20 12:45:26,894 [INFO]   EMAIL UPGRADE:  -> events@guardspoloclub.com
+2026-03-20 12:45:30,503 [INFO] 
+[23/142] Newbury Racecourse
+2026-03-20 12:45:35,553 [INFO]   EMAIL UPGRADE:  -> events@newburyracecourse.co.uk
+2026-03-20 12:45:37,786 [INFO] 
+[24/142] Epsom Downs Racecourse
+2026-03-20 12:45:42,561 [INFO] 
+[25/142] Hampshire Cricket (Utilita Bowl)
+2026-03-20 12:45:46,872 [INFO] 
+[26/142] The Big Feastival
+2026-03-20 12:45:51,056 [INFO] 
+[27/142] Great British Food Festival
+2026-03-20 12:46:01,699 [INFO]   EMAIL UPGRADE:  -> info@greatbritishfoodfestival.com
+2026-03-20 12:46:04,626 [INFO] 
+[28/142] Blenheim Palace Food Festival
+2026-03-20 12:46:20,809 [INFO]   CONTACT: Travel Trade — Private Hire
+2026-03-20 12:46:24,803 [INFO] 
+[29/142] Royal County of Berkshire Show
+2026-03-20 12:46:38,394 [INFO] 
+[30/142] Surrey County Show
+2026-03-20 12:46:38,871 [WARNING]   ERROR: HTTP 503
+2026-03-20 12:46:40,914 [INFO] 
+[31/142] Bucks County Show
+2026-03-20 12:46:43,216 [INFO]   EMAIL UPGRADE:  -> info@buckscountyshow.co.uk
+2026-03-20 12:46:46,892 [INFO] 
+[32/142] Henley Royal Regatta
+2026-03-20 12:47:08,845 [INFO] 
+[33/142] Cartier Queen's Cup Polo
+2026-03-20 12:47:15,995 [INFO]   EMAIL UPGRADE:  -> events@guardspoloclub.com
+2026-03-20 12:47:19,317 [INFO] 
+[34/142] Royal Ascot
+2026-03-20 12:47:39,364 [INFO]   EMAIL UPGRADE:  -> events@ascot.com
+2026-03-20 12:47:42,663 [INFO] 
+[35/142] Henley Festival
+2026-03-20 12:47:43,547 [INFO]   EMAIL UPGRADE:  -> info@henley-festival.co.uk
+2026-03-20 12:47:45,852 [INFO] 
+[36/142] The Nomad Cinema
+2026-03-20 12:47:58,107 [INFO] 
+[37/142] Wilderness Festival
+2026-03-20 12:48:08,183 [INFO] 
+[38/142] Highclere Castle (Downton Abbey)
+2026-03-20 12:48:19,547 [INFO] 
+[39/142] Waddesdon Manor
+2026-03-20 12:48:24,399 [INFO] 
+[40/142] Cliveden House Events
+2026-03-20 12:48:33,781 [INFO]   EMAIL UPGRADE:  -> weddings@clivedenhouse.co.uk
+2026-03-20 12:48:36,235 [INFO] 
+[41/142] Stonor Park
+2026-03-20 12:48:44,024 [INFO]   EMAIL UPGRADE:  -> enquiries@stonor.com
+2026-03-20 12:48:46,075 [INFO] 
+[42/142] Histon Manor
+2026-03-20 12:49:02,170 [INFO] 
+[43/142] Swynford Manor
+2026-03-20 12:49:02,415 [WARNING]   ERROR: Connection failed
+2026-03-20 12:49:05,411 [INFO] 
+[44/142] Bassmead Manor Barns
+2026-03-20 12:49:05,631 [WARNING]   ERROR: Connection failed
+2026-03-20 12:49:09,098 [INFO] 
+[45/142] Waresley Park Estate
+2026-03-20 12:49:11,421 [WARNING]   ERROR: Connection failed
+2026-03-20 12:49:14,841 [INFO] 
+[46/142] The Manor Barn
+2026-03-20 12:49:14,841 [WARNING]   ERROR: No website
+2026-03-20 12:49:18,117 [INFO] 
+[47/142] Mill Farm
+2026-03-20 12:49:18,117 [WARNING]   ERROR: No website
+2026-03-20 12:49:20,166 [INFO] 
+[48/142] South Farm
+2026-03-20 12:49:23,891 [INFO]   EMAIL UPGRADE:  -> info@south-farm.co.uk
+2026-03-20 12:49:26,284 [INFO] 
+[49/142] Childerley Hall
+2026-03-20 12:49:29,539 [INFO] 
+[50/142] Madingley Hall
+2026-03-20 12:49:31,760 [INFO]   EMAIL UPGRADE:  -> enquiries@madingleyhall.cam.ac.uk
+2026-03-20 12:49:35,668 [INFO] 
+[51/142] Chippenham Park
+2026-03-20 12:49:38,576 [INFO] 
+[52/142] Longstowe Hall
+2026-03-20 12:49:49,128 [INFO] 
+[53/142] The Old Hall Ely
+2026-03-20 12:49:59,804 [INFO]   CONTACT: Ili Brooks — Sales Events Manager
+2026-03-20 12:49:59,804 [INFO]   EMAIL UPGRADE:  -> events@theoldhallely.co.uk
+2026-03-20 12:50:02,617 [INFO] 
+[54/142] Norfolk Garden Weddings
+2026-03-20 12:50:08,556 [INFO]   EMAIL UPGRADE:  -> info@norfolkgardenweddings.co.uk
+2026-03-20 12:50:12,004 [INFO] 
+[55/142] Chaucer Barn
+2026-03-20 12:50:17,980 [INFO]   CONTACT: Quick Links — Weddings
+2026-03-20 12:50:17,980 [INFO]   EMAIL UPGRADE:  -> info@chaucerbarn.com
+2026-03-20 12:50:20,750 [INFO] 
+[56/142] Holkham Hall
+2026-03-20 12:50:39,760 [INFO]   EMAIL UPGRADE:  -> weddings@holkham.co.uk
+2026-03-20 12:50:41,836 [INFO] 
+[57/142] Voewood
+2026-03-20 12:50:48,051 [INFO]   EMAIL UPGRADE:  -> info@voewood.com
+2026-03-20 12:50:50,118 [INFO] 
+[58/142] The Granary Estates
+2026-03-20 12:51:01,380 [INFO]   CONTACT: Jenna Flatt — Weddings and Events Manager
+2026-03-20 12:51:01,380 [INFO]   EMAIL UPGRADE:  -> philip.greer@universityarms.com
+2026-03-20 12:51:05,138 [INFO] 
+[59/142] Oxnead Hall
+2026-03-20 12:51:05,202 [WARNING]   ERROR: Connection failed
+2026-03-20 12:51:08,751 [INFO] 
+[60/142] Godwick Hall
+2026-03-20 12:51:12,415 [INFO]   EMAIL UPGRADE:  -> info@godwickhall.co.uk
+2026-03-20 12:51:14,671 [INFO] 
+[61/142] Elms Barn
+2026-03-20 12:51:59,924 [WARNING]   ERROR: Timeout
+2026-03-20 12:52:02,861 [INFO] 
+[62/142] The Norfolk Mead Hotel
+2026-03-20 12:52:17,672 [INFO]   EMAIL UPGRADE:  -> events@norfolkmead.co.uk
+2026-03-20 12:52:20,735 [INFO] 
+[63/142] Bressingham Hall
+2026-03-20 12:52:20,795 [WARNING]   ERROR: Connection failed
+2026-03-20 12:52:23,929 [INFO] 
+[64/142] Thursford Garden Pavilion
+2026-03-20 12:52:32,895 [INFO] 
+[65/142] Rookery Meadow
+2026-03-20 12:52:48,300 [INFO]   EMAIL UPGRADE:  -> info@example.com
+2026-03-20 12:52:50,381 [INFO] 
+[66/142] Copdock Hall
+2026-03-20 12:53:06,188 [INFO]   CONTACT: Taylor Howe — Head of Events
+2026-03-20 12:53:06,188 [INFO]   EMAIL UPGRADE:  -> info@copdockhall.com
+2026-03-20 12:53:09,088 [INFO] 
+[67/142] Henham Barns
+2026-03-20 12:53:09,790 [WARNING]   ERROR: Connection failed
+2026-03-20 12:53:13,347 [INFO] 
+[68/142] The Anchor Walberswick
+2026-03-20 12:53:30,610 [INFO] 
+[69/142] Glemham Hall
+2026-03-20 12:53:33,421 [INFO]   CONTACT: HOLLY CLARKE — Weddings & Events Manager07711 945896info@glemhamhall.co.uk
+2026-03-20 12:53:33,421 [INFO]   EMAIL UPGRADE:  -> events@glemhamhall.co.uk
+2026-03-20 12:53:36,658 [INFO] 
+[70/142] Smeetham Hall Barn
+2026-03-20 12:53:36,849 [WARNING]   ERROR: Connection failed
+2026-03-20 12:53:40,824 [INFO] 
+[71/142] Bruisyard Hall
+2026-03-20 12:53:44,477 [INFO] 
+[72/142] Haughley Park Barn
+2026-03-20 12:53:44,735 [WARNING]   ERROR: Connection failed
+2026-03-20 12:53:47,207 [INFO] 
+[73/142] Helmingham Hall
+2026-03-20 12:53:58,073 [INFO]   EMAIL UPGRADE:  -> info@helmingham.com
+2026-03-20 12:54:00,527 [INFO] 
+[74/142] Woodhall Manor
+2026-03-20 12:54:03,154 [INFO]   EMAIL UPGRADE:  -> info@woodhallmanor.com
+2026-03-20 12:54:05,801 [INFO] 
+[75/142] Suffolk Barns at Hasketon
+2026-03-20 12:54:05,801 [WARNING]   ERROR: No website
+2026-03-20 12:54:09,033 [INFO] 
+[76/142] Elmhay Park
+2026-03-20 12:54:20,452 [INFO]   EMAIL UPGRADE:  -> info@elmhaypark.co.uk
+2026-03-20 12:54:24,118 [INFO] 
+[77/142] Pennard Hill Farm
+2026-03-20 12:54:24,890 [WARNING]   ERROR: Connection failed
+2026-03-20 12:54:27,558 [INFO] 
+[78/142] St Audries Park
+2026-03-20 12:54:42,704 [WARNING]   ERROR: Timeout
+2026-03-20 12:54:46,684 [INFO] 
+[79/142] The Cider Barn at Cheddar
+2026-03-20 12:54:46,684 [WARNING]   ERROR: No website
+2026-03-20 12:54:49,302 [INFO] 
+[80/142] Kilver Court
+2026-03-20 12:54:54,287 [INFO] 
+[81/142] Quantock Lakes
+2026-03-20 12:54:58,904 [INFO] 
+[82/142] Haselbury Mill
+2026-03-20 12:55:04,731 [INFO]   EMAIL UPGRADE:  -> info@haselburymill.co.uk
+2026-03-20 12:55:07,483 [INFO] 
+[83/142] Maunsel House
+2026-03-20 12:55:17,115 [INFO]   EMAIL UPGRADE:  -> enquiries@maunselhouse.co.uk
+2026-03-20 12:55:20,064 [INFO] 
+[84/142] Barley Wood Walled Garden
+2026-03-20 12:55:27,519 [INFO] 
+[85/142] The Priests House Hotel
+2026-03-20 12:55:27,520 [WARNING]   ERROR: No website
+2026-03-20 12:55:31,347 [INFO] 
+[86/142] Hale Park
+2026-03-20 12:55:35,006 [INFO] 
+[87/142] Tithe Barn Hinton St Mary
+2026-03-20 12:55:35,006 [WARNING]   ERROR: No website
+2026-03-20 12:55:38,285 [INFO] 
+[88/142] Deans Court
+2026-03-20 12:55:47,431 [INFO]   EMAIL UPGRADE:  -> events@deanscourt.org
+2026-03-20 12:55:50,955 [INFO] 
+[89/142] Mapperton
+2026-03-20 12:55:56,097 [INFO] 
+[90/142] Sopley Lake
+2026-03-20 12:56:11,297 [WARNING]   ERROR: Timeout
+2026-03-20 12:56:15,085 [INFO] 
+[91/142] Smedmore House
+2026-03-20 12:56:21,209 [WARNING]   ERROR: Connection failed
+2026-03-20 12:56:24,720 [INFO] 
+[92/142] Plush Manor
+2026-03-20 12:56:25,165 [WARNING]   ERROR: Connection failed
+2026-03-20 12:56:28,652 [INFO] 
+[93/142] Kingston Country Courtyard
+2026-03-20 12:56:29,068 [WARNING]   ERROR: Connection failed
+2026-03-20 12:56:32,618 [INFO] 
+[94/142] Sculpture by the Lakes
+2026-03-20 12:56:44,234 [INFO] 
+[95/142] The Italian Villa
+2026-03-20 12:56:48,612 [INFO] 
+[96/142] Huntsham Court
+2026-03-20 12:57:02,993 [INFO]   EMAIL UPGRADE:  -> enquiries@huntshamcourt.co.uk
+2026-03-20 12:57:06,406 [INFO] 
+[97/142] Pirzwell Barn
+2026-03-20 12:57:06,923 [WARNING]   ERROR: Connection failed
+2026-03-20 12:57:10,487 [INFO] 
+[98/142] The Great Barn Devon
+2026-03-20 12:57:18,761 [INFO]   EMAIL UPGRADE:  -> info@thegreatbarndevon.co.uk
+2026-03-20 12:57:21,666 [INFO] 
+[99/142] Rockbeare Manor
+2026-03-20 12:57:35,450 [INFO] 
+[100/142] Bickleigh Castle
+2026-03-20 12:57:42,826 [INFO]   EMAIL UPGRADE:  -> weddings@bickleighcastle.com
+2026-03-20 12:57:46,516 [INFO] 
+[101/142] Shilstone House
+2026-03-20 12:57:52,487 [INFO] 
+[102/142] Upton Barn & Walled Garden
+2026-03-20 12:57:55,854 [INFO]   EMAIL UPGRADE:  -> info@uptonbarn.co.uk
+2026-03-20 12:57:58,234 [INFO] 
+[103/142] Boringdon Hall
+2026-03-20 12:58:04,960 [INFO]   EMAIL UPGRADE:  -> info@boringdonhall.co.uk
+2026-03-20 12:58:08,616 [INFO] 
+[104/142] Ash Barton Estate
+2026-03-20 12:58:09,116 [WARNING]   ERROR: Connection failed
+2026-03-20 12:58:12,088 [INFO] 
+[105/142] Dartington Hall
+2026-03-20 12:58:23,754 [INFO]   EMAIL UPGRADE:  -> hellohr@dartington.org
+2026-03-20 12:58:26,622 [INFO] 
+[106/142] Hadsham Farm
+2026-03-20 12:58:37,876 [INFO] 
+[107/142] Alveston Pastures Farm
+2026-03-20 12:58:46,082 [INFO] 
+[108/142] Park Farm
+2026-03-20 12:58:46,764 [WARNING]   ERROR: Connection failed
+2026-03-20 12:58:49,504 [INFO] 
+[109/142] Wootton Park
+2026-03-20 12:59:05,841 [INFO]   CONTACT: Wedding Night Farmhouse Accommodation — Wootton Park Wedding Planner
+2026-03-20 12:59:09,558 [INFO] 
+[110/142] Compton Verney
+2026-03-20 12:59:17,591 [INFO]   EMAIL UPGRADE:  -> events@comptonverney.org.uk
+2026-03-20 12:59:19,770 [INFO] 
+[111/142] Ettington Park
+2026-03-20 12:59:19,951 [WARNING]   ERROR: HTTP 403
+2026-03-20 12:59:23,090 [INFO] 
+[112/142] Wroxall Abbey Estate
+2026-03-20 12:59:23,510 [WARNING]   ERROR: Connection failed
+2026-03-20 12:59:25,650 [INFO] 
+[113/142] Shustoke Farm Barns
+2026-03-20 12:59:29,210 [INFO] 
+[114/142] Nuthurst Grange Country House
+2026-03-20 12:59:34,862 [INFO] 
+[115/142] Westenhanger Castle
+2026-03-20 12:59:39,578 [INFO] 
+[116/142] The Orangery Maidstone
+2026-03-20 12:59:43,926 [INFO] 
+[117/142] Kent Event Centre
+2026-03-20 12:59:45,161 [INFO]   EMAIL UPGRADE:  -> info@kenteventcentre.co.uk
+2026-03-20 12:59:47,352 [INFO] 
+[118/142] The Barn at Bore Place
+2026-03-20 13:00:20,825 [INFO]   CONTACT: Caroline Simpson — Events and Wedding Coordinator
+2026-03-20 13:00:20,825 [INFO]   EMAIL UPGRADE:  -> bookings@boreplace.org
+2026-03-20 13:00:23,258 [INFO] 
+[119/142] Cooling Castle Barn
+2026-03-20 13:00:30,552 [INFO]   CONTACT: Contact Us — Wedding Coordinators | Cooling Castle Barn
+2026-03-20 13:00:30,552 [INFO]   EMAIL UPGRADE:  -> enquiries@coolingcastlebarn.com
+2026-03-20 13:00:33,574 [INFO] 
+[120/142] Penshurst Place
+2026-03-20 13:00:48,958 [INFO] 
+[121/142] The Hop Farm
+2026-03-20 13:00:54,450 [INFO] 
+[122/142] Port Lympne Hotel & Reserve
+2026-03-20 13:01:04,637 [INFO] 
+[123/142] Leeds Castle
+2026-03-20 13:01:17,802 [INFO]   CONTACT: Senior LeadershipTeam — Helen Bonser-Wilton
+2026-03-20 13:01:20,609 [INFO] 
+[124/142] Hadlow Manor
+2026-03-20 13:01:25,135 [INFO] 
+[125/142] Knowle Country House
+2026-03-20 13:01:31,782 [INFO] 
+[126/142] The Underglobe
+2026-03-20 13:01:33,542 [WARNING]   ERROR: HTTP 404
+2026-03-20 13:01:37,385 [INFO] 
+[127/142] Goodwood House
+2026-03-20 13:01:47,456 [INFO]   EMAIL UPGRADE:  -> events@goodwood.com
+2026-03-20 13:01:51,186 [INFO] 
+[128/142] The Brewery London
+2026-03-20 13:02:16,680 [INFO]   EMAIL UPGRADE:  -> info@thebrewery.co.uk
+2026-03-20 13:02:19,294 [INFO] 
+[129/142] Tobacco Dock
+2026-03-20 13:02:27,494 [INFO]   CONTACT: Chelsey Hulbert — Once a client of Tobacco Dock, Chelsey has a great insight i
+2026-03-20 13:02:30,256 [INFO] 
+[130/142] Banqueting House
+2026-03-20 13:02:30,588 [WARNING]   ERROR: HTTP 403
+2026-03-20 13:02:33,332 [INFO] 
+[131/142] The Spitfire Ground
+2026-03-20 13:02:33,593 [WARNING]   ERROR: Connection failed
+2026-03-20 13:02:37,248 [INFO] 
+[132/142] BOOM BATTLE BAR venues
+2026-03-20 13:02:40,568 [INFO] 
+[133/142] Prestige Venues (Sodexo)
+2026-03-20 13:02:51,086 [INFO] 
+[134/142] Lime Venue Portfolio
+2026-03-20 13:03:04,826 [INFO]   CONTACT: Emma Hinsley — Business Development Manager
+2026-03-20 13:03:04,826 [INFO]   EMAIL UPGRADE:  -> enquiries@limevenueportfolio.com
+2026-03-20 13:03:07,118 [INFO] 
+[135/142] Cowdray Park Polo Club
+2026-03-20 13:03:26,691 [INFO] 
+[136/142] Edgbaston Stadium
+2026-03-20 13:03:50,961 [INFO] 
+[137/142] Pub in the Park
+2026-03-20 13:03:55,536 [INFO] 
+[138/142] Taste of London
+2026-03-20 13:04:05,535 [INFO] 
+[139/142] Meatopia
+2026-03-20 13:04:08,607 [INFO] 
+[140/142] Abergavenny Food Festival
+2026-03-20 13:04:17,506 [INFO] 
+[141/142] Maldon Food and Drink Festival
+2026-03-20 13:04:30,470 [INFO]   EMAIL UPGRADE:  -> enquiries@colchesterfoodanddrink.co.uk
+2026-03-20 13:04:33,763 [INFO] 
+[142/142] South of England Show
+2026-03-20 13:04:41,007 [INFO]   EMAIL UPGRADE:  -> gemma.lewis@pmwcom.co.uk
+2026-03-20 13:04:43,495 [INFO] 
+============================================================
+2026-03-20 13:04:43,496 [INFO] CONTACT FINDER COMPLETE
+2026-03-20 13:04:43,496 [INFO] ============================================================
+2026-03-20 13:04:43,496 [INFO] Processed: 142
+2026-03-20 13:04:43,496 [INFO] Decision makers found: 14
+2026-03-20 13:04:43,496 [INFO] Emails upgraded: 52
+2026-03-20 13:04:43,496 [INFO] Results saved to: /Users/jameshuertas/Documents/Claude/projects/hht/contact_finder_results.json

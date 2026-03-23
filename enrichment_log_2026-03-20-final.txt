@@ -1,0 +1,176 @@
+Input: /Users/jameshuertas/Documents/Claude/projects/hht/enriched_leads_2026-03-20.json
+Processing 148 leads (dry_run=False)
+Geography filter: 6 leads outside target area, 142 leads in target geography
+  FILTERED: BOOM BATTLE BAR venues — outside target geography: county=, location=multiple uk locations (30+)
+  FILTERED: Prestige Venues (Sodexo) — outside target geography: county=, location=multiple — uk heritage + sporting venues
+  FILTERED: Lime Venue Portfolio — outside target geography: county=, location=uk-wide
+  FILTERED: Pub in the Park — outside target geography: county=, location=marlow, tunbridge wells, chiswick, st albans, bath, dulwich
+  FILTERED: Abergavenny Food Festival — outside target geography: county=, location=abergavenny, wales
+  FILTERED: Luna Cinema — outside target geography: county=, location=multiple — blenheim palace, kew gardens, hampton court, leeds castle, warwick castle, etc.
+
+  Website rescue: 6 leads missing website URLs
+    FOUND: The Manor Barn → https://www.themanorbarn.com/
+    FOUND: Mill Farm → https://www.millfarm.co.uk/
+    MISS:  Suffolk Barns at Hasketon — no domain resolved
+    MISS:  The Cider Barn at Cheddar — no domain resolved
+    MISS:  The Priests House Hotel — no domain resolved
+    MISS:  Tithe Barn Hinton St Mary — no domain resolved
+  Website rescue: found 2/6
+  [1/142] Talton Lodge... score=48 tier=ARCHIVE
+  [2/142] Highcroft Retreat... score=19 tier=ARCHIVE
+  [3/142] Milton Hill House... score=33 tier=ARCHIVE
+  [4/142] Barnett Hill Hotel... score=19 tier=ARCHIVE
+  [5/142] De Vere Horsley Estate... score=43 tier=ARCHIVE
+  [6/142] Wokefield Estate... score=43 tier=ARCHIVE
+  [7/142] Gorse Hill... score=19 tier=ARCHIVE
+  [8/142] Farnborough International... score=48 tier=ARCHIVE
+  [9/142] Bodleian Libraries... score=29 tier=ARCHIVE
+  [10/142] Easthampstead Park... score=43 tier=ARCHIVE
+  [11/142] Hatfield House... score=43 tier=ARCHIVE
+  [12/142] Aubrey Park... score=43 tier=ARCHIVE
+  [13/142] Lakeside Country Club... score=48 tier=ARCHIVE
+  [14/142] Blenheim Palace... score=43 tier=ARCHIVE
+  [15/142] Ascot Racecourse... score=29 tier=ARCHIVE
+  [16/142] Kew Gardens... score=29 tier=ARCHIVE
+  [17/142] Hampton Court Palace... score=43 tier=ARCHIVE
+  [18/142] Soho Farmhouse... score=43 tier=ARCHIVE
+  [19/142] Hilton Reading... score=29 tier=ARCHIVE
+  [20/142] Hilton Cobham... score=29 tier=ARCHIVE
+  [21/142] Wentworth Golf Club... score=29 tier=ARCHIVE
+  [22/142] Guards Polo Club... score=29 tier=ARCHIVE
+  [23/142] Newbury Racecourse... score=29 tier=ARCHIVE
+  [24/142] Epsom Downs Racecourse... score=29 tier=ARCHIVE
+  [25/142] Hampshire Cricket (Utilita Bowl)... score=62 tier=NURTURE
+  [26/142] The Big Feastival... score=29 tier=ARCHIVE
+  [27/142] Great British Food Festival... score=29 tier=ARCHIVE
+  [28/142] Blenheim Palace Food Festival... score=29 tier=ARCHIVE
+  [29/142] Royal County of Berkshire Show... score=29 tier=ARCHIVE
+  [30/142] Surrey County Show... score=29 tier=ARCHIVE
+  [31/142] Bucks County Show... score=29 tier=ARCHIVE
+  [32/142] Henley Royal Regatta... score=29 tier=ARCHIVE
+  [33/142] Cartier Queen's Cup Polo... score=29 tier=ARCHIVE
+  [34/142] Royal Ascot... score=29 tier=ARCHIVE
+  [35/142] Henley Festival... score=29 tier=ARCHIVE
+  [36/142] The Nomad Cinema... score=29 tier=ARCHIVE
+  [37/142] Wilderness Festival... score=29 tier=ARCHIVE
+  [38/142] Highclere Castle (Downton Abbey)... score=43 tier=ARCHIVE
+  [39/142] Waddesdon Manor... score=43 tier=ARCHIVE
+  [40/142] Cliveden House Events... score=43 tier=ARCHIVE
+  [41/142] Stonor Park... score=43 tier=ARCHIVE
+  [42/142] Histon Manor... score=52 tier=NURTURE
+  [43/142] Swynford Manor... score=52 tier=NURTURE
+  [44/142] Bassmead Manor Barns... score=62 tier=NURTURE
+  [45/142] Waresley Park Estate... score=62 tier=NURTURE
+  [46/142] The Manor Barn... score=52 tier=NURTURE
+  [47/142] Mill Farm... score=38 tier=ARCHIVE
+  [48/142] South Farm... score=29 tier=ARCHIVE
+  [49/142] Childerley Hall... score=52 tier=NURTURE
+  [50/142] Madingley Hall... score=33 tier=ARCHIVE
+  [51/142] Chippenham Park... score=62 tier=NURTURE
+  [52/142] Longstowe Hall... score=62 tier=NURTURE
+  [53/142] The Old Hall Ely... score=52 tier=NURTURE
+  [54/142] Norfolk Garden Weddings... score=48 tier=ARCHIVE
+  [55/142] Chaucer Barn... score=38 tier=ARCHIVE
+  [56/142] Holkham Hall... score=43 tier=ARCHIVE
+  [57/142] Voewood... score=38 tier=ARCHIVE
+  [58/142] The Granary Estates... score=62 tier=NURTURE
+  [59/142] Oxnead Hall... score=52 tier=NURTURE
+  [60/142] Godwick Hall... score=62 tier=NURTURE
+  [61/142] Elms Barn... score=38 tier=ARCHIVE
+  [62/142] The Norfolk Mead Hotel... score=19 tier=ARCHIVE
+  [63/142] Bressingham Hall... score=62 tier=NURTURE
+  [64/142] Thursford Garden Pavilion... score=48 tier=ARCHIVE
+  [65/142] Rookery Meadow... score=48 tier=ARCHIVE
+  [66/142] Copdock Hall... score=62 tier=NURTURE
+  [67/142] Henham Barns... score=48 tier=ARCHIVE
+  [68/142] The Anchor Walberswick... score=38 tier=ARCHIVE
+  [69/142] Glemham Hall... score=62 tier=NURTURE
+  [70/142] Smeetham Hall Barn... score=52 tier=NURTURE
+  [71/142] Bruisyard Hall... score=33 tier=ARCHIVE
+  [72/142] Haughley Park Barn... score=52 tier=NURTURE
+  [73/142] Helmingham Hall... score=62 tier=NURTURE
+  [74/142] Woodhall Manor... score=33 tier=ARCHIVE
+  [75/142] Suffolk Barns at Hasketon... score=33 tier=ARCHIVE
+  [76/142] Elmhay Park... score=62 tier=NURTURE
+  [77/142] Pennard Hill Farm... score=48 tier=ARCHIVE
+  [78/142] St Audries Park... score=52 tier=NURTURE
+  [79/142] The Cider Barn at Cheddar... score=33 tier=ARCHIVE
+  [80/142] Kilver Court... score=43 tier=ARCHIVE
+  [81/142] Quantock Lakes... score=48 tier=ARCHIVE
+  [82/142] Haselbury Mill... score=19 tier=ARCHIVE
+  [83/142] Maunsel House... score=62 tier=NURTURE
+  [84/142] Barley Wood Walled Garden... score=38 tier=ARCHIVE
+  [85/142] The Priests House Hotel... score=14 tier=ARCHIVE
+  [86/142] Hale Park... score=62 tier=NURTURE
+  [87/142] Tithe Barn Hinton St Mary... score=33 tier=ARCHIVE
+  [88/142] Deans Court... score=52 tier=NURTURE
+  [89/142] Mapperton... score=48 tier=ARCHIVE
+  [90/142] Sopley Lake... score=48 tier=ARCHIVE
+  [91/142] Smedmore House... score=52 tier=NURTURE
+  [92/142] Plush Manor... score=52 tier=NURTURE
+  [93/142] Kingston Country Courtyard... score=52 tier=NURTURE
+  [94/142] Sculpture by the Lakes... score=48 tier=ARCHIVE
+  [95/142] The Italian Villa... score=19 tier=ARCHIVE
+  [96/142] Huntsham Court... score=62 tier=NURTURE
+  [97/142] Pirzwell Barn... score=38 tier=ARCHIVE
+  [98/142] The Great Barn Devon... score=48 tier=ARCHIVE
+  [99/142] Rockbeare Manor... score=52 tier=NURTURE
+  [100/142] Bickleigh Castle... score=52 tier=NURTURE
+  [101/142] Shilstone House... score=52 tier=NURTURE
+  [102/142] Upton Barn & Walled Garden... score=38 tier=ARCHIVE
+  [103/142] Boringdon Hall... score=43 tier=ARCHIVE
+  [104/142] Ash Barton Estate... score=62 tier=NURTURE
+  [105/142] Dartington Hall... score=43 tier=ARCHIVE
+  [106/142] Hadsham Farm... score=38 tier=ARCHIVE
+  [107/142] Alveston Pastures Farm... score=38 tier=ARCHIVE
+  [108/142] Park Farm... score=52 tier=NURTURE
+  [109/142] Wootton Park... score=62 tier=NURTURE
+  [110/142] Compton Verney... score=29 tier=ARCHIVE
+  [111/142] Ettington Park... score=43 tier=ARCHIVE
+  [112/142] Wroxall Abbey Estate... score=62 tier=NURTURE
+  [113/142] Shustoke Farm Barns... score=38 tier=ARCHIVE
+  [114/142] Nuthurst Grange Country House... score=33 tier=ARCHIVE
+  [115/142] Westenhanger Castle... score=62 tier=NURTURE
+  [116/142] The Orangery Maidstone... score=38 tier=ARCHIVE
+  [117/142] Kent Event Centre... score=48 tier=ARCHIVE
+  [118/142] The Barn at Bore Place... score=52 tier=NURTURE
+  [119/142] Cooling Castle Barn... score=43 tier=ARCHIVE
+  [120/142] Penshurst Place... score=43 tier=ARCHIVE
+  [121/142] The Hop Farm... score=48 tier=ARCHIVE
+  [122/142] Port Lympne Hotel & Reserve... score=29 tier=ARCHIVE
+  [123/142] Leeds Castle... score=43 tier=ARCHIVE
+  [124/142] Hadlow Manor... score=52 tier=NURTURE
+  [125/142] Knowle Country House... score=52 tier=NURTURE
+  [126/142] The Underglobe... score=48 tier=ARCHIVE
+  [127/142] Goodwood House... score=43 tier=ARCHIVE
+  [128/142] The Brewery London... score=48 tier=ARCHIVE
+  [129/142] Tobacco Dock... score=48 tier=ARCHIVE
+  [130/142] Banqueting House... score=62 tier=NURTURE
+  [131/142] The Spitfire Ground... score=48 tier=ARCHIVE
+  [132/142] Cowdray Park Polo Club... score=43 tier=ARCHIVE
+  [133/142] Edgbaston Stadium... score=48 tier=ARCHIVE
+  [134/142] Taste of London... score=29 tier=ARCHIVE
+  [135/142] Meatopia... score=29 tier=ARCHIVE
+  [136/142] Maldon Food and Drink Festival... score=29 tier=ARCHIVE
+  [137/142] South of England Show... score=29 tier=ARCHIVE
+  [138/142] CLA Game Fair... score=29 tier=ARCHIVE
+  [139/142] Cowdray Gold Cup Polo... score=29 tier=ARCHIVE
+  [140/142] Glorious Goodwood... score=29 tier=ARCHIVE
+  [141/142] Glyndebourne... score=29 tier=ARCHIVE
+  [142/142] BBC Good Food Show... score=43 tier=ARCHIVE
+
+Enriched leads: /Users/jameshuertas/Documents/Claude/projects/hht/enriched_leads_2026-03-20.json
+Joe alert: /Users/jameshuertas/Documents/Claude/projects/hht/joe_alert_2026-03-20.md
+Manual enrichment: /Users/jameshuertas/Documents/Claude/projects/hht/manual_enrichment_needed.md
+
+--- Enrichment Stats ---
+Total: 148
+Emails found: 4
+Phones found: 85
+MX verified: 76
+Web errors: 0
+Geo-filtered: 6
+Websites rescued: 2
+Manual needed: 45
+CALL_NOW: 0, NURTURE: 40, ARCHIVE: 102
+Self-score (enrichment rate): 9/10
